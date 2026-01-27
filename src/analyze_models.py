@@ -15,12 +15,11 @@ FIELDS_TO_COMPARE = [
     "histologic_type",
     "histologic_variant",
     "tumor_size",
-    "pathologic_T",
-    "pathologic_N",
-    "pathologic_M",
+    "tumor_site",
     "extrathyroidal_extension",
     "margins",
     "focality",
+    "lymph_nodes_resected",
     "lymph_nodes_examined_count",
     "lymph_nodes_positive_count"
 ]
@@ -46,6 +45,12 @@ def normalize_value(val):
     # Remove 'p' prefix for TNM
     if s.startswith("p") and len(s) > 1 and s[1] in ["t", "n", "m"]:
         s = s[1:]
+
+    # Tumor site normalization
+    if "right" in s and "left" in s:
+        return "bilateral"
+    if s == "bilateral":
+        return "bilateral"
         
     # Attempt numeric normalization for counts
     try:
@@ -74,6 +79,11 @@ def is_match(pred, true):
     # Fuzzy match for strings (only for non-numeric looking values)
     if not (p.isdigit() or t.isdigit()):
         if p in t or t in p:
+            return True
+        # Bilateral / multifocal lobe matching
+        if t == "bilateral" and ("right" in p and "left" in p):
+            return True
+        if p == "bilateral" and ("right" in t and "left" in t):
             return True
             
     return False
@@ -187,14 +197,6 @@ def main():
     summary_df = pd.DataFrame(summary_data)
     summary_df.to_csv(ANALYSIS_OUTPUT_DIR / "summary_metrics.csv", index=False)
     print(f"\nSummary metrics saved to {ANALYSIS_OUTPUT_DIR / 'summary_metrics.csv'}")
-
-if __name__ == "__main__":
-    main()
-
-
-            
-            # Detailed report for one field if interesting
-            # print(classification_report(y_true, y_pred))
 
 if __name__ == "__main__":
     main()

@@ -129,14 +129,29 @@ def parse_clinical_xml(xml_path):
         
         # 8. Lymph Node Count and Assessment
         nodes_examined_status = patient.find(".//clin_shared:primary_lymph_node_presentation_assessment", NAMESPACES)
-        data['lymph_nodes_examined_status'] = nodes_examined_status.text if nodes_examined_status is not None else "Not Available"
+        exam_status = nodes_examined_status.text if nodes_examined_status is not None else "Not Available"
+        data['lymph_nodes_examined_status'] = exam_status
         
         nodes_examined = patient.find(".//clin_shared:lymph_node_examined_count", NAMESPACES)
         nodes_positive = patient.find(".//clin_shared:number_of_lymphnodes_positive_by_he", NAMESPACES)
         data['lymph_nodes_examined_count'] = nodes_examined.text if nodes_examined is not None else "Not Available"
         data['lymph_nodes_positive_count'] = nodes_positive.text if nodes_positive is not None else "Not Available"
         
-        # 9. Tumor Size (Max dimension in cm)
+        # New binary resected field
+        if data['lymph_nodes_examined_count'] not in ["Not Available", None]:
+            try:
+                count = int(data['lymph_nodes_examined_count'])
+                data['lymph_nodes_resected'] = "yes" if count > 0 else "no"
+            except:
+                data['lymph_nodes_resected'] = "yes" if exam_status == "YES" else "no"
+        else:
+            data['lymph_nodes_resected'] = "yes" if exam_status == "YES" else "no"
+        
+        # 9. Tumor Site (Laterality)
+        site = patient.find(".//thca:primary_thyroid_gland_neoplasm_location_anatomic_site", NAMESPACES)
+        data['tumor_site'] = site.text if site is not None else "Not Available"
+        
+        # 10. Tumor Size (Max dimension in cm)
         tumor_size = 0.0
         dims = patient.find(".//thca:neoplasm_dimension", NAMESPACES)
         if dims is not None:
