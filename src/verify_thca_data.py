@@ -2,8 +2,8 @@ import csv
 from pathlib import Path
 
 # Paths
-BASE_DIR = Path("/Users/larrygrpolanco/Documents/GitHub/pathology-llm-data-extraction")
-CSV_FILE = BASE_DIR / "thyroid_gold_standard.csv"
+BASE_DIR = Path(__file__).resolve().parent.parent
+CSV_FILE = BASE_DIR / "data" / "gold_standard" / "thyroid_gold_standard.csv"
 
 def run_checks():
     if not CSV_FILE.exists():

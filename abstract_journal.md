@@ -47,8 +47,42 @@ A gold-standard dataset of 507 TCGA-THCA cases was established by automated XML 
 
 ### Results
 
-_Current Progress_: Gold standard established for 507 cases. Parsing identified 94 cases where lymph node counts were absent due to lack of resection (correctly identified via `primary_lymph_node_presentation_assessment`), resulting in a 19% increase in usable reference data.
-_[Pending Results]_: Comparative metrics across Mistral and Llama architectures.
+Summary of 507 cases:
+  - Incomplete cases: 37 (7.3%)
+  - Files missing from disk: 0
+
+Missing values per column:
+  - pathologic_stage              : 2 (0.4%)
+  - pathologic_M                  : 1 (0.2%)
+  - lymph_nodes_examined_count    : 114 (22.5%)
+  - lymph_nodes_positive_count    : 116 (22.9%)
+  - extrathyroidal_extension      : 18 (3.6%)
+  - lymph_nodes_examined_status   : 10 (2.0%)
+  - focality                      : 10 (2.0%)
+
+Value distributions:
+  - pathologic_T:
+    - T3                       : 171
+    - T2                       : 167
+    - T1b                      : 80
+    - T1                       : 44
+    - T1a                      : 20
+    - T4a                      : 14
+    - T4                       : 9
+    - TX                       : 2
+  - pathologic_N:
+    - N0                       : 231
+    - N1a                      : 93
+    - N1b                      : 75
+    - N1                       : 58
+    - NX                       : 50
+  - pathologic_M:
+    - M0                       : 283
+    - MX                       : 214
+    - M1                       : 9
+  - data_quality_flag:
+    - OK                       : 470
+    - INCOMPLETE               : 37
 
 ### Conclusions
 
@@ -67,4 +101,4 @@ _[Pending Results]_: Comparative metrics across Mistral and Llama architectures.
 
 - **Architecture**: Zero-shot prompting with JSON schema enforcement.
 - **Models**: Focus on Llama 3.1 and Mistral families.
-- **Target Elements**: Histologic Type, Stage, Pathologic T/N/M, Extrathyroidal Extension, Focality, Lymph Node Counts.
+- **Target Elements**: Histologic Type, Pathologic T/N/M, Extrathyroidal Extension, Focality, Lymph Node Counts.

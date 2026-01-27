@@ -4,11 +4,12 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 # Paths
-BASE_DIR = Path("/Users/larrygrpolanco/Documents/GitHub/pathology-llm-data-extraction")
-DATA_DIR = BASE_DIR / "GDC Data Thyroid"
-MANIFEST_FILE = DATA_DIR / "gdc_manifest.2026-01-23.102905.txt"
-DOWNLOAD_DIR = DATA_DIR / "gdc_download_20260123_154153.943271"
-OUTPUT_CSV = BASE_DIR / "thyroid_gold_standard.csv"
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = BASE_DIR / "data"
+RAW_DIR = DATA_DIR / "raw" / "GDC Data Thyroid" 
+MANIFEST_FILE = RAW_DIR / "gdc_manifest.2026-01-23.102905.txt"
+DOWNLOAD_DIR = RAW_DIR / "gdc_download_20260123_154153.943271"
+OUTPUT_CSV = DATA_DIR / "gold_standard" / "thyroid_gold_standard.csv"
 
 # Namespaces
 NAMESPACES = {
@@ -54,8 +55,8 @@ def parse_clinical_xml(xml_path):
         data['histologic_type'] = hist_type.text if hist_type is not None else "Not Available"
         
         # 2. Pathologic Stage
-        stage = patient.find(".//shared_stage:pathologic_stage", NAMESPACES)
-        data['pathologic_stage'] = stage.text if stage is not None else "Not Available"
+        # stage = patient.find(".//shared_stage:pathologic_stage", NAMESPACES)
+        # data['pathologic_stage'] = stage.text if stage is not None else "Not Available"
         
         # TNM Categories
         data['pathologic_T'] = "Not Available"
@@ -163,13 +164,18 @@ def main():
         
         # Data Quality Flag Logic
         # We flag as incomplete if any required field is "Not Available"
-        # BUT: if lymph_nodes_examined_status is "NO", then missing counts are OK.
+        # BUT: lymph node data requirements depend on pathologic_N
         is_incomplete = False
-        skip_node_counts = (pathology_data.get('lymph_nodes_examined_status') == "NO")
+        
+        # If N1 (N1, N1a, N1b), we MUST have lymph node data.
+        # If N0 or NX, it's optional.
+        pathologic_n = pathology_data.get('pathologic_N', "Not Available")
+        needs_lymph_nodes = ("1" in pathologic_n) if pathologic_n != "Not Available" else False
         
         for key, value in pathology_data.items():
             if value == "Not Available" or value is None:
-                if skip_node_counts and key in ['lymph_nodes_examined_count', 'lymph_nodes_positive_count']:
+                # If we don't need lymph nodes, skip these fields in the check
+                if not needs_lymph_nodes and key in ['lymph_nodes_examined_count', 'lymph_nodes_positive_count']:
                     continue
                 is_incomplete = True
                 break

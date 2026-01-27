@@ -1,0 +1,78 @@
+patient_id,model_name,model_id,timestamp,status,raw_response,parsed_json
+TCGA-DJ-A2Q6,mistral-large,mistralai/mistral-large,2026-01-27 11:02:47,success,"{
+  ""histologic_type"": ""Papillary carcinoma"",
+  ""pathologic_stage"": ""IVA"",
+  ""pathologic_T"": ""Not Available"",
+  ""pathologic_N"": ""pN1b"",
+  ""pathologic_M"": ""Not Available"",
+  ""extrathyroidal_extension"": ""present"",
+  ""focality"": ""Multifocal"",
+  ""lymph_nodes_examined_count"": 45,
+  ""lymph_nodes_positive_count"": 22
+}","{""histologic_type"": ""Papillary carcinoma"", ""pathologic_stage"": ""IVA"", ""pathologic_T"": ""Not Available"", ""pathologic_N"": ""pN1b"", ""pathologic_M"": ""Not Available"", ""extrathyroidal_extension"": ""present"", ""focality"": ""Multifocal"", ""lymph_nodes_examined_count"": 45, ""lymph_nodes_positive_count"": 22}"
+TCGA-DJ-A2Q6,llama-3.1-405b,meta-llama/llama-3.1-405b-instruct,2026-01-27 11:03:08,success,"{ 
+ 	""histologic_type""	:	""Papillary carcinoma""	, 
+ 	""pathologic_stage""	:	""Not Available""	, 
+ 	""pathologic_T""	:	""Not Available""	, 
+ 	""pathologic_N""	:	""Not Available""	, 
+ 	""pathologic_M""	:	""Not Available""	, 
+ 	""extrathyroidal_extension""	:	""present""	, 
+ 	""focality""	:	""Multifocal""	, 
+ 	""lymph_nodes_examined_count""	:	45	, 
+ 	""lymph_nodes_positive_count""	:	22	
+}","{""histologic_type"": ""Papillary carcinoma"", ""pathologic_stage"": ""Not Available"", ""pathologic_T"": ""Not Available"", ""pathologic_N"": ""Not Available"", ""pathologic_M"": ""Not Available"", ""extrathyroidal_extension"": ""present"", ""focality"": ""Multifocal"", ""lymph_nodes_examined_count"": 45, ""lymph_nodes_positive_count"": 22}"
+TCGA-DJ-A2Q6,llama-3.1-70b,meta-llama/llama-3.1-70b-instruct,2026-01-27 11:03:14,success,"{
+  ""histologic_type"": ""Papillary carcinoma"",
+  ""pathologic_stage"": null,
+  ""pathologic_T"": null,
+  ""pathologic_N"": null,
+  ""pathologic_M"": null,
+  ""extrathyroidal_extension"": ""Invades fibroadipose tissue"",
+  ""focality"": ""Multifocal"",
+  ""lymph_nodes_examined_count"": 16,
+  ""lymph_nodes_positive_count"": 15
+}","{""histologic_type"": ""Papillary carcinoma"", ""pathologic_stage"": null, ""pathologic_T"": null, ""pathologic_N"": null, ""pathologic_M"": null, ""extrathyroidal_extension"": ""Invades fibroadipose tissue"", ""focality"": ""Multifocal"", ""lymph_nodes_examined_count"": 16, ""lymph_nodes_positive_count"": 15}"
+TCGA-DJ-A2Q6,mixtral-8x7b,mistralai/mixtral-8x7b-instruct,2026-01-27 11:03:16,success,"{
+""histologic_type"": ""Papillary carcinoma"",
+""pathologic_stage"": ""Not Available"",
+""pathologic_T"": ""Not Available"",
+""pathologic_N"": ""pN1b"",
+""pathologic_M"": ""Not Available"",
+""extrathyroidal_extension"": ""present"",
+""focality"": ""Multifocal"",
+""lymph_nodes_examined_count"": 61,
+""lymph_nodes_positive_count"": 22
+}","{""histologic_type"": ""Papillary carcinoma"", ""pathologic_stage"": ""Not Available"", ""pathologic_T"": ""Not Available"", ""pathologic_N"": ""pN1b"", ""pathologic_M"": ""Not Available"", ""extrathyroidal_extension"": ""present"", ""focality"": ""Multifocal"", ""lymph_nodes_examined_count"": 61, ""lymph_nodes_positive_count"": 22}"
+TCGA-DJ-A2Q6,llama-3.1-8b,meta-llama/llama-3.1-8b-instruct,2026-01-27 11:03:20,success,"{
+  ""histologic_type"": ""Papillary carcinoma"",
+  ""pathologic_stage"": ""Not Available"",
+  ""pathologic_T"": ""pT1a"",
+  ""pathologic_N"": ""pN1b"",
+  ""pathologic_M"": ""pM0"",
+  ""extrathyroidal_extension"": ""Invades fibroadipose tissue"",
+  ""focality"": ""Multifocal"",
+  ""lymph_nodes_examined_count"": 16,
+  ""lymph_nodes_positive_count"": 15
+}","{""histologic_type"": ""Papillary carcinoma"", ""pathologic_stage"": ""Not Available"", ""pathologic_T"": ""pT1a"", ""pathologic_N"": ""pN1b"", ""pathologic_M"": ""pM0"", ""extrathyroidal_extension"": ""Invades fibroadipose tissue"", ""focality"": ""Multifocal"", ""lymph_nodes_examined_count"": 16, ""lymph_nodes_positive_count"": 15}"
+TCGA-DJ-A2Q6,mistral-7b,mistralai/mistral-7b-instruct,2026-01-27 11:03:23,success,"{
+  ""histologic_type"": ""Papillary carcinoma"",
+  ""pathologic_stage"": ""Not Available"",
+  ""pathologic_T"": ""Not Available"",
+  ""pathologic_N"": ""pN15"",
+  ""pathologic_M"": ""pM0"",
+  ""extrathyroidal_extension"": ""Identified"",
+  ""focality"": ""Multifocal"",
+  ""lymph_nodes_examined_count"": 16,
+  ""lymph_nodes_positive_count"": 15
+}","{""histologic_type"": ""Papillary carcinoma"", ""pathologic_stage"": ""Not Available"", ""pathologic_T"": ""Not Available"", ""pathologic_N"": ""pN15"", ""pathologic_M"": ""pM0"", ""extrathyroidal_extension"": ""Identified"", ""focality"": ""Multifocal"", ""lymph_nodes_examined_count"": 16, ""lymph_nodes_positive_count"": 15}"
+TCGA-FK-A3SE,mistral-large,mistralai/mistral-large,2026-01-27 11:03:26,success,"{
+  ""histologic_type"": ""Papillary carcinoma"",
+  ""pathologic_stage"": ""Not Available"",
+  ""pathologic_T"": ""pT2"",
+  ""pathologic_N"": ""Not Available"",
+  ""pathologic_M"": ""pMx"",
+  ""extrathyroidal_extension"": ""Not Available"",
+  ""focality"": ""Multifocal"",
+  ""lymph_nodes_examined_count"": 15,
+  ""lymph_nodes_positive_count"": 4
+}","{""histologic_type"": ""Papillary carcinoma"", ""pathologic_stage"": ""Not Available"", ""pathologic_T"": ""pT2"", ""pathologic_N"": ""Not Available"", ""pathologic_M"": ""pMx"", ""extrathyroidal_extension"": ""Not Available"", ""focality"": ""Multifocal"", ""lymph_nodes_examined_count"": 15, ""lymph_nodes_positive_count"": 4}"
