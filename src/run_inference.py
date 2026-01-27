@@ -24,11 +24,11 @@ OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 # Model definition (Scale: Large, Medium, Small)
 MODELS = {
     # Large
-    "mistral-large": "mistralai/mistral-large",
-    "llama-3.1-405b": "meta-llama/llama-3.1-405b-instruct",
+    # "mistral-large": "mistralai/mistral-large",
+    # "llama-3.1-405b": "meta-llama/llama-3.1-405b-instruct",
     # Medium
-    "llama-3.1-70b": "meta-llama/llama-3.1-70b-instruct",
-    "mixtral-8x7b": "mistralai/mixtral-8x7b-instruct",
+    # "llama-3.1-70b": "meta-llama/llama-3.1-70b-instruct",
+    # "mixtral-8x7b": "mistralai/mixtral-8x7b-instruct",
     # Small
     "llama-3.1-8b": "meta-llama/llama-3.1-8b-instruct",
     "mistral-7b": "mistralai/mistral-7b-instruct",

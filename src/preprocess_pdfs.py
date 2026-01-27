@@ -58,9 +58,6 @@ def main():
                 continue
 
             # Construct paths
-            # The CSV path is like "GDC Data Thyroid/..."
-            # We moved "GDC Data Thyroid" into "data/raw/"
-            # So the new path is data/raw/ + pdf_rel_path
             pdf_path = RAW_DIR / pdf_rel_path
             output_path = PARSED_DIR / f"{patient_id}.md"
 
