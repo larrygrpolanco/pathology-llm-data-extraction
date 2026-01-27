@@ -58,7 +58,9 @@ def main():
                 continue
 
             # Construct paths
-            pdf_path = RAW_DIR / pdf_rel_path
+            # The CSV path is like "data/raw/GDC Data Thyroid/..."
+            # We join with BASE_DIR since the relative path already starts with data/raw/
+            pdf_path = BASE_DIR / pdf_rel_path
             output_path = PARSED_DIR / f"{patient_id}.md"
 
             if output_path.exists():
