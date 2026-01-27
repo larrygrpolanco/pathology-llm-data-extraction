@@ -51,18 +51,19 @@ Extract the following fields into a standard JSON format:
 1. histologic_type (Use "Papillary Thyroid Carcinoma" or "Other")
 2. histologic_variant (Extracted variant. MUST be one of: "Classical", "Follicular", "Tall Cell", "Columnar Cell", or "Not Available")
    *Note: If the report indicates "Papillary Thyroid Carcinoma" but doesn't specify a variant, use "Classical".*
-3. pathologic_T (Text, e.g., "pT1a")
-4. pathologic_N (Text, e.g., "pN0", "pNx")
-5. pathologic_M (Text, e.g., "pM0", "Not Available")
-6. extrathyroidal_extension (MUST be one of: "No ETE", "Microscopic", "Gross", or "Not Available")
-7. margins (MUST be one of: "R0", "R1", "R2", or "Not Available")
-8. focality (Text, e.g., "Unifocal", "Multifocal")
-9. lymph_nodes_examined_count (Integer or null if not stating a count)
-10. lymph_nodes_positive_count (Integer or null if not stating a count)
+3. tumor_size (Float representing the maximum dimension of the tumor in cm, e.g., 2.5. Use null if not available)
+4. pathologic_T (Text, e.g., "pT1a")
+5. pathologic_N (Text, e.g., "pN0", "pN1a". If lymph nodes were not resected or the status is unknown, use null)
+6. pathologic_M (Text, e.g., "pM0", "pM1". If distant metastasis was not assessed or status is unknown, use null)
+7. extrathyroidal_extension (MUST be one of: "No ETE", "Microscopic", "Gross", or "Not Available")
+8. margins (MUST be one of: "R0", "R1", "R2", or "Not Available")
+9. focality (Text, e.g., "Unifocal", "Multifocal")
+10. lymph_nodes_examined_count (Integer or null if not stating a count)
+11. lymph_nodes_positive_count (Integer or null if not stating a count)
 
 Consistency is key. Use strict names for variants. If a variant is "follicular variant of papillary carcinoma", just use "Follicular".
 Return ONLY valid JSON. Do not include markdown formatting (```json ... ```).
-If a field is not available or not applicable, use null or "Not Available".
+If a field is not available or not applicable, use null or "Not Available" as specified.
 """
 
 def get_completed_runs():
@@ -142,7 +143,9 @@ def main():
     patients = []
     with open(GOLD_STANDARD_CSV, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
-        patients = list(reader)
+        # For verification, only run on a few specific cases
+        verification_ids = ['TCGA-DJ-A2Q6', 'TCGA-FK-A3SE', 'TCGA-DJ-A2QA', 'TCGA-EL-A3GR', 'TCGA-EL-A3T7']
+        patients = [row for row in reader if row.get('patient_id') in verification_ids]
 
     print(f"Starting inference on {len(patients)} cases across {len(MODELS)} models...")
 

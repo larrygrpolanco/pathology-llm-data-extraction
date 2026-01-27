@@ -14,6 +14,7 @@ ANALYSIS_OUTPUT_DIR = BASE_DIR / "output" / "analysis"
 FIELDS_TO_COMPARE = [
     "histologic_type",
     "histologic_variant",
+    "tumor_size",
     "pathologic_T",
     "pathologic_N",
     "pathologic_M",

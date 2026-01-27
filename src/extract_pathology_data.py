@@ -136,6 +136,21 @@ def parse_clinical_xml(xml_path):
         data['lymph_nodes_examined_count'] = nodes_examined.text if nodes_examined is not None else "Not Available"
         data['lymph_nodes_positive_count'] = nodes_positive.text if nodes_positive is not None else "Not Available"
         
+        # 9. Tumor Size (Max dimension in cm)
+        tumor_size = 0.0
+        dims = patient.find(".//thca:neoplasm_dimension", NAMESPACES)
+        if dims is not None:
+            for dim_tag in ["thca:neoplasm_length", "thca:neoplasm_width", "thca:neoplasm_depth"]:
+                dim_elem = dims.find(dim_tag, NAMESPACES)
+                if dim_elem is not None and dim_elem.text:
+                    try:
+                        val = float(dim_elem.text)
+                        if val > tumor_size:
+                            tumor_size = val
+                    except ValueError:
+                        pass
+        data['tumor_size'] = tumor_size if tumor_size > 0 else "Not Available"
+        
         return data
 
     except Exception as e:
