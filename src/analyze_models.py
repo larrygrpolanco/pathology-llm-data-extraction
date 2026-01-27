@@ -20,7 +20,7 @@ FIELDS_TO_COMPARE = [
     "margins",
     "focality",
     "lymph_nodes_resected",
-    "lymph_nodes_examined_count",
+    # "lymph_nodes_examined_count",
     "lymph_nodes_positive_count"
 ]
 
