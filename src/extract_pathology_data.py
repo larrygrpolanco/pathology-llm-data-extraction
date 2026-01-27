@@ -11,6 +11,11 @@ MANIFEST_FILE = RAW_DIR / "gdc_manifest.2026-01-23.102905.txt"
 DOWNLOAD_DIR = RAW_DIR / "gdc_download_20260123_154153.943271"
 OUTPUT_CSV = DATA_DIR / "gold_standard" / "thyroid_gold_standard.csv"
 
+# Strict Histologic Categories for logging/verification
+HISTOLOGIC_VARIANTS = ["Classical", "Follicular", "Tall Cell", "Columnar Cell", "Not Available"]
+ETE_CATEGORIES = ["No ETE", "Microscopic", "Gross", "Not Available"]
+MARGINS_CATEGORIES = ["R0", "R1", "R2", "Not Available"]
+
 # Namespaces
 NAMESPACES = {
     'admin': 'http://tcga.nci/bcr/xml/administration/2.7',
@@ -50,9 +55,28 @@ def parse_clinical_xml(xml_path):
 
         data = {}
         
-        # 1. Histologic Type
-        hist_type = patient.find(".//shared:histological_type", NAMESPACES)
-        data['histologic_type'] = hist_type.text if hist_type is not None else "Not Available"
+        # 1. Histologic Type & Variant
+        hist_raw = patient.find(".//shared:histological_type", NAMESPACES)
+        hist_text = (hist_raw.text if (hist_raw is not None and hist_raw.text is not None) else "Not Available").strip()
+        
+        data['histologic_type'] = "Papillary Thyroid Carcinoma"
+        data['histologic_variant'] = "Not Available"
+        
+        if hist_text != "Not Available":
+            if " - " in hist_text:
+                variant_raw = hist_text.split(" - ")[1]
+                if "Classical" in variant_raw:
+                    data['histologic_variant'] = "Classical"
+                elif "Follicular" in variant_raw:
+                    data['histologic_variant'] = "Follicular"
+                elif "Tall Cell" in variant_raw:
+                    data['histologic_variant'] = "Tall Cell"
+                elif "Columnar" in variant_raw:
+                    data['histologic_variant'] = "Columnar Cell"
+                else:
+                    data['histologic_variant'] = variant_raw
+            elif "Other" in hist_text:
+                data['histologic_type'] = "Other"
         
         # 2. Pathologic Stage
         # stage = patient.find(".//shared_stage:pathologic_stage", NAMESPACES)
@@ -73,8 +97,31 @@ def parse_clinical_xml(xml_path):
             data['pathologic_M'] = m.text if m is not None else "Not Available"
             
         # 6. Extrathyroidal Extension
-        ete = patient.find(".//thca:extrathyroid_carcinoma_present_extension_status", NAMESPACES)
-        data['extrathyroidal_extension'] = ete.text if ete is not None else "Not Available"
+        ete_raw = patient.find(".//thca:extrathyroid_carcinoma_present_extension_status", NAMESPACES)
+        ete_text = (ete_raw.text if (ete_raw is not None and ete_raw.text is not None) else "Not Available").strip().lower()
+        
+        if any(x in ete_text for x in ["none", "not identified"]):
+            data['extrathyroidal_extension'] = "No ETE"
+        elif "minimal" in ete_text:
+            data['extrathyroidal_extension'] = "Microscopic"
+        elif any(x in ete_text for x in ["moderate", "advanced", "gross"]):
+            data['extrathyroidal_extension'] = "Gross"
+        elif ete_text == "not available":
+            data['extrathyroidal_extension'] = "Not Available"
+        else:
+            # Fallback but strip suffixes like (T3)
+            import re
+            clean_ete = re.sub(r'\(T\d[abc]?\)', '', ete_text).strip().capitalize()
+            data['extrathyroidal_extension'] = clean_ete if clean_ete else "Not Available"
+
+        # 7. Margins (Residual Tumor)
+        margins_raw = patient.find(".//clin_shared:residual_tumor", NAMESPACES)
+        margins_text = (margins_raw.text if (margins_raw is not None and margins_raw.text is not None) else "Not Available").strip().upper()
+        
+        if margins_text in ["R0", "R1", "R2"]:
+            data['margins'] = margins_text
+        else:
+            data['margins'] = "Not Available"
         
         # 7. Focality
         focality = patient.find(".//thca:primary_neoplasm_focus_type", NAMESPACES)

@@ -6,6 +6,7 @@ import requests
 import pandas as pd
 from pathlib import Path
 from dotenv import load_dotenv
+from groq import Groq
 
 # Load environment variables
 load_dotenv()
@@ -21,32 +22,45 @@ OUTPUT_CSV = OUTPUT_DIR / "model_outputs.csv"
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
-# Model definition (Scale: Large, Medium, Small)
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+
+# Initialize Clients
+groq_client = None
+if GROQ_API_KEY:
+    groq_client = Groq(api_key=GROQ_API_KEY)
+
+# Model definition (Alias: {id, provider})
 MODELS = {
-    # Large
-    "mistral-large": "mistralai/mistral-large",
-    "llama-3.1-405b": "meta-llama/llama-3.1-405b-instruct",
-    # Medium
-    "llama-3.1-70b": "meta-llama/llama-3.1-70b-instruct",
-    "mixtral-8x7b": "mistralai/mixtral-8x7b-instruct",
-    # Small
-    "llama-3.1-8b": "meta-llama/llama-3.1-8b-instruct",
-    "mistral-7b": "mistralai/mistral-7b-instruct",
+    # Groq Models
+    # "llama-3.1-8b-instant": {"id": "llama-3.1-8b-instant", "provider": "groq"},
+    # "llama-3.3-70b-versatile": {"id": "llama-3.3-70b-versatile", "provider": "groq"},
+    "gpt-oss-120b": {"id": "openai/gpt-oss-120b", "provider": "groq"},
+    "gpt-oss-20b": {"id": "openai/gpt-oss-20b", "provider": "groq"},
+    # "kimi-k2-instruct": {"id": "moonshotai/kimi-k2-instruct-0905", "provider": "groq"},
+    # "qwen3-32b": {"id": "qwen/qwen3-32b", "provider": "groq"},
+    
+    # OpenRouter Models
+    # "mistral-large": {"id": "mistralai/mistral-large", "provider": "openrouter"},
+    # "llama-3.1-405b": {"id": "meta-llama/llama-3.1-405b-instruct", "provider": "openrouter"},
 }
 
 # Prompt
 SYSTEM_PROMPT = """You are an expert pathologist assistant. Your task is to extract structured data from the provided Thyroid Pathology Report.
 
 Extract the following fields into a standard JSON format:
-1. histologic_type (Text, e.g., "Papillary carcinoma")
-2. pathologic_T (Text, e.g., "pT1a")
-3. pathologic_N (Text, e.g., "pN0", "pNx")
-4. pathologic_M (Text, e.g., "pM0", "Not Available")
-5. extrathyroidal_extension (Text, present/absent/minimal/etc.)
-6. focality (Text, e.g., "Unifocal", "Multifocal")
-7. lymph_nodes_examined_count (Integer or null if not stating a count)
-8. lymph_nodes_positive_count (Integer or null if not stating a count)
+1. histologic_type (Use "Papillary Thyroid Carcinoma" or "Other")
+2. histologic_variant (Extracted variant. MUST be one of: "Classical", "Follicular", "Tall Cell", "Columnar Cell", or "Not Available")
+   *Note: If the report indicates "Papillary Thyroid Carcinoma" but doesn't specify a variant, use "Classical".*
+3. pathologic_T (Text, e.g., "pT1a")
+4. pathologic_N (Text, e.g., "pN0", "pNx")
+5. pathologic_M (Text, e.g., "pM0", "Not Available")
+6. extrathyroidal_extension (MUST be one of: "No ETE", "Microscopic", "Gross", or "Not Available")
+7. margins (MUST be one of: "R0", "R1", "R2", or "Not Available")
+8. focality (Text, e.g., "Unifocal", "Multifocal")
+9. lymph_nodes_examined_count (Integer or null if not stating a count)
+10. lymph_nodes_positive_count (Integer or null if not stating a count)
 
+Consistency is key. Use strict names for variants. If a variant is "follicular variant of papillary carcinoma", just use "Follicular".
 Return ONLY valid JSON. Do not include markdown formatting (```json ... ```).
 If a field is not available or not applicable, use null or "Not Available".
 """
@@ -63,7 +77,7 @@ def get_completed_runs():
     except Exception:
         return set()
 
-def call_openrouter(model_id, prompt, model_alias):
+def call_openrouter(model_id, prompt):
     headers = {
         "Authorization": f"Bearer {OPENROUTER_API_KEY}",
         "Content-Type": "application/json",
@@ -89,11 +103,26 @@ def call_openrouter(model_id, prompt, model_alias):
     except Exception as e:
         return str(e), "error"
 
-def main():
-    if not OPENROUTER_API_KEY:
-        print("Error: OPENROUTER_API_KEY not found in .env")
-        return
+def call_groq(model_id, prompt):
+    if not groq_client:
+        return "Groq client not initialized (check GROQ_API_KEY)", "error"
+        
+    try:
+        chat_completion = groq_client.chat.completions.create(
+            messages=[
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": prompt},
+            ],
+            model=model_id,
+            temperature=0.0,
+            response_format={"type": "json_object"}
+        )
+        content = chat_completion.choices[0].message.content
+        return content, "success"
+    except Exception as e:
+        return str(e), "error"
 
+def main():
     # Ensure output directory exists
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     
@@ -123,23 +152,24 @@ def main():
         # Check for parsed markdown
         md_path = PARSED_DIR / f"{patient_id}.md"
         if not md_path.exists():
-            # If parsing is still running or failed, skip
-            # print(f"Skipping {patient_id}: parsed MD not found (yet).")
             continue
             
         with open(md_path, 'r', encoding='utf-8') as f:
             report_text = f.read()
 
-        for model_alias, model_id in MODELS.items():
+        for model_alias, config in MODELS.items():
             if (patient_id, model_alias) in completed_runs:
                 continue
                 
-            print(f"[{i+1}/{len(patients)}] Processing {patient_id} on {model_alias}...")
+            print(f"[{i+1}/{len(patients)}] Processing {patient_id} on {model_alias} ({config['provider']})...")
             
             # API Call
-            raw_response, status = call_openrouter(model_id, report_text, model_alias)
+            if config['provider'] == 'groq':
+                raw_response, status = call_groq(config['id'], report_text)
+            else:
+                raw_response, status = call_openrouter(config['id'], report_text)
             
-            # Try parsing JSON to ensure it's valid (metrics script will do deep check)
+            # Try parsing JSON to ensure it's valid
             parsed_json = ""
             if status == "success":
                 try:
@@ -150,23 +180,21 @@ def main():
                 except json.JSONDecodeError:
                     parsed_json = "JSON_DECODE_ERROR"
             
-            # Allow saving invalid JSON to debug later
-            
             # Append to CSV
             with open(OUTPUT_CSV, 'a', newline='', encoding='utf-8') as f:
                 writer = csv.writer(f)
                 writer.writerow([
                     patient_id,
                     model_alias,
-                    model_id,
+                    config['id'],
                     time.strftime("%Y-%m-%d %H:%M:%S"),
                     status,
                     raw_response,
                     parsed_json
                 ])
                 
-            # Rate limiting / Politeness
-            time.sleep(1)
+            # Rate limiting / Politeness (Groq is faster, but let's keep it safe)
+            time.sleep(0.5)
 
     print("Inference run complete (or caught up).")
 

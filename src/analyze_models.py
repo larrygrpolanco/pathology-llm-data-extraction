@@ -13,10 +13,12 @@ ANALYSIS_OUTPUT_DIR = BASE_DIR / "output" / "analysis"
 
 FIELDS_TO_COMPARE = [
     "histologic_type",
+    "histologic_variant",
     "pathologic_T",
     "pathologic_N",
     "pathologic_M",
     "extrathyroidal_extension",
+    "margins",
     "focality",
     "lymph_nodes_examined_count",
     "lymph_nodes_positive_count"
@@ -36,7 +38,11 @@ def normalize_value(val):
     if s in ["null", "none", "nan", "not available", "not applicable", "unknown"]:
         return "not available"
         
-    # Remove 'p' prefix for TNM (e.g. pt1b -> t1b, pn1 -> n1)
+    # Map "papillary" to "classical" since PTC pure is often considered classical variant here
+    if s == "papillary":
+        return "classical"
+        
+    # Remove 'p' prefix for TNM
     if s.startswith("p") and len(s) > 1 and s[1] in ["t", "n", "m"]:
         s = s[1:]
         
@@ -72,30 +78,22 @@ def is_match(pred, true):
     return False
 
 def calculate_metrics(y_true, y_pred):
-    """Calculate Precision, Recall, and F1."""
-    # We treat any non-match as incorrect.
-    # To use sklearn metrics, we need to map values to integers or handle them as classes.
-    # However, since we want F1/Precision/Recall per model per field, and our 'classes' are arbitrary,
-    # we can simplify: 
-    # Accuracy = Matches / Total
-    # For Precision/Recall/F1 in a multi-class setting where we care about "correctness" overall:
+    """Calculate Precision, Recall, and F1 by aligning matches to ground truth labels."""
+    y_true_norm = [normalize_value(v) for v in y_true]
+    y_pred_norm = [normalize_value(v) for v in y_pred]
     
-    matches = [is_match(p, t) for p, t in zip(y_pred, y_true)]
-    accuracy = sum(matches) / len(matches) if matches else 0
+    # Map predictions that "match" to the actual gold standard label for sklearn
+    y_pred_aligned = []
+    for p, t in zip(y_pred_norm, y_true_norm):
+        if is_match(p, t):
+            y_pred_aligned.append(t)
+        else:
+            y_pred_aligned.append(p)
+            
+    accuracy = sum(1 for p, t in zip(y_pred_aligned, y_true_norm) if p == t) / len(y_true_norm) if y_true_norm else 0
     
-    # For a more nuanced F1, we could treat each unique value as a class, 
-    # but the user asked for F1 per data point (field). 
-    # Usually, F1 per field in this context means treating the extraction as a classification task.
-    
-    # Let's provide a simple report based on matches for now, 
-    # but also use sklearn for macro-averaging if possible.
     try:
-        # Normalize all for sklearn
-        y_true_norm = [normalize_value(v) for v in y_true]
-        y_pred_norm = [normalize_value(v) for v in y_pred]
-        
-        # We use 'weighted' to account for class imbalance in the specific values
-        p, r, f1, _ = precision_recall_fscore_support(y_true_norm, y_pred_norm, average='weighted', zero_division=0)
+        p, r, f1, _ = precision_recall_fscore_support(y_true_norm, y_pred_aligned, average='weighted', zero_division=0)
         return accuracy, p, r, f1
     except:
         return accuracy, 0, 0, 0

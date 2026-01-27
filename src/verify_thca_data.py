@@ -16,9 +16,13 @@ def run_checks():
     incomplete_rows = 0
     column_missing_counts = {}
     value_distributions = {
+        'histologic_type': {},
+        'histologic_variant': {},
         'pathologic_T': {},
         'pathologic_N': {},
         'pathologic_M': {},
+        'extrathyroidal_extension': {},
+        'margins': {},
         'data_quality_flag': {}
     }
     file_existence_errors = []

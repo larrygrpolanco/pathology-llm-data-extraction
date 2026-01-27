@@ -4,4 +4,5 @@ llama-parse
 python-dotenv
 pandas
 scikit-learn
+groq
 
