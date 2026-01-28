@@ -17,7 +17,11 @@ DATA_DIR = BASE_DIR / "data"
 PARSED_DIR = DATA_DIR / "parsed_reports"
 GOLD_STANDARD_CSV = DATA_DIR / "gold_standard" / "thyroid_gold_standard.csv"
 OUTPUT_DIR = BASE_DIR / "output" / "inference_logs"
-OUTPUT_CSV = OUTPUT_DIR / "model_outputs.csv"
+
+def get_output_path(model_alias):
+    """Returns the path to the log file for a specific model."""
+    sanitized_name = model_alias.replace("/", "_").replace(":", "_")
+    return OUTPUT_DIR / f"model_{sanitized_name}.csv"
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
@@ -33,11 +37,11 @@ if GROQ_API_KEY:
 MODELS = {
     # Groq Models
     "llama-3.1-8b-instant": {"id": "llama-3.1-8b-instant", "provider": "groq"},
-    # "llama-3.3-70b-versatile": {"id": "llama-3.3-70b-versatile", "provider": "groq"},
-    # "gpt-oss-120b": {"id": "openai/gpt-oss-120b", "provider": "groq"},
+    "llama-3.3-70b-versatile": {"id": "llama-3.3-70b-versatile", "provider": "groq"},
+    "gpt-oss-120b": {"id": "openai/gpt-oss-120b", "provider": "groq"},
     "gpt-oss-20b": {"id": "openai/gpt-oss-20b", "provider": "groq"},
     # "kimi-k2-instruct": {"id": "moonshotai/kimi-k2-instruct-0905", "provider": "groq"},
-    # "qwen3-32b": {"id": "qwen/qwen3-32b", "provider": "groq"},
+    "qwen3-32b": {"id": "qwen/qwen3-32b", "provider": "groq"},
     
     # OpenRouter Models
     # "mistral-large": {"id": "mistralai/mistral-large", "provider": "openrouter"},
@@ -69,21 +73,21 @@ Extract the following fields into a standard JSON format:
 6. tumor_site (Use "Right lobe", "Left lobe", "Isthmus", or "Bilateral" mentioned in report or if both lobes involved.)
 7. focality (Use "Unifocal" or "Multifocal" based on report.)
 8. lymph_nodes_resected (Use "yes" or "no" to indicate if any lymph nodes were resected/examined.)
-9. lymph_nodes_positive_count (Integer. Sum positive counts from ALL specimens/levels. Must be <= examined_count. Use 0 if all nodes are negative.)
+9. lymph_nodes_positive_count (Integer. Sum positive counts from ALL specimens/levels. Use 0 if all nodes are negative. Use null if lymph_nodes_resected is "no".)
 
 Return ONLY valid JSON. If a field is not present in the report, use null.
 Do not attempt to assess pathologic staging (T, N, M); focus only on extraction.
 """
 
-def get_completed_runs():
-    """Returns a set of (patient_id, model_name) that have already been processed."""
-    if not OUTPUT_CSV.exists():
+def get_completed_runs(model_alias):
+    """Returns a set of patient_ids that have already been processed for a specific model."""
+    output_csv = get_output_path(model_alias)
+    if not output_csv.exists():
         return set()
     
     try:
-        df = pd.read_csv(OUTPUT_CSV)
-        # Create a set of tuples
-        return set(zip(df['patient_id'], df['model_name']))
+        df = pd.read_csv(output_csv)
+        return set(df['patient_id'].astype(str))
     except Exception:
         return set()
 
@@ -136,13 +140,13 @@ def main():
     # Ensure output directory exists
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     
-    # Initialize CSV if needed
-    if not OUTPUT_CSV.exists():
-        with open(OUTPUT_CSV, 'w', newline='', encoding='utf-8') as f:
-            writer = csv.writer(f)
-            writer.writerow(['patient_id', 'model_name', 'model_id', 'timestamp', 'status', 'raw_response', 'parsed_json'])
-
-    completed_runs = get_completed_runs()
+    # Initialize log files for each model
+    for model_alias in MODELS.keys():
+        output_csv = get_output_path(model_alias)
+        if not output_csv.exists():
+            with open(output_csv, 'w', newline='', encoding='utf-8') as f:
+                writer = csv.writer(f)
+                writer.writerow(['patient_id', 'model_name', 'model_id', 'timestamp', 'status', 'raw_response', 'parsed_json'])
     
     # Load Gold Standard
     if not GOLD_STANDARD_CSV.exists():
@@ -168,7 +172,9 @@ def main():
             report_text = f.read()
 
         for model_alias, config in MODELS.items():
-            if (patient_id, model_alias) in completed_runs:
+            # Check if this patient was already processed for THIS model
+            completed_patients = get_completed_runs(model_alias)
+            if patient_id in completed_patients:
                 continue
                 
             print(f"[{i+1}/{len(patients)}] Processing {patient_id} on {model_alias} ({config['provider']})...")
@@ -190,8 +196,9 @@ def main():
                 except json.JSONDecodeError:
                     parsed_json = "JSON_DECODE_ERROR"
             
-            # Append to CSV
-            with open(OUTPUT_CSV, 'a', newline='', encoding='utf-8') as f:
+            # Append to model-specific CSV
+            output_csv = get_output_path(model_alias)
+            with open(output_csv, 'a', newline='', encoding='utf-8') as f:
                 writer = csv.writer(f)
                 writer.writerow([
                     patient_id,

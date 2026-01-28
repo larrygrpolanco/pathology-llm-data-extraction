@@ -8,7 +8,7 @@ from sklearn.metrics import precision_recall_fscore_support
 # Configuration
 BASE_DIR = Path(__file__).resolve().parent.parent
 GOLD_STANDARD_CSV = BASE_DIR / "data" / "gold_standard" / "thyroid_gold_standard.csv"
-MODEL_OUTPUTS_CSV = BASE_DIR / "output" / "inference_logs" / "model_outputs.csv"
+INFERENCE_LOGS_DIR = BASE_DIR / "output" / "inference_logs"
 ANALYSIS_OUTPUT_DIR = BASE_DIR / "output" / "analysis"
 
 FIELDS_TO_COMPARE = [
@@ -110,15 +110,40 @@ def calculate_metrics(y_true, y_pred):
         return accuracy, 0, 0, 0
 
 def main():
-    if not MODEL_OUTPUTS_CSV.exists():
-        print("No model outputs found.")
+    if not INFERENCE_LOGS_DIR.exists():
+        print("No inference logs directory found.")
         return
 
+    # Find all model CSV files
+    log_files = list(INFERENCE_LOGS_DIR.glob("model_*.csv"))
+    if not log_files:
+        # Check if the old model_outputs.csv exists as a fallback
+        old_log = INFERENCE_LOGS_DIR / "model_outputs.csv"
+        if old_log.exists():
+            log_files = [old_log]
+        else:
+            print("No model log files found (model_*.csv).")
+            return
+
+    print(f"Loading logs from {len(log_files)} files...")
+    all_logs = []
+    for f in log_files:
+        try:
+            df = pd.read_csv(f)
+            all_logs.append(df)
+        except Exception as e:
+            print(f"Warning: Could not read {f.name}: {e}")
+
+    if not all_logs:
+        print("No data found in any log files.")
+        return
+
+    model_df = pd.concat(all_logs, ignore_index=True)
+    
     ANALYSIS_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    # Load Data
+    # Load Gold Standard
     gold_df = pd.read_csv(GOLD_STANDARD_CSV)
-    model_df = pd.read_csv(MODEL_OUTPUTS_CSV)
     
     # Filter for success
     model_df = model_df[model_df['status'] == 'success']
