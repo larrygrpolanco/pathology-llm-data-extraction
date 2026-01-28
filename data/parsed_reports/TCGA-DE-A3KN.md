@@ -1,0 +1,145 @@
+
+# SURGICAL PATHOLOGY
+
+| Diagnosis: |                                                                                                                                                                                                                      |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| A:         | Lymph node, superior thyroid pole, removal                                                                                                                                                                           |
+|            | - Consistent with metastatic papillary carcinoma of thyroid in 1 of 1 lymph node (1/1) with complete effacement of lymph node architecture; maximum size of metastasis 0.5 cm; negative for extracapsular extension. |
+| B:         | Lymph node, superior thyroid pole, removal                                                                                                                                                                           |
+|            | - Metastatic papillary carcinoma of thyroid in 1 of 1 lymph node (1/1); maximum size of metastasis 0.6 cm; focal extracapsular extension identified.                                                                 |
+| C:         | Thyroid gland, total thyroidectomy                                                                                                                                                                                   |
+
+| Tumor histologic type:                   | papillary carcinoma of thyroid, mixed follicular and papillary variants                                      |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Tumor size:                              | 4.5 cm                                                                                                       |
+| Tumor growth pattern:                    | infiltrative                                                                                                 |
+| Tumor focality:                          | left lobe, unifocal                                                                                          |
+| Extent of invasion:                      |                                                                                                              |
+| Capsular Invasion:                       | not applicable                                                                                               |
+| Lymphovascular:                          | not identified                                                                                               |
+| Blood vascular:                          | not identified                                                                                               |
+| Extra thyroidal extension:               | present, focal extension into perithyroidal soft tissues (C4)                                                |
+| Surgical margins:                        | carcinoma focally abuts the black inked posterior margin (C5), remaining margins negative for definite tumor |
+| Status of thyroid gland away from tumor: | unremarkable                                                                                                 |
+| Lymph nodes:                             | separately submitted, total lymph node count for all specimens                                               |
+
+
+
+
+
+
+# Pathologic Report
+
+is 5 of 9 lymph nodes involved by metastatic papillary carcinoma (5/9)
+
+Size of largest metastasis (greatest dimension): 0.6
+
+Extracapsular (perinodal) extension: focally present:
+
+# AJCC PATHOLOGIC TNM STAGE
+
+pT3 pNlb
+
+NOTE: This pathologic stage assessment is based on information available at the time of this report and is subject to change pending clinical review and additional information.
+
+# D: Central lymph nodes and thymus, thymectomy and lymph node removal
+
+- Metastatic papillary carcinoma of thyroid in 3 of 7 lymph nodes (3/7); maximum size of metastasis 0.6 cm; negative for extracapsular extension
+- Benign thymic tissue
+
+Comment:
+
+- The frozen section diagnosis is confirmed.
+
+# Intraoperative Consult Diagnosis:
+
+An intraoperative consultation was requested by Dr. from at on
+
+# FSA1: Lymph node, superior thyroid pole, biopsy
+
+- Follicular neoplasm with features suspicious for follicular variant of papillary carcinoma
+- No lymphoid tissue present, but cannot exclude metastatic tumor
+- Dr. concurs
+
+Drs. at
+
+Frozen Section Pathologist:, MD
+
+# Clinical History:
+
+-year-old female with left thyroid nodule. FNA shows malignancy favoring papillary carcinoma.
+
+Gross Description: 0
+
+
+
+
+
+
+# Specimen A
+
+Specimen A is received in one appropriately labeled container, additionally labeled "superior thyroid pole lymph node" and holds a 0.4 x 0.2 x 0.1 cm pink/tan soft tissue fragment that is entirely frozen as FSA1.
+
+# Specimen B
+
+Specimen B is received in one appropriately labeled container, additionally labeled "superior thyroid pole lymph node 2" and holds a white/tan lymph node candidate that measures 0.5 x 0.5 x 0.3 cm. The lymph node candidate is sectioned and entirely submitted in block B1.
+
+# Specimen C
+
+Specimen fixation: Formalin
+
+Type of specimen: Total thyroidectomy
+
+Size and weight of specimen: Overall 7.2 x 5.4 x 2.8 cm; right lobe (4.4 x 2.2 x 2.4 cm); left (5.2 x 4.2 x 2.8 cm); weight: 29 grams.
+
+Orientation: Anterior/blue, posterior/black, isthmus/yellow. The specimen is oriented noting that the tumor is located in the left lobe.
+
+Tumor location: Left lobe
+
+Focality: Unifocal
+
+Tumor description: A very firm solitary unencapsulated mass (4.5 x 2.5 x 2.0 cm) is noted expanding the mid portion of the left thyroid lobe. The cut surface is yellow/tan, solid and lobulated with scattered calcifications. No areas of hemorrhage or necrosis are grossly observed. The mass appears well-circumscribed with compression of the adjacent residual thyroid parenchyma.
+
+Tumor size: 4.5 x 2.5 x 2.0 cm
+
+
+
+
+
+
+# Confinement/non-confinement: Confined
+
+Distance of tumor to surgical margins: The mass grossly abuts the blue inked and black inked anterior and posterior margins, respectively. No extension into the isthmus is grossly identified.
+
+Appearance of thyroid gland away from tumor: The remainder of thyroid parenchyma in the left lobe is red/tan and compressed. The isthmus and right thyroid lobe are grossly unremarkable.
+
+Parathyroids: Not identified
+
+Tissue submitted for special investigations: Tumor was collected for tissue procurement.
+
+Lymph nodes: N/A
+
+Digital photograph taken: N/A
+
+# Block Summary:
+
+- Cl-C5 - Representative mass with margins and adjacent thyroid
+- C6 - Left thyroid lobe at edge of tumor, in continuity with grossly identified tumor
+- C7 - Isthmus
+- C8-C9 - Representative sections of right thyroid lobe
+
+Specimen D is received in one appropriately labeled container, additionally labeled "central lymph nodes and thymus" and holds a firm, nodular pink/tan tissue fragment that measures 4.0 x 2.2 x 0.3 cm. The tissue fragment has a matted appearance and with gentle palpation separates into three tissue fragments. The largest fragment is composed of grey-tan lobulated tissue and presumed to represent thymic tissue. The remaining fragments are presumed to represent the "central lymph nodes" and submitted per block.
+
+
+
+
+
+
+# Summary
+
+# Block Summary:
+
+- Dl-D2 - ? thymus
+- D3 - One candidate lymph node, sectioned
+- D4 - One candidate lymph node, sectioned
+

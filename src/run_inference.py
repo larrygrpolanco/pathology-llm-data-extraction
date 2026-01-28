@@ -32,7 +32,7 @@ if GROQ_API_KEY:
 # Model definition (Alias: {id, provider})
 MODELS = {
     # Groq Models
-    # "llama-3.1-8b-instant": {"id": "llama-3.1-8b-instant", "provider": "groq"},
+    "llama-3.1-8b-instant": {"id": "llama-3.1-8b-instant", "provider": "groq"},
     # "llama-3.3-70b-versatile": {"id": "llama-3.3-70b-versatile", "provider": "groq"},
     # "gpt-oss-120b": {"id": "openai/gpt-oss-120b", "provider": "groq"},
     # "gpt-oss-20b": {"id": "openai/gpt-oss-20b", "provider": "groq"},
@@ -42,7 +42,7 @@ MODELS = {
     # OpenRouter Models
     # "mistral-large": {"id": "mistralai/mistral-large", "provider": "openrouter"},
     # "llama-3.1-405b": {"id": "meta-llama/llama-3.1-405b-instruct", "provider": "openrouter"},
-    "deepseek-v3.2": {"id": "deepseek/deepseek-v3.2", "provider": "openrouter"},
+    # "deepseek-v3.2": {"id": "deepseek/deepseek-v3.2", "provider": "openrouter"},
     # "claude-3.7-sonnet": {"id": "anthropic/claude-3.7-sonnet", "provider": "openrouter"},
 
 }

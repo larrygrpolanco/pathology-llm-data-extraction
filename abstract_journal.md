@@ -5,22 +5,21 @@
 
 To address both **high-performance requirements** at NCI-designated centers and **global health access**, we categorize models into deployment tiers rather than simply "best vs. worst." This framework acknowledges that a 50% cost reduction enabling deployment in low-resource settings is ethically preferable to marginal gains for wealthy institutions.
 
-**Exclusion Note**: `lymph_nodes_examined_count` removed from primary analysis due to systematic ground truth parsing ambiguities. Analysis focuses on 8 remaining prognostic fields.
 
 #### **Tier 1: Accessible (Small, ≤10B)**
-**Representative**: `llama-3.1-8b-instant` (Groq)
+**Representative**: `llama-3.1-8b`
 
 - **Role**: On-premise deployment for HIPAA-sensitive environments, global health applications, resource-limited pathology departments
-- **Performance**: Perfect accuracy (100%) on 5/8 fields: histologic_type, histologic_variant, tumor_size, margins, focality
-- **Limitations**: Extrathyroidal extension (67%), lymph node positive count (50%)
+- **Performance**: XX accuracy (XX%) on 5/8 fields: histologic_type, histologic_variant, tumor_size, margins, focality
+- **Limitations**: Extrathyroidal extension (XX%), lymph node positive count (XX%)
 - **Clinical Interpretation**: Excellent for basic registry abstraction and diagnostic confirmation; requires human verification for surgical extent (ETE) and nodal staging
 
 #### **Tier 2: Clinical Standard (Medium, 30B-70B)**
-**Representative**: `qwen3-32b` (Groq - optimized speed/cost)
+**Representative**: `qwen3-32b`
 
 - **Role**: The "sweet spot" for hospital deployment—balancing accuracy with operational cost
-- **Performance**: Perfect accuracy (100%) on 6/8 fields, specifically **correcting the 8B model's failure on extrathyroidal extension (100%) and tumor site (100%)**
-- **Limitations**: Lymph node positive count (50%) remains challenging
+- **Performance**: XX accuracy (XX%) on 6/8 fields, specifically **correcting the 8B model's failure on extrathyroidal extension (XX%) and tumor site (XX%)**
+- **Limitations**: Lymph node positive count (XX%) remains challenging
 - **Clinical Interpretation**: Suitable for surgical abstraction and AJCC staging (T-category); ETE accuracy critical for risk stratification
 
 #### **Tier 3: Maximum Accuracy (Large, &gt;70B)**
