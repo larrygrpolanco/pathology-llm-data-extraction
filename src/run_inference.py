@@ -3,7 +3,6 @@ import csv
 import json
 import time
 import requests
-import pandas as pd
 from pathlib import Path
 from dotenv import load_dotenv
 from groq import Groq
@@ -44,7 +43,7 @@ MODELS = {
     "qwen3-32b": {"id": "qwen/qwen3-32b", "provider": "groq"},
     
     # OpenRouter Models
-    # "mistral-large": {"id": "mistralai/mistral-large", "provider": "openrouter"},
+    "mistral-large": {"id": "mistralai/mistral-large", "provider": "openrouter"},
     # "llama-3.1-405b": {"id": "meta-llama/llama-3.1-405b-instruct", "provider": "openrouter"},
     # "deepseek-v3.2": {"id": "deepseek/deepseek-v3.2", "provider": "openrouter"},
     # "claude-3.7-sonnet": {"id": "anthropic/claude-3.7-sonnet", "provider": "openrouter"},
@@ -85,11 +84,16 @@ def get_completed_runs(model_alias):
     if not output_csv.exists():
         return set()
     
+    completed_ids = set()
     try:
-        df = pd.read_csv(output_csv)
-        return set(df['patient_id'].astype(str))
+        with open(output_csv, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                if row.get('patient_id'):
+                    completed_ids.add(row['patient_id'].strip())
     except Exception:
-        return set()
+        pass
+    return completed_ids
 
 def call_openrouter(model_id, prompt):
     headers = {
@@ -140,13 +144,17 @@ def main():
     # Ensure output directory exists
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     
-    # Initialize log files for each model
+    # Initialize log files and load completed runs cache
+    model_runs_cache = {}
     for model_alias in MODELS.keys():
         output_csv = get_output_path(model_alias)
         if not output_csv.exists():
             with open(output_csv, 'w', newline='', encoding='utf-8') as f:
                 writer = csv.writer(f)
                 writer.writerow(['patient_id', 'model_name', 'model_id', 'timestamp', 'status', 'raw_response', 'parsed_json'])
+            model_runs_cache[model_alias] = set()
+        else:
+            model_runs_cache[model_alias] = get_completed_runs(model_alias)
     
     # Load Gold Standard
     if not GOLD_STANDARD_CSV.exists():
@@ -172,9 +180,8 @@ def main():
             report_text = f.read()
 
         for model_alias, config in MODELS.items():
-            # Check if this patient was already processed for THIS model
-            completed_patients = get_completed_runs(model_alias)
-            if patient_id in completed_patients:
+            # Check if this patient was already processed for THIS model using cache
+            if patient_id in model_runs_cache.get(model_alias, set()):
                 continue
                 
             print(f"[{i+1}/{len(patients)}] Processing {patient_id} on {model_alias} ({config['provider']})...")
@@ -209,6 +216,8 @@ def main():
                     raw_response,
                     parsed_json
                 ])
+                # Update cache
+                model_runs_cache[model_alias].add(patient_id)
                 
             # Rate limiting / Politeness (Groq is faster, but let's keep it safe)
             time.sleep(0.5)
