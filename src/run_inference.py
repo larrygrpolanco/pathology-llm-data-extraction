@@ -35,7 +35,7 @@ MODELS = {
     "llama-3.1-8b-instant": {"id": "llama-3.1-8b-instant", "provider": "groq"},
     # "llama-3.3-70b-versatile": {"id": "llama-3.3-70b-versatile", "provider": "groq"},
     # "gpt-oss-120b": {"id": "openai/gpt-oss-120b", "provider": "groq"},
-    # "gpt-oss-20b": {"id": "openai/gpt-oss-20b", "provider": "groq"},
+    "gpt-oss-20b": {"id": "openai/gpt-oss-20b", "provider": "groq"},
     # "kimi-k2-instruct": {"id": "moonshotai/kimi-k2-instruct-0905", "provider": "groq"},
     # "qwen3-32b": {"id": "qwen/qwen3-32b", "provider": "groq"},
     
@@ -53,24 +53,23 @@ SYSTEM_PROMPT = """You are an expert pathologist assistant. Your task is to extr
 
 Extract the following fields into a standard JSON format:
 1. histologic_type (Use "Papillary Thyroid Carcinoma" or "Other")
-2. histologic_variant (Extracted variant. MUST be one of: "Classical", "Follicular", "Tall Cell", "Columnar Cell", or "Not Available")
+2. histologic_variant (Extracted variant. MUST be one of: "Classical", "Follicular", "Tall Cell", or "Columnar Cell")
    *Note: If "Papillary Thyroid Carcinoma" is indicated without a specific variant, or if "Classical", "Usual", "Conventional", or "FVPTC" (Follicular Variant) is mentioned, use the appropriate label ("Classical" or "Follicular").*
-3. tumor_size (Float representing the maximum dimension of the principal tumor in cm, e.g., 2.5. Convert mm to cm if necessary. Use null if not available.)
-4. extrathyroidal_extension (Categorize based on report text. Use null if unknown)
-   - "No ETE": Literal "none", "not identified", "confined to thyroid", "encapsulated", or "no extension".
-   - "Microscopic": Literal "minimal", "microscopic", or "extension to perithyroidal soft tissues" WITHOUT gross involvement.
-   - "Gross": Literal "gross", "macroscopic", or involvement of "strap muscles", "trachea", "esophagus", or "vessels".
-   *Note: If "extension" is mentioned without a qualifier, default to "Microscopic" unless "gross" is explicitly stated.*
-5. margins (Categorize based on final sign-out status. Use null if unknown)
-   - "R0": Negative margins, "no residual tumor", or "margins uninvolved". 
+3. tumor_size (Float representing the maximum dimension of the principal tumor in cm, e.g., 2.5. Convert mm to cm if necessary.)
+4. extrathyroidal_extension (Use "No ETE", "Microscopic", or "Gross" based on report.)
+   - "No ETE": e.g., "none", "not identified", "confined to thyroid", "encapsulated", or "no extension".
+   - "Microscopic": e.g., "minimal", "microscopic", or "extension to perithyroidal soft tissues" WITHOUT gross involvement.
+   - "Gross": e.g., "gross", "macroscopic", or involvement of "strap muscles", "trachea", "esophagus", or "vessels".
+   *Note: If "extension" is mentioned without a qualifier, assume "Microscopic" unless "gross" is explicitly stated.*
+5. margins (Use "R0", "R1", or "R2" based on report.)
+   - "R0": e.g., "Negative margins", "no residual tumor", or "margins uninvolved". 
    *Note: If margins are described as "narrow" (e.g. <1mm) but signed out as "Negative", use "R0".*
-   - "R1": Microscopic involvement of margins.
-   - "R2": Gross involvement of margins or gross residual tumor.
-6. tumor_site (Text: "Right lobe", "Left lobe", "Isthmus", or "Bilateral" if both lobes involved. Use null if unknown.)
-7. focality ("Unifocal" or "Multifocal")
+   - "R1": e.g., "Microscopic involvement of margins".
+   - "R2": e.g., "Gross involvement of margins or gross residual tumor".
+6. tumor_site (Use "Right lobe", "Left lobe", "Isthmus", or "Bilateral" mentioned in report or if both lobes involved.)
+7. focality (Use "Unifocal" or "Multifocal" based on report.)
 8. lymph_nodes_resected (Use "yes" or "no" to indicate if any lymph nodes were resected/examined.)
-9. lymph_nodes_examined_count (Integer. CRITICAL: Sum counts from ALL mentioned specimens/levels, e.g., "Level VI (4 nodes) + Right Neck (10 nodes)" = 14. Use 0 if "no nodes resected", null if unknown.)
-10. lymph_nodes_positive_count (Integer. Sum positive counts from ALL specimens/levels. Must be <= examined_count. Use 0 if all nodes are negative.)
+9. lymph_nodes_positive_count (Integer. Sum positive counts from ALL specimens/levels. Must be <= examined_count. Use 0 if all nodes are negative.)
 
 Return ONLY valid JSON. If a field is not present in the report, use null.
 Do not attempt to assess pathologic staging (T, N, M); focus only on extraction.
