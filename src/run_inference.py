@@ -39,11 +39,12 @@ MODELS = {
     "llama-3.3-70b-versatile": {"id": "llama-3.3-70b-versatile", "provider": "groq"},
     "gpt-oss-120b": {"id": "openai/gpt-oss-120b", "provider": "groq"},
     "gpt-oss-20b": {"id": "openai/gpt-oss-20b", "provider": "groq"},
-    # "kimi-k2-instruct": {"id": "moonshotai/kimi-k2-instruct-0905", "provider": "groq"},
+    "kimi-k2-instruct": {"id": "moonshotai/kimi-k2-instruct-0905", "provider": "groq"},
     "qwen3-32b": {"id": "qwen/qwen3-32b", "provider": "groq"},
     
     # OpenRouter Models
-    "mistral-large": {"id": "mistralai/mistral-large", "provider": "openrouter"},
+    # "mistral-large": {"id": "mistralai/mistral-large", "provider": "openrouter"},
+    "mistral-large-3": {"id": "mistralai/mistral-large-2512", "provider": "openrouter"},
     # "llama-3.1-405b": {"id": "meta-llama/llama-3.1-405b-instruct", "provider": "openrouter"},
     # "deepseek-v3.2": {"id": "deepseek/deepseek-v3.2", "provider": "openrouter"},
     # "claude-3.7-sonnet": {"id": "anthropic/claude-3.7-sonnet", "provider": "openrouter"},

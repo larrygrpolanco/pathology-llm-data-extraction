@@ -373,3 +373,322 @@ TCGA-FY-A3YR,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-28 18:11:10
    ""lymph_nodes_resected"": ""yes"",
    ""lymph_nodes_positive_count"": 4
 }","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 1.7, ""extrathyroidal_extension"": ""Microscopic"", ""margins"": ""R0"", ""tumor_site"": ""Bilateral"", ""focality"": ""Unifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 4}"
+TCGA-ET-A39L,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-28 18:11:21,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Follicular"",
+   ""tumor_size"": 5.5,
+   ""extrathyroidal_extension"": ""No ETE"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Left lobe"",
+   ""focality"": ""Unifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 0
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Follicular"", ""tumor_size"": 5.5, ""extrathyroidal_extension"": ""No ETE"", ""margins"": ""R0"", ""tumor_site"": ""Left lobe"", ""focality"": ""Unifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 0}"
+TCGA-KS-A4IB,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-28 18:11:34,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Follicular"",
+   ""tumor_size"": 3.2,
+   ""extrathyroidal_extension"": ""No ETE"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Left lobe"",
+   ""focality"": null,
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 2
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Follicular"", ""tumor_size"": 3.2, ""extrathyroidal_extension"": ""No ETE"", ""margins"": ""R0"", ""tumor_site"": ""Left lobe"", ""focality"": null, ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 2}"
+TCGA-EM-A3ST,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-28 18:11:43,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Follicular"",
+   ""tumor_size"": 5.4,
+   ""extrathyroidal_extension"": ""No ETE"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Bilateral"",
+   ""focality"": ""Multifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 0
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Follicular"", ""tumor_size"": 5.4, ""extrathyroidal_extension"": ""No ETE"", ""margins"": ""R0"", ""tumor_site"": ""Bilateral"", ""focality"": ""Multifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 0}"
+TCGA-EM-A2OY,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-28 18:11:55,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Follicular"",
+   ""tumor_size"": 2.6,
+   ""extrathyroidal_extension"": ""No ETE"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Right lobe"",
+   ""focality"": ""Multifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 0
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Follicular"", ""tumor_size"": 2.6, ""extrathyroidal_extension"": ""No ETE"", ""margins"": ""R0"", ""tumor_site"": ""Right lobe"", ""focality"": ""Multifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 0}"
+TCGA-EL-A3TA,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-28 18:12:06,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 4.0,
+   ""extrathyroidal_extension"": ""No ETE"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Left lobe"",
+   ""focality"": ""Unifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 3
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 4.0, ""extrathyroidal_extension"": ""No ETE"", ""margins"": ""R0"", ""tumor_site"": ""Left lobe"", ""focality"": ""Unifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 3}"
+TCGA-E8-A413,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-28 18:12:16,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 1.5,
+   ""extrathyroidal_extension"": ""No ETE"",
+   ""margins"": null,
+   ""tumor_site"": ""Left lobe"",
+   ""focality"": ""Unifocal"",
+   ""lymph_nodes_resected"": null,
+   ""lymph_nodes_positive_count"": null
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 1.5, ""extrathyroidal_extension"": ""No ETE"", ""margins"": null, ""tumor_site"": ""Left lobe"", ""focality"": ""Unifocal"", ""lymph_nodes_resected"": null, ""lymph_nodes_positive_count"": null}"
+TCGA-DJ-A2PO,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-28 18:12:26,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 0.6,
+   ""extrathyroidal_extension"": ""No ETE"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Bilateral"",
+   ""focality"": ""Multifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 0
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 0.6, ""extrathyroidal_extension"": ""No ETE"", ""margins"": ""R0"", ""tumor_site"": ""Bilateral"", ""focality"": ""Multifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 0}"
+TCGA-DJ-A2PW,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-28 18:12:36,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 4.6,
+   ""extrathyroidal_extension"": ""No ETE"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Right lobe"",
+   ""focality"": ""Multifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 1
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 4.6, ""extrathyroidal_extension"": ""No ETE"", ""margins"": ""R0"", ""tumor_site"": ""Right lobe"", ""focality"": ""Multifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 1}"
+TCGA-DJ-A3UK,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-28 18:12:47,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 1.5,
+   ""extrathyroidal_extension"": ""No ETE"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Left lobe"",
+   ""focality"": ""Unifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 0
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 1.5, ""extrathyroidal_extension"": ""No ETE"", ""margins"": ""R0"", ""tumor_site"": ""Left lobe"", ""focality"": ""Unifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 0}"
+TCGA-FY-A3R9,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-28 18:12:56,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 0.7,
+   ""extrathyroidal_extension"": ""No ETE"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Bilateral"",
+   ""focality"": ""Multifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 0
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 0.7, ""extrathyroidal_extension"": ""No ETE"", ""margins"": ""R0"", ""tumor_site"": ""Bilateral"", ""focality"": ""Multifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 0}"
+TCGA-L6-A4EQ,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-28 18:13:08,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 3.5,
+   ""extrathyroidal_extension"": ""No ETE"",
+   ""margins"": null,
+   ""tumor_site"": ""Left lobe"",
+   ""focality"": ""Unifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 1
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 3.5, ""extrathyroidal_extension"": ""No ETE"", ""margins"": null, ""tumor_site"": ""Left lobe"", ""focality"": ""Unifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 1}"
+TCGA-DJ-A3UO,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-28 18:13:22,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 2.8,
+   ""extrathyroidal_extension"": ""Gross"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Bilateral"",
+   ""focality"": ""Multifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 5
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 2.8, ""extrathyroidal_extension"": ""Gross"", ""margins"": ""R0"", ""tumor_site"": ""Bilateral"", ""focality"": ""Multifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 5}"
+TCGA-ET-A3BT,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-28 18:13:33,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Tall Cell"",
+   ""tumor_size"": 2.5,
+   ""extrathyroidal_extension"": ""No ETE"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Isthmus"",
+   ""focality"": ""Unifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 2
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Tall Cell"", ""tumor_size"": 2.5, ""extrathyroidal_extension"": ""No ETE"", ""margins"": ""R0"", ""tumor_site"": ""Isthmus"", ""focality"": ""Unifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 2}"
+TCGA-DJ-A3VD,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-28 18:13:54,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 0.8,
+   ""extrathyroidal_extension"": ""No ETE"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Isthmus"",
+   ""focality"": null,
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 4
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 0.8, ""extrathyroidal_extension"": ""No ETE"", ""margins"": ""R0"", ""tumor_site"": ""Isthmus"", ""focality"": null, ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 4}"
+TCGA-EL-A4K7,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-28 18:14:04,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 2.5,
+   ""extrathyroidal_extension"": ""Gross"",
+   ""margins"": ""R1"",
+   ""tumor_site"": ""Left lobe"",
+   ""focality"": ""Unifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 1
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 2.5, ""extrathyroidal_extension"": ""Gross"", ""margins"": ""R1"", ""tumor_site"": ""Left lobe"", ""focality"": ""Unifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 1}"
+TCGA-DJ-A1QE,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-28 18:14:14,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 1.5,
+   ""extrathyroidal_extension"": ""Microscopic"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Right lobe"",
+   ""focality"": ""Unifocal"",
+   ""lymph_nodes_resected"": ""no"",
+   ""lymph_nodes_positive_count"": null
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 1.5, ""extrathyroidal_extension"": ""Microscopic"", ""margins"": ""R0"", ""tumor_site"": ""Right lobe"", ""focality"": ""Unifocal"", ""lymph_nodes_resected"": ""no"", ""lymph_nodes_positive_count"": null}"
+TCGA-EL-A4KG,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-28 18:14:23,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 2.0,
+   ""extrathyroidal_extension"": ""Microscopic"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Right lobe"",
+   ""focality"": ""Unifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 0
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 2.0, ""extrathyroidal_extension"": ""Microscopic"", ""margins"": ""R0"", ""tumor_site"": ""Right lobe"", ""focality"": ""Unifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 0}"
+TCGA-ET-A39S,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-28 18:14:33,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 1.0,
+   ""extrathyroidal_extension"": ""No ETE"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Left lobe"",
+   ""focality"": ""Unifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 0
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 1.0, ""extrathyroidal_extension"": ""No ETE"", ""margins"": ""R0"", ""tumor_site"": ""Left lobe"", ""focality"": ""Unifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 0}"
+TCGA-EL-A3GU,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-28 18:14:43,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 5.0,
+   ""extrathyroidal_extension"": ""Gross"",
+   ""margins"": null,
+   ""tumor_site"": ""Bilateral"",
+   ""focality"": ""Multifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 10
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 5.0, ""extrathyroidal_extension"": ""Gross"", ""margins"": null, ""tumor_site"": ""Bilateral"", ""focality"": ""Multifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 10}"
+TCGA-FE-A238,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-29 07:01:32,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Tall Cell"",
+   ""tumor_size"": 3.9,
+   ""extrathyroidal_extension"": ""Microscopic"",
+   ""margins"": null,
+   ""tumor_site"": ""Bilateral"",
+   ""focality"": ""Multifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 0
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Tall Cell"", ""tumor_size"": 3.9, ""extrathyroidal_extension"": ""Microscopic"", ""margins"": null, ""tumor_site"": ""Bilateral"", ""focality"": ""Multifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 0}"
+TCGA-CE-A3ME,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-29 07:01:44,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 2.0,
+   ""extrathyroidal_extension"": null,
+   ""margins"": null,
+   ""tumor_site"": null,
+   ""focality"": null,
+   ""lymph_nodes_resected"": null,
+   ""lymph_nodes_positive_count"": null
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 2.0, ""extrathyroidal_extension"": null, ""margins"": null, ""tumor_site"": null, ""focality"": null, ""lymph_nodes_resected"": null, ""lymph_nodes_positive_count"": null}"
+TCGA-KS-A4I7,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-29 07:01:57,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 1.5,
+   ""extrathyroidal_extension"": ""No ETE"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Left lobe"",
+   ""focality"": ""Unifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 0
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 1.5, ""extrathyroidal_extension"": ""No ETE"", ""margins"": ""R0"", ""tumor_site"": ""Left lobe"", ""focality"": ""Unifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 0}"
+TCGA-EL-A3H4,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-29 07:02:10,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 5.0,
+   ""extrathyroidal_extension"": ""Gross"",
+   ""margins"": null,
+   ""tumor_site"": ""Right lobe"",
+   ""focality"": null,
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 13
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 5.0, ""extrathyroidal_extension"": ""Gross"", ""margins"": null, ""tumor_site"": ""Right lobe"", ""focality"": null, ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 13}"
+TCGA-EM-A4FO,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-29 07:02:23,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 1.1,
+   ""extrathyroidal_extension"": ""No ETE"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Bilateral"",
+   ""focality"": ""Multifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 0
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 1.1, ""extrathyroidal_extension"": ""No ETE"", ""margins"": ""R0"", ""tumor_site"": ""Bilateral"", ""focality"": ""Multifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 0}"
+TCGA-IM-A420,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-29 07:02:34,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Follicular"",
+   ""tumor_size"": 4.0,
+   ""extrathyroidal_extension"": ""Microscopic"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Bilateral"",
+   ""focality"": ""Multifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 5
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Follicular"", ""tumor_size"": 4.0, ""extrathyroidal_extension"": ""Microscopic"", ""margins"": ""R0"", ""tumor_site"": ""Bilateral"", ""focality"": ""Multifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 5}"
+TCGA-FK-A3SH,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-29 07:03:01,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 3.0,
+   ""extrathyroidal_extension"": ""Microscopic"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Bilateral"",
+   ""focality"": ""Multifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 4
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 3.0, ""extrathyroidal_extension"": ""Microscopic"", ""margins"": ""R0"", ""tumor_site"": ""Bilateral"", ""focality"": ""Multifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 4}"
+TCGA-DJ-A1QL,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-29 07:03:13,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Follicular"",
+   ""tumor_size"": 2.2,
+   ""extrathyroidal_extension"": ""No ETE"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Left lobe"",
+   ""focality"": ""Unifocal"",
+   ""lymph_nodes_resected"": ""no"",
+   ""lymph_nodes_positive_count"": null
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Follicular"", ""tumor_size"": 2.2, ""extrathyroidal_extension"": ""No ETE"", ""margins"": ""R0"", ""tumor_site"": ""Left lobe"", ""focality"": ""Unifocal"", ""lymph_nodes_resected"": ""no"", ""lymph_nodes_positive_count"": null}"
+TCGA-FE-A234,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-29 07:03:23,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 3.3,
+   ""extrathyroidal_extension"": ""No ETE"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Right lobe"",
+   ""focality"": ""Unifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 2
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 3.3, ""extrathyroidal_extension"": ""No ETE"", ""margins"": ""R0"", ""tumor_site"": ""Right lobe"", ""focality"": ""Unifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 2}"
+TCGA-CE-A484,llama-3.3-70b-versatile,llama-3.3-70b-versatile,2026-01-29 07:03:35,success,"{
+  ""histologic_type"": ""Papillary Thyroid Carcinoma"",
+   ""histologic_variant"": ""Classical"",
+   ""tumor_size"": 2.0,
+   ""extrathyroidal_extension"": ""Microscopic"",
+   ""margins"": ""R0"",
+   ""tumor_site"": ""Right lobe"",
+   ""focality"": ""Unifocal"",
+   ""lymph_nodes_resected"": ""yes"",
+   ""lymph_nodes_positive_count"": 2
+}","{""histologic_type"": ""Papillary Thyroid Carcinoma"", ""histologic_variant"": ""Classical"", ""tumor_size"": 2.0, ""extrathyroidal_extension"": ""Microscopic"", ""margins"": ""R0"", ""tumor_site"": ""Right lobe"", ""focality"": ""Unifocal"", ""lymph_nodes_resected"": ""yes"", ""lymph_nodes_positive_count"": 2}"
