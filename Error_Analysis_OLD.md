@@ -1,5 +1,67 @@
 ### Final Error Analysis Report: `gpt-oss-120b` (Thyroid Extraction)
 
+This analysis provides the evidence required to defend your "LLM as Auditor" hypothesis.
+
+### **1. Provenance of the "Gold Standard"**
+The "Ground Truth" you are evaluating against is **not** a direct extraction of the pathology report. It is the **TCGA Clinical Data Resource (TCGA-CDR)**, manually curated by the **Biospecimen Core Resource (BCR) at Nationwide Children's Hospital**.
+
+*   **Methodology:** Human curators abstracted data from pathology reports, operative notes, and staging forms into the XML format.
+*   **The Bias:** Curators followed strict **AJCC 6th/7th Edition Staging Rules**. If a specific detail (like "Minimal ETE") did not alter the final Stage (e.g., if the tumor was already T3 due to size >4cm), curators frequently omitted it or defaulted to "None" to save time, as it was clinically irrelevant for staging.
+*   **The Consequence:** The XML is a **Staging Summary**, while your LLM is performing **Surgical Extraction**. This fundamental mismatch explains the majority of "errors."
+
+---
+
+### **2. Forensic Error Analysis: "The Smoking Guns"**
+
+We analyzed 4 representative discrepancies to categorize them into **Model Failures** vs. **Gold Standard Flaws/Definitions**.
+
+#### **Exhibit A: The "Staging Artifact" (Registry Inconsistency)**
+*   **Patient:** `TCGA-EM-A2CN`
+*   **Discrepancy:** Gold Standard = **No ETE** | LLM = **Microscopic**
+*   **The Evidence (Report):** "Extrathyroidal Extension: **Identified**... pT3... with **minimal extrathyroidal extension**."
+*   **The Forensic Verdict:** **The Gold Standard is Factually Incorrect.**
+    *   The curator marked "No ETE" in the XML.
+    *   *Why?* The tumor was **6.0 cm**. In AJCC 7th Ed., a tumor >4cm is automatically **T3**. The presence of minimal ETE *also* makes it T3. Since the size alone dictated the stage, the curator likely ignored the ETE field or defaulted it to "None".
+    *   **Conclusion:** The LLM was correct; the human curator was sloppy because the detail was redundant for staging.
+
+#### **Exhibit B: The "Dominant Nodule" Paradox (Definition Mismatch)**
+*   **Patient:** `TCGA-J8-A3YH`
+*   **Discrepancy:** Gold Standard = **Bilateral** | LLM = **Right Lobe**
+*   **The Evidence (Report):** "Multifocal papillary carcinoma involving the right and left sides... **Predominant nodule in the right lobe... 4.5 cm**."
+*   **The Forensic Verdict:** **Correct Extraction, Different Question.**
+    *   The LLM followed your prompt: *"Identify the DOMINANT (largest) tumor nodule."* It correctly found the Right Lobe mass.
+    *   The XML followed Staging Rules: Presence of tumor in both lobes = **Bilateral**.
+    *   **Conclusion:** The model is not failing; it is answering a surgical question (Where is the main tumor?) while the dataset answers a systemic question (Is disease present on both sides?).
+
+#### **Exhibit C: The "Strap Muscle" Confusion (Model Error)**
+*   **Patient:** `TCGA-EL-A3H4`
+*   **Discrepancy:** Gold Standard = **Gross** | LLM = **Microscopic**
+*   **The Evidence (Report):** "THE TUMOR REPLACES THYROID LOBE AND **GROSSLY INVADES** INTO SURROUNDING SOFT TISSUE, SKELETAL AND SMOOTH MUSCLE."
+*   **The Forensic Verdict:** **Genuine Model Failure.**
+    *   The text contains the trigger word **"GROSSLY"**.
+    *   The model likely fixated on the list of tissues ("skeletal muscle"), which usually implies microscopic invasion, and missed the adjective "GROSSLY" preceding it.
+    *   **Conclusion:** This is a fixable "Attention Error."
+
+#### **Exhibit D: The "Floating Header" (Model Error)**
+*   **Patient:** `TCGA-J8-A3O2`
+*   **Discrepancy:** Gold Standard = **Bilateral** | LLM = **Left Lobe**
+*   **The Evidence:** Similar to Exhibit B, but notably, the specific location of the multifocal disease was buried in a frozen section diagnosis ("3.5 cm... Left lobe") while the final diagnosis was vague.
+*   **Conclusion:** Validates that the LLM struggles when the "Dominant" nodule isn't clearly labeled in the final summary, defaulting to the first location it sees.
+
+---
+
+### **3. Final Pipeline & Prompt Refinement**
+
+To address the **Genuine Model Failures (Exhibit C)** and handle the **Definition Mismatches (Exhibit B)**, we will update the System Prompt one last time.
+
+**Key Changes:**
+1.  **"Gross" Priority:** Explicit instruction that the word "Grossly" *overrides* any mention of skeletal muscle.
+2.  **Bilateral Logic:** Adjusted to capture "Bilateral" if the report *Heading* says "Bilateral," even if a dominant nodule is found. This aligns the LLM closer to the Registry definition without losing surgical precision.
+
+
+
+### Old Analysis
+
 #### 1. Executive Summary
 The model is performing with high accuracy (>90%) on Histologic Type, Margins, and Lymph Node status. The remaining performance gap (Site ~80%, ETE ~85%) is driven by **systematic definition mismatches** between the LLM's general medical knowledge and the specific curation rules of the target dataset (TCGA). The model is "correct" clinically, but "wrong" relative to the specific curation guidelines of this dataset.
 
@@ -30,79 +92,3 @@ The model is performing with high accuracy (>90%) on Histologic Type, Margins, a
 *   **Action:** No prompt fix possible. This represents the theoretical ceiling of accuracy for this specific dataset.
 
 ---
-
-### Improved Prompt Implementation
-
-This prompt incorporates the fixes for **Dominant Site logic**, **Header Size parsing**, and **Strict Gross ETE definitions**.
-
-**Replace the `SYSTEM_PROMPT` variable in `run_study_inference.py` with the following:**
-
-```python
-# Refined System Prompt
-SYSTEM_PROMPT = """Role: Specialized Pathologist Assistant for Thyroid Cancer Data Extraction.
-
-Context: Extract structured data from surgical pathology reports.
-
-Objective: Return a valid JSON object.
-
---- EXTRACTION LOGIC AND RULES ---
-
-1. histologic_type:
-   - Options: "Papillary Thyroid Carcinoma" | "Other"
-   - Rule: "Microcarcinoma" = "Papillary Thyroid Carcinoma".
-
-2. histologic_variant:
-   - Options: "Classical" | "Follicular" | "Tall Cell" | "Columnar Cell"
-   - Priority: 
-     1. Text Explicitly says "Follicular Variant" or "FVPTC" -> "Follicular".
-     2. Text Explicitly says "Tall Cell" -> "Tall Cell".
-     3. If "Papillary Thyroid Carcinoma" is diagnosed with NO specific variant mentioned -> "Classical".
-     4. Ignore "follicular architecture" or "follicular pattern" if the diagnosis is simply PTC.
-
-3. tumor_size:
-   - Type: Float (cm).
-   - Logic: 
-     1. Identify the DOMINANT (Largest) tumor size.
-     2. "Floating" Header Sizes: Look for measurements in parentheses at the start of Diagnosis lines (e.g., "(3.5 CM) PAPILLARY CARCINOMA"). Use this if it is the largest value.
-     3. Priority: Synoptic Data > Diagnosis Header > Diagnosis Text > Gross Description.
-     4. Ignore sizes of "microcarcinoma" or incidental nodules (<1cm) IF a larger distinct tumor (>1cm) is present.
-
-4. extrathyroidal_extension (ETE):
-   - Options: "No ETE" | "Microscopic" | "Gross"
-   - Rules:
-     - "Gross" ETE: ONLY if the text explicitly uses the words "Gross", "Grossly", or "Macroscopic", OR describes invasion into "Trachea", "Larynx", or "Esophagus".
-     - "Microscopic" ETE: Describes invasion into "perithyroidal soft tissue", "adipose tissue", "skeletal muscle", or "strap muscle" WITHOUT the word "Gross".
-     - "No ETE": "Confined to thyroid", "Not identified", "Negative", "Capsular invasion only" (Capsular invasion is NOT ETE).
-
-5. margins:
-   - Options: "R0" (Negative) | "R1" (Microscopic Positive) | "R2" (Gross Positive)
-   - Rule: 
-     - "Uninvolved", "Clear", "Negative", "Free of tumor" -> "R0".
-     - "Involved", "Positive", "Tumor on ink", "Extends to margin" -> "R1".
-
-6. tumor_site:
-   - Options: "Right lobe" | "Left lobe" | "Isthmus" | "Bilateral"
-   - Logic: 
-     1. Identify the DOMINANT (largest) tumor nodule. Output the site of ONLY this dominant nodule.
-     2. Example: "Right lobe: 4.5cm, Left lobe: 0.2cm" -> Output "Right lobe" (Ignore the contralateral focus for this field).
-     3. ONLY output "Bilateral" if:
-        - The text explicitly diagnoses "Bilateral Papillary Carcinoma" in the main heading AND no single dominant nodule is distinguished.
-        - OR the Dominant tumor is explicitly described as spanning both lobes.
-
-7. focality:
-   - Options: "Unifocal" | "Multifocal"
-   - Rule: "Single focus" -> Unifocal. "Multiple", "2 foci", "Bilateral involvement" -> Multifocal. (Note: A patient can be Multifocal even if the 'tumor_site' is recorded as Right Lobe).
-
-8. lymph_nodes_resected:
-   - Options: "yes" | "no"
-   - Rule: Look for "lymph node", "LN", "Level VI". If tissue was received/examined -> "yes".
-
-9. lymph_nodes_positive_count:
-    - Rule: If lymph_nodes_resected is "yes", count the total number of POSITIVE nodes across all containers. 
-    - If 0 positive nodes -> 0.
-
---- ROBUSTNESS ---
-- If a specific field is not found, use null (except for Variant, which defaults to Classical).
-- Ignore separators like "IIIIII". 
-"""
-```

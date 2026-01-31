@@ -116,19 +116,56 @@ def main():
         # Merge with Gold (Including pathologic_T from updated extraction)
         merged = pd.merge(llm_df, gold_df, on='patient_id', suffixes=('_llm', '_gold'))
         
-        # Normalize
+        # Normalize and Compare
         for field, config in FIELDS_CONFIG.items():
             norm_func = config['norm']
+            
+            def safe_norm(val):
+                if pd.isna(val) or val is None: return "not available"
+                try: return norm_func(val)
+                except: return "not available"
+
             col_llm = f"{field}_llm" if f"{field}_llm" in merged.columns else field
             col_gold = f"{field}_gold" if f"{field}_gold" in merged.columns else field
             
-            merged[f"{field}_llm_norm"] = merged[col_llm].apply(norm_func)
-            merged[f"{field}_gold_norm"] = merged[col_gold].apply(norm_func)
+            if col_llm not in merged.columns: merged[col_llm] = None
+            if col_gold not in merged.columns: merged[col_gold] = None
+
+            merged[f"{field}_llm_norm"] = merged[col_llm].apply(safe_norm)
+            merged[f"{field}_gold_norm"] = merged[col_gold].apply(safe_norm)
             
-            # Calc Metrics
+            # Match Indicator
+            merged[f"{field}_match"] = merged[f"{field}_llm_norm"] == merged[f"{field}_gold_norm"]
+            merged[f"{field}_match"] = merged[f"{field}_match"].map({True: "MATCH", False: "MISMATCH"})
+
+            # Metrics
             metrics = calculate_metrics(merged, field, config)
-            metrics.update({'Model': model_name, 'Split': split_name, 'Field': field})
+            metrics['Model'] = model_name
+            metrics['Split'] = split_name
+            metrics['Field'] = field
             all_metrics.append(metrics)
+            
+        # Save detailed comparison
+        out_path = OUTPUT_DIR / f"detailed_{split_name}_{model_name}.csv"
+        # Select relevant cols
+        cols = ['patient_id']
+        for field in FIELDS_CONFIG.keys():
+            cols.extend([f"{field}_gold", f"{field}_llm", f"{field}_match"])
+        
+        merged[cols].to_csv(out_path, index=False)
+        print(f"Saved detailed comparison to {out_path}")
+
+        # Save Error Report (any mismatch)
+        match_cols = [f"{field}_match" for field in FIELDS_CONFIG.keys()]
+        errors_mask = (merged[match_cols] == "MISMATCH").any(axis=1)
+        error_df = merged[errors_mask]
+        
+        if len(error_df) > 0:
+            err_path = OUTPUT_DIR / f"errors_{split_name}_{model_name}.csv"
+            error_df[cols].to_csv(err_path, index=False)
+            print(f"Saved error report ({len(error_df)} cases) to {err_path}")
+        else:
+            print("No errors found for this model/split.")
 
         # --- FORENSIC AUDIT ---
         # Analyze ETE
