@@ -52,36 +52,74 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 groq_client = Groq(api_key=GROQ_API_KEY) if GROQ_API_KEY else None
 
 # Refined System Prompt
-SYSTEM_PROMPT = """Role: Expert pathologist assistant for thyroid cancer synoptic extraction.
+# Refined System Prompt
+SYSTEM_PROMPT = """Role: Specialized Pathologist Assistant for Thyroid Cancer Data Extraction.
 
-Task: From the provided pathology report, output JSON with:
-1) histologic_type: "Papillary Thyroid Carcinoma" | "Other"
-2) histologic_variant: "Classical" | "Follicular" | "Tall Cell" | "Columnar Cell" 
-- Map "usual/conventional"→Classical; "FVPTC"→Follicular.
-3) tumor_size: float (cm). Convert mm→cm. Use maximum dimension of the principal tumor.
-4) extrathyroidal_extension: "No ETE" | "Microscopic" | "Gross"
-- Rules: “extension” without “gross/macroscopic” → Microscopic.
-“strap muscles/trachea/esophagus/vascular invasion (gross)” → Gross.
-Prefer synoptic/final diagnosis over narrative.
-5) margins: "R0" | "R1" | "R2" 
-- “negative/uninvolved/clear” → R0 (even if “close/<1 mm”).
-- “microscopic at ink/focal involvement” → R1; “gross residual” → R2.
-- Prefer final sign-out over other sections.
-6) tumor_site: "Right lobe" | "Left lobe" | "Isthmus" | "Bilateral" 
-- If “Isthmus” appears in synoptic/final diagnosis, set "Isthmus" unless the synoptic explicitly lists primary sites in both lobes.
-7) focality: "Unifocal" | "Multifocal" 
-8) lymph_nodes_resected: "yes" | "no" 
-- If synoptic lists LN examined status "NO", set "no".
-9) lymph_nodes_positive_count: integer | 0 
-- Sum across all parts; 0 if all nodes negative; null if lymph_nodes_resected="no".
+Context: Extract structured data from surgical pathology reports.
 
-General priorities:
-- Prefer SYNOPTIC and FINAL DIAGNOSIS sections; ignore gross description for counts.
-- Resolve conflicts using addenda precedence (latest addendum overrides prior).
-- If a field is truly absent, return null.
+Objective: Return a valid JSON object.
 
-Return ONLY valid JSON.
+--- EXTRACTION LOGIC AND RULES ---
+
+1. histologic_type:
+   - Options: "Papillary Thyroid Carcinoma" | "Other"
+   - Rule: "Microcarcinoma" = "Papillary Thyroid Carcinoma".
+
+2. histologic_variant:
+   - Options: "Classical" | "Follicular" | "Tall Cell" | "Columnar Cell"
+   - Priority: 
+     1. Text Explicitly says "Follicular Variant" or "FVPTC" -> "Follicular".
+     2. Text Explicitly says "Tall Cell" -> "Tall Cell".
+     3. If "Papillary Thyroid Carcinoma" is diagnosed with NO specific variant mentioned -> "Classical".
+     4. Ignore "follicular architecture" or "follicular pattern" if the diagnosis is simply PTC.
+
+3. tumor_size:
+   - Type: Float (cm).
+   - Logic: 
+     1. Identify the DOMINANT (Largest) tumor size.
+     2. "Floating" Header Sizes: Look for measurements in parentheses at the start of Diagnosis lines (e.g., "(3.5 CM) PAPILLARY CARCINOMA"). Use this if it is the largest value.
+     3. Priority: Synoptic Data > Diagnosis Header > Diagnosis Text > Gross Description.
+     4. Ignore sizes of "microcarcinoma" or incidental nodules (<1cm) IF a larger distinct tumor (>1cm) is present.
+
+4. extrathyroidal_extension (ETE):
+   - Options: "No ETE" | "Microscopic" | "Gross"
+   - Rules:
+     - "Gross" ETE: ONLY if the text explicitly uses the words "Gross", "Grossly", or "Macroscopic", OR describes invasion into "Trachea", "Larynx", or "Esophagus".
+     - "Microscopic" ETE: Describes invasion into "perithyroidal soft tissue", "adipose tissue", "skeletal muscle", or "strap muscle" WITHOUT the word "Gross".
+     - "No ETE": "Confined to thyroid", "Not identified", "Negative", "Capsular invasion only" (Capsular invasion is NOT ETE).
+
+5. margins:
+   - Options: "R0" (Negative) | "R1" (Microscopic Positive) | "R2" (Gross Positive)
+   - Rule: 
+     - "Uninvolved", "Clear", "Negative", "Free of tumor" -> "R0".
+     - "Involved", "Positive", "Tumor on ink", "Extends to margin" -> "R1".
+
+6. tumor_site:
+   - Options: "Right lobe" | "Left lobe" | "Isthmus" | "Bilateral"
+   - Logic: 
+     1. Identify the DOMINANT (largest) tumor nodule. Output the site of ONLY this dominant nodule.
+     2. Example: "Right lobe: 4.5cm, Left lobe: 0.2cm" -> Output "Right lobe" (Ignore the contralateral focus for this field).
+     3. ONLY output "Bilateral" if:
+        - The text explicitly diagnoses "Bilateral Papillary Carcinoma" in the main heading AND no single dominant nodule is distinguished.
+        - OR the Dominant tumor is explicitly described as spanning both lobes.
+
+7. focality:
+   - Options: "Unifocal" | "Multifocal"
+   - Rule: "Single focus" -> Unifocal. "Multiple", "2 foci", "Bilateral involvement" -> Multifocal. (Note: A patient can be Multifocal even if the 'tumor_site' is recorded as Right Lobe).
+
+8. lymph_nodes_resected:
+   - Options: "yes" | "no"
+   - Rule: Look for "lymph node", "LN", "Level VI". If tissue was received/examined -> "yes".
+
+9. lymph_nodes_positive_count:
+    - Rule: If lymph_nodes_resected is "yes", count the total number of POSITIVE nodes across all containers. 
+    - If 0 positive nodes -> 0.
+
+--- ROBUSTNESS ---
+- If a specific field is not found, use null (except for Variant, which defaults to Classical).
+- Ignore separators like "IIIIII". 
 """
+
 
 def get_output_path(model_alias: str, split_name: str) -> Path:
     """Returns the path to the log file for a specific model and split."""
