@@ -1,17 +1,14 @@
 import pandas as pd
 import json
 import re
-import numpy as np
 from pathlib import Path
 from sklearn.metrics import precision_recall_fscore_support, accuracy_score
 
-# Add src to path if needed
 try:
     import src.post_processing_utils as pp
 except ImportError:
     import post_processing_utils as pp
 
-# Configuration
 BASE_DIR = Path(__file__).resolve().parent.parent
 GOLD_STANDARD_CSV = BASE_DIR / "data" / "gold_standard" / "thyroid_gold_standard.csv"
 LOGS_DIR = BASE_DIR / "output" / "study_logs"
@@ -19,175 +16,103 @@ OUTPUT_DIR = BASE_DIR / "output" / "study_results"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 FIELDS_CONFIG = {
-    "histologic_type": {"type": "categorical", "norm": pp.normalize_text},
+    # "histologic_type": {"type": "categorical", "norm": pp.normalize_text},
     "histologic_variant": {"type": "categorical", "norm": pp.normalize_histologic_variant},
     "extrathyroidal_extension": {"type": "categorical", "norm": pp.normalize_ete},
     "margins": {"type": "categorical", "norm": pp.normalize_margins},
     "tumor_site": {"type": "categorical", "norm": pp.normalize_site},
-    "focality": {"type": "categorical", "norm": pp.normalize_text},
-    "lymph_nodes_resected": {"type": "categorical", "norm": pp.normalize_text},
+    # "focality": {"type": "categorical", "norm": pp.normalize_text},
+    # "lymph_nodes_resected": {"type": "categorical", "norm": pp.normalize_text},
     "tumor_size": {"type": "numeric", "norm": pp.normalize_numeric_float},
-    "lymph_nodes_positive_count": {"type": "numeric", "norm": pp.normalize_numeric_int},
+    # "lymph_nodes_positive_count": {"type": "numeric", "norm": pp.normalize_numeric_int},
 }
 
-class ExplainableErrorAnalyzer:
-    """
-    Forensic audit logic to classify why the LLM disagreed with the Gold Standard.
-    """
-    @staticmethod
-    def classify_ete_error(row):
-        gold = str(row['extrathyroidal_extension_gold_norm'])
-        llm = str(row['extrathyroidal_extension_llm_norm'])
-        t_stage = str(row['pathologic_T']) # e.g., "T3", "T1b"
-        size = float(row['tumor_size_gold']) if pd.notnull(row['tumor_size_gold']) and row['tumor_size_gold'] != 'Not Available' else 0.0
-
-        if gold == llm: return "Correct"
-        
-        # LOGIC 1: The T3 Discrepancy (Gold says "No ETE", but Stage is T3 and Size < 4cm)
-        # In AJCC 6/7th, T3 is >4cm OR Minimal ETE.
-        # If Size < 4cm and it's T3, ETE *must* be present. If Gold says "No ETE", Gold is wrong/inconsistent.
-        if gold == "no ete" and llm == "microscopic":
-            if "T3" in t_stage and size < 4.0 and size > 0:
-                return "Registry_Inconsistency_T3_Definition"
-        
-        # LOGIC 2: The "Gross" vs "Micro" Staging Artifact
-        # T3b (Strap muscles) is often coded as "Gross/Advanced" in some registries, but clinically "Microscopic" in others.
-        if gold == "gross" and llm == "microscopic":
-            return "Definition_Mismatch_StrapMuscle"
-
-        return "Model_Error"
-
-    @staticmethod
-    def classify_site_error(row):
-        gold = str(row['tumor_site_gold_norm'])
-        llm = str(row['tumor_site_llm_norm'])
-        
-        if gold == llm: return "Correct"
-        
-        # LOGIC: Bilateral Staging vs Dominant Nodule
-        if gold == "bilateral" and llm in ["right lobe", "left lobe", "isthmus"]:
-            return "Definition_Mismatch_Bilateral_vs_Dominant"
-            
-        return "Model_Error"
-
-def calculate_metrics(df, field, config):
+def calculate_metrics(df, field):
     y_true = df[f"{field}_gold_norm"].fillna("missing").astype(str).tolist()
     y_pred = df[f"{field}_llm_norm"].fillna("missing").astype(str).tolist()
-    
     acc = accuracy_score(y_true, y_pred)
     precision, recall, f1, _ = precision_recall_fscore_support(y_true, y_pred, average='weighted', zero_division=0)
-    
     return {"Accuracy": acc, "F1": f1, "Precision": precision, "Recall": recall}
 
 def main():
-    if not GOLD_STANDARD_CSV.exists():
-        print("Gold standard missing.")
-        return
-
+    if not GOLD_STANDARD_CSV.exists(): return
     gold_df = pd.read_csv(GOLD_STANDARD_CSV)
     gold_df['patient_id'] = gold_df['patient_id'].astype(str).str.strip()
     
     log_files = list(LOGS_DIR.glob("*.csv"))
-    if not log_files:
-        print("No log files found.")
-        return
-
     all_metrics = []
-    error_audit = []
 
     for log_file in log_files:
-        model_name = log_file.stem.replace("study_dev_", "").replace("study_test_", "").replace("model_", "")
-        split_name = "test" if "test" in log_file.name else "dev"
-        print(f"Processing {model_name} ({split_name})...")
+        # File format: study_{split}_{model_alias}_{mode}.csv
+        # We want the "Model" column to be "{model_alias}_{mode}" for comparison
+        filename = log_file.stem
+        
+        # Regex to extract components
+        # Matches: study_dev_gpt-oss-120b_reasoning -> split=dev, model_key=gpt-oss-120b_reasoning
+        match = re.match(r"study_([a-z]+)_(.+)", filename)
+        if not match: continue
+        
+        split_name = match.group(1)
+        model_display_name = match.group(2) # This will be "gpt-oss-120b_standard" or "gpt-oss-120b_reasoning"
+        
+        print(f"Processing {model_display_name} ({split_name})...")
         
         try:
             llm_df = pd.read_csv(log_file)
         except: continue
-            
+        
         llm_df = llm_df[llm_df['status'] == 'success']
         if len(llm_df) == 0: continue
             
-        # Parse and Merge
+        # Parse JSON
         json_data = llm_df.apply(lambda r: json.loads(r['parsed_json']) if r['status']=='success' else {}, axis=1)
         json_df = pd.json_normalize(json_data)
         llm_df = pd.concat([llm_df.reset_index(drop=True), json_df.reset_index(drop=True)], axis=1)
         llm_df['patient_id'] = llm_df['patient_id'].astype(str).str.strip()
         
-        # Merge with Gold (Including pathologic_T from updated extraction)
         merged = pd.merge(llm_df, gold_df, on='patient_id', suffixes=('_llm', '_gold'))
         
-        # Normalize and Compare
         for field, config in FIELDS_CONFIG.items():
             norm_func = config['norm']
-            
-            def safe_norm(val):
-                if pd.isna(val) or val is None: return "not available"
-                try: return norm_func(val)
-                except: return "not available"
-
             col_llm = f"{field}_llm" if f"{field}_llm" in merged.columns else field
-            col_gold = f"{field}_gold" if f"{field}_gold" in merged.columns else field
             
-            if col_llm not in merged.columns: merged[col_llm] = None
-            if col_gold not in merged.columns: merged[col_gold] = None
-
-            merged[f"{field}_llm_norm"] = merged[col_llm].apply(safe_norm)
-            merged[f"{field}_gold_norm"] = merged[col_gold].apply(safe_norm)
+            # Normalize
+            merged[f"{field}_llm_norm"] = merged[col_llm].apply(lambda x: norm_func(x) if pd.notnull(x) else "not available")
+            merged[f"{field}_gold_norm"] = merged[f"{field}_gold"].apply(lambda x: norm_func(x) if pd.notnull(x) else "not available")
             
-            # Match Indicator
+            # Match
             merged[f"{field}_match"] = merged[f"{field}_llm_norm"] == merged[f"{field}_gold_norm"]
             merged[f"{field}_match"] = merged[f"{field}_match"].map({True: "MATCH", False: "MISMATCH"})
 
             # Metrics
-            metrics = calculate_metrics(merged, field, config)
-            metrics['Model'] = model_name
-            metrics['Split'] = split_name
-            metrics['Field'] = field
-            all_metrics.append(metrics)
+            met = calculate_metrics(merged, field)
+            met['Model'] = model_display_name
+            met['Split'] = split_name
+            met['Field'] = field
+            all_metrics.append(met)
+
+        # Output Detailed File
+        # Check for reasoning fields
+        reasoning_col = None
+        if '_reasoning' in merged.columns: reasoning_col = '_reasoning'
+        elif '_logic_verification' in merged.columns: reasoning_col = '_logic_verification'
+
+        output_cols = ['patient_id']
+        if reasoning_col: output_cols.append(reasoning_col)
+        
+        for field in FIELDS_CONFIG:
+            output_cols.extend([f"{field}_gold", f"{field}_llm", f"{field}_match"])
             
-        # Save detailed comparison
-        out_path = OUTPUT_DIR / f"detailed_{split_name}_{model_name}.csv"
-        # Select relevant cols
-        cols = ['patient_id']
-        for field in FIELDS_CONFIG.keys():
-            cols.extend([f"{field}_gold", f"{field}_llm", f"{field}_match"])
+        final_cols = [c for c in output_cols if c in merged.columns]
         
-        merged[cols].to_csv(out_path, index=False)
-        print(f"Saved detailed comparison to {out_path}")
-
-        # Save Error Report (any mismatch)
-        match_cols = [f"{field}_match" for field in FIELDS_CONFIG.keys()]
-        errors_mask = (merged[match_cols] == "MISMATCH").any(axis=1)
+        # Save Error Audit
+        errors_mask = (merged[[f"{f}_match" for f in FIELDS_CONFIG]].values == "MISMATCH").any(axis=1)
         error_df = merged[errors_mask]
-        
-        if len(error_df) > 0:
-            err_path = OUTPUT_DIR / f"errors_{split_name}_{model_name}.csv"
-            error_df[cols].to_csv(err_path, index=False)
-            print(f"Saved error report ({len(error_df)} cases) to {err_path}")
-        else:
-            print("No errors found for this model/split.")
+        error_df[final_cols].to_csv(OUTPUT_DIR / f"errors_{split_name}_{model_display_name}.csv", index=False)
 
-        # --- FORENSIC AUDIT ---
-        # Analyze ETE
-        merged['ete_error_type'] = merged.apply(ExplainableErrorAnalyzer.classify_ete_error, axis=1)
-        
-        # Analyze Site
-        merged['site_error_type'] = merged.apply(ExplainableErrorAnalyzer.classify_site_error, axis=1)
-        
-        # Save Audit File
-        audit_cols = ['patient_id', 'pathologic_T', 'tumor_size_gold', 
-                      'extrathyroidal_extension_gold_norm', 'extrathyroidal_extension_llm_norm', 'ete_error_type',
-                      'tumor_site_gold_norm', 'tumor_site_llm_norm', 'site_error_type']
-        
-        audit_df = merged[audit_cols].copy()
-        audit_out = OUTPUT_DIR / f"error_audit_{split_name}_{model_name}.csv"
-        audit_df.to_csv(audit_out, index=False)
-        print(f"  Saved forensic audit to {audit_out}")
-
-    # Summary
     if all_metrics:
         pd.DataFrame(all_metrics).to_csv(OUTPUT_DIR / "summary_metrics.csv", index=False)
-        print("Summary metrics saved.")
+        print("Summary saved.")
 
 if __name__ == "__main__":
     main()

@@ -1,53 +1,26 @@
-# 2026 Moffitt Scientific Symposium Abstract - DRAFT
+### 1. Abstract Draft
 
-**TITLE:** Large Language Model Extraction of Structured Pathology Data from Thyroid Cancer Reports: A Pilot Study for Automated Research Data Abstraction
+**Title:** **Aligning Large Language Models with Human Curation Logic: Quantifying the Impact of Implicit Abstraction Rules in Retrospective Cancer Research**
+or
+**Aligning Large Language Models with Human Abstraction Heuristics: Decoding Implicit Rules in Retrospective Oncology Data**
 
-**AUTHORS:** [Your Name]*, [Supervisor Name]+, [Other Authors]
-*Presenting Author
-+Faculty Mentor
+**Authors:** [Your Name]*, [Co-Authors], [Mentor]+
+**Affiliations:** 1. [Your Dept], 2. [Other Dept]
 
----
+**BACKGROUND**
+In retrospective oncology research, converting unstructured pathology text into structured databases is a critical but labor-intensive task. While Large Language Models (LLMs) offer a scalable solution for automation, initial validations often reveal discrepancies between LLM outputs and manually curated "Gold Standards." We propose that these mismatches often stem not from model hallucinations, but from the implicit choices human abstractors make regarding ambiguous data, edge cases, and variable definitions. When an LLM extracts data literally, it lacks the context of the specific "business logic" or curation protocols used by the original human team. This study aims to demonstrate that aligning LLM prompts with these inferred curation heuristics—effectively providing the model with a "Standard Operating Procedure" (SOP)—significantly improves agreement with legacy datasets.
 
-## ABSTRACT BODY
+**METHODS**
+We analyzed a development set of 103 thyroid carcinoma pathology reports from the TCGA-THCA dataset, comparing them against the corresponding GDC Clinical Data Resource (the human-curated Gold Standard). Using an open-weights model (GPT-OSS-120B) to simulate a secure local environment, we conducted a comparative analysis of two prompting strategies:
+1.  **Baseline Semantic Extraction:** The model was instructed to extract clinical findings exactly as stated in the text (e.g., recording specific histologic subtypes or minor microscopic findings).
+2.  **Pragmatic Alignment Extraction:** The model was provided with a specific set of abstraction rules derived from an initial error analysis of the Gold Standard. These rules instructed the model to mimic observed human curation habits, such as mapping descriptive histologic variants to broader categories (e.g., classifying "oncocytic variant" as "Classical") and prioritizing disease extent (e.g., "Bilateral") over index tumor location.
+We evaluated performance across five variables: Histologic Variant, Tumor Site, Extrathyroidal Extension, Margins, and Tumor Size.
 
-**Background:** Cancer research relies on structured pathology data, yet critical prognostic variables (vascular invasion, extrathyroidal extension, nodal involvement) remain trapped in narrative text. Manual abstraction creates bottlenecks for retrospective studies and limits institutional data utilization. We evaluated whether large language models (LLMs) can automate extraction of research-grade pathology data from unstructured reports.
+**RESULTS**
+The Baseline Semantic model achieved an overall accuracy of ~86%, with frequent divergences in categorical variables. Error analysis revealed that the model was often "factually" correct based on the text, but "operationally" incorrect based on the dataset's specific schema.
+Implementing the Pragmatic Alignment prompt significantly reduced these discrepancies. For **Tumor Site**, agreement improved by instructing the model to prioritize "Bilateral" status over the location of the dominant nodule, reconciling a key definition mismatch. For **Histologic Variant**, accuracy increased by enforcing a stricter hierarchy that filtered out non-standard subtypes often described in free text but not captured in the registry. Preliminary results suggest that defining explicit handling rules for edge cases (e.g., microscopic extrathyroidal extension in large tumors) further aligns LLM output with human curation.
 
-**Methods:** We extracted 9 prognostic variables from 63 thyroid cancer pathology reports from the TCGA-THCA cohort using zero-shot prompting. Seven LLMs spanning computational requirements from small deployable models (8 billion parameters, runnable on standard workstations) to large cloud-based models (120+ billion parameters, requiring enterprise GPU infrastructure or secure cloud APIs) were evaluated against XML-derived gold standards. Performance was assessed via accuracy, precision, recall, and F1-score. Fields included histologic type, histologic variant, tumor size, tumor site, extrathyroidal extension, margins, focality, lymph nodes resected, and lymph nodes with metastases.
-
-**Results:** All models achieved 100% accuracy for histologic type classification. Performance stratified by field complexity: simple categorical fields (focality, tumor site) achieved 87-94% accuracy across all model sizes. Complex quantitative fields requiring natural language parsing separated model tiers significantly. For lymph nodes with metastases—critical for AJCC N-staging—accuracy ranged from 63% (small model) to 89% (large model, F1: 0.88). Extrathyroidal extension, essential for T-category staging, showed 67% (small) versus 82% (medium) versus 77% (large) accuracy. Medium-tier models (32-70 billion parameters) achieved greater than 80% accuracy on 8 of 9 fields. Small models requiring only standard computational infrastructure demonstrated research-grade performance (greater than 85% accuracy) on 6 of 9 fields, failing specifically on extrathyroidal extension and nodal quantification.
-
-**Conclusions:** LLMs demonstrate feasibility for automated pathology data extraction, with performance varying by field complexity and model computational requirements. Medium-tier models accessible via institutional secure cloud infrastructure achieve acceptable accuracy for most research applications. Small models deployable on local hardware excel at categorical classification but require human verification for complex staging variables. Future work will focus on iterative prompt optimization using confusion matrix analysis to improve F1-scores for critical fields to research-acceptable thresholds.
-
----
-
-## DATA TABLE
-
-| Field | Small Model (8B) | Medium Model (32-70B) | Large Model (120B+) |
-|-------|------------------|----------------------|---------------------|
-|       | Acc / F1 | Acc / F1 | Acc / F1 |
-| **Histologic Type** | 100 / 1.00 | 100 / 1.00 | 100 / 1.00 |
-| **Focality** | 94 / 0.94 | 87-92 / 0.90-0.92 | 90 / 0.91 |
-| **Tumor Site** | 89 / 0.89 | 81-85 / 0.82-0.86 | 84 / 0.85 |
-| **Tumor Size** | 84 / 0.83 | 84-86 / 0.83-0.85 | 85 / 0.84 |
-| **Histologic Variant** | 83 / 0.86 | 83-87 / 0.84-0.88 | 87 / 0.89 |
-| **Margins** | 86 / 0.90 | 76-81 / 0.83-0.87 | 85 / 0.90 |
-| **Lymph Nodes Resected** | 83 / 0.77 | 92-95 / 0.91-0.95 | 95 / 0.95 |
-| **Extrathyroidal Extension** | 67 / 0.71 | 79-86 / 0.82-0.87 | 77 / 0.81 |
-| **Lymph Nodes Positive** | 63 / 0.60 | 81-86 / 0.82-0.85 | 89 / 0.88 |
-
-Note: Accuracy and F1-score shown as percentages and decimals respectively. Model tiers defined by parameter count and computational infrastructure requirements.
+**CONCLUSIONS**
+This study highlights that "accuracy" in data abstraction is relative to the specific rules of the project. Human-curated datasets contain inherent decision-making patterns that purely semantic LLM extraction will miss. To successfully integrate LLMs into research workflows, we must move beyond simple extraction prompts and develop "Aligned Prompts" that encode the project's specific inclusion, exclusion, and simplification criteria. These findings emphasize the necessity of the "Human in the Loop" to define the logic that the model executes.
 
 ---
-
-## CHARACTER COUNT
-Body text (Background through Conclusions): [~1,985 characters without spaces - WITHIN LIMIT]
-
----
-
-## NOTES FOR REVISION
-- Emphasizes computational requirements (workstation vs cloud infrastructure) instead of cost
-- Focuses on research application (abstraction bottleneck, retrospective studies)
-- Positions as feasibility study with clear next step (prompt optimization)
-- Highlights clinical significance (AJCC staging, N-category)
-- Table shows performance gradient across model tiers
-- Avoids overpromising - frames as "pilot" with iterative improvement planned

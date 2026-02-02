@@ -5,29 +5,29 @@ import time
 import argparse
 import requests
 from pathlib import Path
-from typing import Dict, Any, List, Set, Tuple, Optional
+from typing import Dict, Any, List, Set, Tuple
 from dotenv import load_dotenv
 from groq import Groq
 
 # -----------------------------------------------------------------------------
-# USER SETTINGS (Edit these to quickly change script behavior)
+# USER SETTINGS 
 # -----------------------------------------------------------------------------
 
-# default split: "dev" or "test"
 DEFAULT_SPLIT = "dev"
 
-# Define the models you want to run. Comment/Uncomment as needed.
-# Note: "alias" is used for filenames, "id" is the API model name.
+# Define the models
 MODELS = {
-    # Groq Models (Fast & Cheap)
-    # "llama-3.1-8b": {"id": "llama-3.1-8b-instant", "provider": "groq"},
-    # "llama-3.3-70b": {"id": "llama-3.3-70b-versatile", "provider": "groq"},
     "gpt-oss-120b": {"id": "openai/gpt-oss-120b", "provider": "groq"},
-    
-    # OpenRouter Models (Broader selection)
-    # "mistral-large": {"id": "mistralai/mistral-large-2411", "provider": "openrouter"},
-    # "kimi-k2.5": {"id": "moonshotai/kimi-k2.5", "provider": "openrouter"},
+    # "llama-3.1-8b": {"id": "meta-llama/llama-3.1-8b-instant", "provider": "groq"},
+    # "llama-3.3-70b": {"id": "meta-llama/llama-3.3-70b-versatile", "provider": "groq"},
+    # "qwen3-32b": {"id": "qwen/qwen3-32b", "provider": "groq"},
+    # "kimi-k2": {"id": "moonshotai/kimi-k2-instruct-0905", "provider": "groq"}
 }
+
+# The two experimental conditions
+ACTIVE_MODES = ["baseline_semantic", "pragmatic_alignment"]
+# ACTIVE_MODES = ["baseline_semantic"]
+# ACTIVE_MODES = ["pragmatic_alignment"]
 
 # -----------------------------------------------------------------------------
 # SYSTEM CONFIGURATION
@@ -40,76 +40,148 @@ DATA_DIR = BASE_DIR / "data"
 PARSED_DIR = DATA_DIR / "parsed_reports"
 OUTPUT_DIR = BASE_DIR / "output" / "study_logs"
 
-# Ensure output directory exists
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-# API Keys
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
-# Initialize Groq Client
 groq_client = Groq(api_key=GROQ_API_KEY) if GROQ_API_KEY else None
 
-# Refined System Prompt
+# -----------------------------------------------------------------------------
+# PROMPT DEFINITIONS
+# -----------------------------------------------------------------------------
 
-SYSTEM_PROMPT = """Role: Specialized Pathologist Assistant for Thyroid Cancer Data Extraction.
+BASELINE_SEMANTIC_PROMPT = """Role: Surgical Pathologist.
+Task: Extract precise clinical data from the report.
+Goal: High semantic fidelity to the text.
 
-Context: Extract structured data from surgical pathology reports.
+--- BASELINE SEMANTIC EXTRACTION ---
 
-Objective: Return a valid JSON object.
+1. histologic_variant:
+   - Options: "Classical" | "Follicular" | "Tall Cell"
+   - CRITICAL RULES:
+     A. Specific Diagnosis: Only select "Follicular" if the diagnosis explicitly says "Follicular Variant" (FVPTC). 
+     B. Architecture vs Variant: Ignore descriptions like "follicular architecture" or "follicular pattern" if the diagnosis is just PTC.
+     C. DEFAULT RULE: If the diagnosis is "Papillary Thyroid Carcinoma" and NO specific variant is mentioned, output "Classical".
 
---- EXTRACTION RULES ---
+2. tumor_site (The Bilateral Rule):
+   - Options: "Right lobe" | "Left lobe" | "Isthmus" | "Bilateral"
+   - Logic:
+     1. Identify the location of the DOMINANT nodule (e.g., Right Lobe).
+     2. Check for ANY carcinoma in the contralateral lobe (e.g., "Left lobe contains a 0.2cm focus").
+     3. If carcinoma is present in BOTH lobes -> Output "Bilateral".
+     4. Otherwise, output the site of the dominant nodule.
+     5. Only use "Isthmus" if the dominant center is the isthmus.
 
-1. histologic_type:
-   - "Papillary Thyroid Carcinoma" (includes Microcarcinoma) or "Other".
+3. extrathyroidal_extension:
+   - Options: "No ETE" | "Microscopic" | "Gross"
+   - Rule: Check Synoptic table first and trust the *descriptive text* over the TNM stage code (as staging criteria vary by year).
+     - "Not identified", "Absent", "Intrathyroidal", "Confined/limited to thyroid" -> "No ETE"
+     - "Present", "Identified", "Microscopic extension", "Invades fat/soft tissue" -> "Microscopic"
+     - "Gross extension", "Macroscopic", "Invades strap muscles/trachea" -> "Gross"
 
-2. histologic_variant:
-   - Priority: 1. Explicit mention (e.g., "Follicular Variant", "Tall Cell"). 2. "Papillary Carcinoma" alone -> "Classical".
-   - Ignore "follicular architecture" if the diagnosis is simply PTC.
+4. margins:
+   - Options: "R0" | "R1" | "R2"
+   - Rule: "Uninvolved", "Negative", "Clear", or if no involvement is mentioned -> "R0" (even if close). 
+   - Rule: "Involved", "Positive", or "Focal involvement" -> "R1".
 
-3. tumor_size:
-   - Extract the size of the DOMINANT (largest) tumor nodule in cm.
-   - CHECK HEADERS: Look for sizes in parentheses at the start of diagnosis lines (e.g., "(3.5 CM) PAPILLARY CARCINOMA"). Use this if it is the largest.
+5. tumor_size (Header Priority):
+   - Type: Float (cm).
+   - Hierarchy: 
+     1. Synoptic Data / Final Diagnosis for the DOMINANT (largest) tumor.
+     2. EXCEPTION: If Diagnosis says "Microcarcinoma" (<1cm) but Gross Description explicitly measures the distinct tumor nodule as larger (e.g., 1.2 cm), use the Gross size.
+     3. Convert mm to cm.
 
-4. extrathyroidal_extension (ETE):
-   - "Gross": Explicit use of "Gross", "Grossly", "Macroscopic". 
-   - CRITICAL RULE: If the text says "Grossly invades skeletal muscle", output "Gross". Do NOT default to Microscopic just because muscle is mentioned.
-   - "Microscopic": Invasion into soft tissue/muscle WITHOUT the word "Gross".
-   - "No ETE": "Confined to thyroid", "capsular invasion only".
-
-5. margins:
-   - "R0" (Negative/Clear), "R1" (Microscopic Positive), "R2" (Gross Positive).
-
-6. tumor_site:
-   - Options: "Right lobe", "Left lobe", "Isthmus", "Bilateral".
-   - Rule: Default to the location of the DOMINANT nodule. 
-   - EXCEPTION: If the Final Diagnosis Heading explicitly states "Bilateral Papillary Carcinoma", output "Bilateral" even if one side is larger.
-
-7. focality:
-   - "Unifocal" (Single focus) vs "Multifocal" (Multiple foci/Bilateral).
-
-8. lymph_nodes_resected:
-   - "yes" if nodes/tissue received, else "no".
-
-9. lymph_nodes_positive_count:
-   - Count of positive nodes. 0 if none.
-
---- FORMATTING ---
-- Use null for missing values.
+--- OUTPUT FORMAT ---
+Return a JSON object:
+{
+  "histologic_variant": "Classical | Follicular | Tall Cell",
+  "tumor_site": "Right lobe | Left lobe | Isthmus | Bilateral",
+  "extrathyroidal_extension": "No ETE | Microscopic | Gross",
+  "margins": "R0 | R1 | R2",
+  "tumor_size": Float
+}
 """
 
+PRAGMATIC_ALIGNMENT_PROMPT = """Role: Expert Cancer Registrar.
+Task: Extract structured variables from Pathology Reports.
+Goal: Balance high semantic fidelity with specific registry prioritization rules.
 
-def get_output_path(model_alias: str, split_name: str) -> Path:
-    """Returns the path to the log file for a specific model and split."""
+--- HYBRID EXTRACTION RULES ---
+
+1. histologic_variant:
+   - Priority Check: Check for "Discrepancy Form", "Addendum", or "Quality Control" sections. If found, findings there OVERRIDE the main text.
+   - Rule A (The 50% Threshold): Do NOT select "Tall Cell" or "Follicular" just because "features" or "architecture" are mentioned. Only select the Variant if it is the PRIMARY diagnosis (e.g., "Papillary Carcinoma, Tall Cell Variant").
+   - Rule B (Default): If the diagnosis is "Papillary Carcinoma" with "focal tall cell features", output "Classical".
+   - Rule C: "Follicular Variant" must be explicitly stated. "Follicular Pattern" alone maps to "Classical" unless it says "Exclusive Follicular Pattern".
+   - Options: "Classical" | "Follicular" | "Tall Cell"
+
+2. tumor_site (The "Bilateral" Check):
+   - Logic:
+     1. Does the report explicitly state "Bilateral" or mention carcinoma in BOTH the Right and Left lobes? -> Output "Bilateral".
+     2. If NO contralateral disease, identify the location of the Dominant (Index) Nodule.
+     3. Ignore "Isthmus" unless the dominant nodule is explicitly centered there.
+   - Options: "Right lobe" | "Left lobe" | "Isthmus" | "Bilateral"
+
+3. extrathyroidal_extension (Text over Stage):
+   - Logic: Trust the *descriptive text* over the TNM stage code (as staging criteria vary by year).
+   - Rules:
+     1. "Confined to thyroid", "Intrathyroidal", "Limited to thyroid" -> "No ETE" (Even if pT3 is listed).
+     2. "Microscopic extension", "Invades perithyroidal soft tissue", "Invades fat" -> "Microscopic".
+     3. "Gross extension", "Macroscopic", "Invades strap muscles/trachea" -> "Gross".
+   - Options: "No ETE" | "Microscopic" | "Gross"
+
+4. margins:
+   - Rules:
+     1. "Negative", "Uninvolved", "Clear" -> "R0".
+     2. "Extends to margin" BUT "Confined to thyroid" -> "R0" (Capsule is the margin, but not breached).
+     3. "Positive", "Involved", "Tumor at ink" (with ETE) -> "R1".
+   - Options: "R0" | "R1" | "R2"
+
+5. tumor_size (The Incidentaloma Rule):
+   - Logic:
+     1. Extract the size of the carcinoma.
+     2. EXCEPTION: If the carcinoma is "microscopic" (<0.1 cm) but contained within a larger "nodule" or "adenoma" (e.g., 3.5 cm), and the Final Diagnosis Header refers to the larger mass size, use the LARGER size.
+     3. If conflicting sizes exist between Synoptic and Gross, prioritize the size listed in the **Final Diagnosis Header**.
+   - Output: Float (cm).
+
+--- OUTPUT FORMAT ---
+Return a JSON object:
+{
+  "histologic_variant": "Classical | Follicular | Tall Cell",
+  "tumor_site": "Right lobe | Left lobe | Isthmus | Bilateral",
+  "extrathyroidal_extension": "No ETE | Microscopic | Gross",
+  "margins": "R0 | R1 | R2",
+  "tumor_size": Float
+}
+"""
+
+USER_PROMPT_TEMPLATE = """Report:
+---
+{report_text}
+---
+"""
+
+PROMPTS = {
+    "baseline_semantic": BASELINE_SEMANTIC_PROMPT,
+    "pragmatic_alignment": PRAGMATIC_ALIGNMENT_PROMPT
+}
+
+
+
+
+# -----------------------------------------------------------------------------
+# HELPER FUNCTIONS
+# -----------------------------------------------------------------------------
+
+def get_output_path(model_alias: str, split_name: str, mode: str) -> Path:
     sanitized_name = model_alias.replace("/", "_").replace(":", "_")
-    return OUTPUT_DIR / f"study_{split_name}_{sanitized_name}.csv"
+    return OUTPUT_DIR / f"study_{split_name}_{sanitized_name}_{mode}.csv"
 
 def get_completed_runs(output_csv: Path) -> Set[str]:
-    """Returns a set of patient_ids that have already been processed in the target CSV."""
     if not output_csv.exists():
         return set()
-    
     completed_ids = set()
     try:
         with open(output_csv, 'r', encoding='utf-8') as f:
@@ -121,171 +193,119 @@ def get_completed_runs(output_csv: Path) -> Set[str]:
         pass
     return completed_ids
 
-def call_openrouter(model_id: str, prompt: str) -> Tuple[str, str]:
-    """Makes an API call via OpenRouter."""
-    if not OPENROUTER_API_KEY:
-        return "OpenRouter API Key Missing", "error"
-
-    headers = {
-        "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-        "Content-Type": "application/json",
-        "HTTP-Referer": "https://github.com/pathology-llm-extraction",
-    }
-    
-    data = {
-        "model": model_id,
-        "messages": [
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": prompt}
-        ],
-        "temperature": 0.0,
-        "response_format": {"type": "json_object"}
-    }
-    
+def call_llm(provider: str, model_id: str, system_prompt: str, user_prompt: str) -> Tuple[str, str]:
     try:
-        response = requests.post(OPENROUTER_URL, headers=headers, json=data, timeout=60)
-        response.raise_for_status()
-        result = response.json()
-        if 'error' in result:
-            return f"API Error: {json.dumps(result['error'])}", "error"
-        content = result['choices'][0]['message']['content']
-        return content, "success"
-    except Exception as e:
-        return str(e), "error"
-
-def call_groq(model_id: str, prompt: str) -> Tuple[str, str]:
-    """Makes an API call via Groq."""
-    if not groq_client:
-        return "Groq client not initialized", "error"
+        if provider == "groq":
+            if not groq_client: return "Groq client missing", "error"
+            chat_completion = groq_client.chat.completions.create(
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt},
+                ],
+                model=model_id,
+                temperature=0.0,
+                response_format={"type": "json_object"}
+            )
+            return chat_completion.choices[0].message.content, "success"
         
-    try:
-        chat_completion = groq_client.chat.completions.create(
-            messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user", "content": prompt},
-            ],
-            model=model_id,
-            temperature=0.0,
-            response_format={"type": "json_object"}
-        )
-        content = chat_completion.choices[0].message.content
-        return content, "success"
+        elif provider == "openrouter":
+            if not OPENROUTER_API_KEY: return "OpenRouter Key missing", "error"
+            headers = {"Authorization": f"Bearer {OPENROUTER_API_KEY}", "Content-Type": "application/json"}
+            data = {
+                "model": model_id,
+                "messages": [
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt}
+                ],
+                "temperature": 0.0,
+                "response_format": {"type": "json_object"}
+            }
+            resp = requests.post(OPENROUTER_URL, headers=headers, json=data, timeout=60)
+            resp.raise_for_status()
+            return resp.json()['choices'][0]['message']['content'], "success"
+            
     except Exception as e:
         return str(e), "error"
-
-def run_inference_for_model(
-    model_alias: str, 
-    model_config: Dict[str, str], 
-    split: str, 
-    patients: List[Dict[str, str]]
-):
-    """Processes all patients for a single model configuration."""
-    model_id = model_config["id"]
-    provider = model_config["provider"]
-    output_csv = get_output_path(model_alias, split)
     
-    # Initialize CSV if it doesn't exist
+    return "Unknown provider", "error"
+
+def run_inference(model_alias: str, model_config: Dict, split: str, mode: str, patients: List[Dict]):
+    output_csv = get_output_path(model_alias, split, mode)
+    
     if not output_csv.exists():
         with open(output_csv, 'w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
-            writer.writerow(['patient_id', 'model_alias', 'model_id', 'timestamp', 'status', 'raw_response', 'parsed_json'])
+            writer.writerow(['patient_id', 'model_alias', 'mode', 'timestamp', 'status', 'raw_response', 'parsed_json'])
     
-    completed_ids = get_completed_runs(output_csv)
-    remaining_patients = [p for p in patients if p['patient_id'] not in completed_ids]
+    completed = get_completed_runs(output_csv)
+    to_process = [p for p in patients if p['patient_id'] not in completed]
     
-    print(f"\n>>> Model: {model_alias} ({provider}) | Progress: {len(completed_ids)}/{len(patients)}")
-    if not remaining_patients:
-        print("    All cases already processed.")
-        return
-
-    for i, row in enumerate(remaining_patients):
-        patient_id = row['patient_id']
-        md_path = PARSED_DIR / f"{patient_id}.md"
+    print(f"\n>>> [{mode.upper()}] {model_alias}: Processing {len(to_process)} cases...")
+    
+    for i, row in enumerate(to_process):
+        pid = row['patient_id']
+        md_path = PARSED_DIR / f"{pid}.md"
         
-        if not md_path.exists():
-            print(f"    [!] Skipping {patient_id}: File not found at {md_path}")
-            continue
-            
+        if not md_path.exists(): continue
+        
         with open(md_path, 'r', encoding='utf-8') as f:
             report_text = f.read()
+            
+        print(f"    [{i+1}/{len(to_process)}] {pid}...", end=" ", flush=True)
         
-        print(f"    [{i+1}/{len(remaining_patients)}] {patient_id}...", end=" ", flush=True)
+        system_prompt = PROMPTS[mode]
+        user_content = USER_PROMPT_TEMPLATE.format(report_text=report_text)
         
-        # API Call
-        if provider == "groq":
-            raw_response, status = call_groq(model_id, report_text)
-        else:
-            raw_response, status = call_openrouter(model_id, report_text)
+        raw_resp, status = call_llm(model_config["provider"], model_config["id"], system_prompt, user_content)
         
-        # Parse Validation
         parsed_json = ""
         if status == "success":
             try:
-                # Basic cleaning for models that ignore "json_object" instruction
-                clean_resp = raw_response.replace("```json", "").replace("```", "").strip()
-                json_obj = json.loads(clean_resp)
-                parsed_json = json.dumps(json_obj)
+                clean = raw_resp.replace("```json", "").replace("```", "").strip()
+                json.loads(clean) 
+                parsed_json = clean
                 print("OK")
-            except Exception:
+            except:
                 parsed_json = "JSON_ERROR"
-                print("JSON_PARSE_FAILED")
+                print("JSON_FAIL")
         else:
-            print(f"FAILED ({status})")
-        
-        # Log Result
+            print(f"FAIL ({status}): {raw_resp}")
+            
         with open(output_csv, 'a', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
-            writer.writerow([
-                patient_id,
-                model_alias,
-                model_id,
-                time.strftime("%Y-%m-%d %H:%M:%S"),
-                status,
-                raw_response,
-                parsed_json
-            ])
+            writer.writerow([pid, model_alias, mode, time.strftime("%Y-%m-%d %H:%M:%S"), status, raw_resp, parsed_json])
         
-        # Rate limiting
-        time.sleep(0.5)
+        time.sleep(0.3)
+
+# -----------------------------------------------------------------------------
+# MAIN
+# -----------------------------------------------------------------------------
 
 def main():
-    parser = argparse.ArgumentParser(description="Run pathology extraction inference.")
-    parser.add_argument("--split", type=str, default=DEFAULT_SPLIT, help=f"Which split to run on (default: {DEFAULT_SPLIT})")
-    parser.add_argument("--models", nargs="+", help="Explicit list of model aliases to run. If omitted, runs all active models in the registry.")
-    
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--split", default=DEFAULT_SPLIT)
+    parser.add_argument("--models", nargs="+")
     args = parser.parse_args()
     
-    # Determine which models to run
-    active_models = {}
+    target_models = MODELS
     if args.models:
-        for alias in args.models:
-            if alias in MODELS:
-                active_models[alias] = MODELS[alias]
-            else:
-                print(f"Warning: Model alias '{alias}' not found in registry.")
-    else:
-        active_models = MODELS
-
-    if not active_models:
-        print("No models selected to run. Check the registry or your CLI arguments.")
+        target_models = {k: v for k, v in MODELS.items() if k in args.models}
+    
+    if not target_models:
+        print("No valid models selected.")
         return
 
-    # Load Split Data
     split_file = DATA_DIR / f"{args.split}_split.csv"
     if not split_file.exists():
-        print(f"Split file not found: {split_file}")
+        print("Split file missing.")
         return
         
-    patients = []
     with open(split_file, 'r', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        patients = [row for row in reader] # Stratification already filters for 'OK' flags
-        
-    print(f"Loaded {len(patients)} cases from {args.split} split.")
-    print(f"Running for models: {', '.join(active_models.keys())}")
+        patients = list(csv.DictReader(f))
 
-    for alias, config in active_models.items():
-        run_inference_for_model(alias, config, args.split, patients)
+    for alias, config in target_models.items():
+        for mode in ACTIVE_MODES:
+            run_inference(alias, config, args.split, mode, patients)
 
 if __name__ == "__main__":
     main()
