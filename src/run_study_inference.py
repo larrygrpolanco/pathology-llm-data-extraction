@@ -24,11 +24,6 @@ MODELS = {
     # "kimi-k2": {"id": "moonshotai/kimi-k2-instruct-0905", "provider": "groq"}
 }
 
-# The two experimental conditions
-ACTIVE_MODES = ["baseline_semantic", "pragmatic_alignment"]
-# ACTIVE_MODES = ["baseline_semantic"]
-# ACTIVE_MODES = ["pragmatic_alignment"]
-
 # -----------------------------------------------------------------------------
 # SYSTEM CONFIGURATION
 # -----------------------------------------------------------------------------
@@ -49,14 +44,14 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 groq_client = Groq(api_key=GROQ_API_KEY) if GROQ_API_KEY else None
 
 # -----------------------------------------------------------------------------
-# PROMPT DEFINITIONS
+# PROMPT DEFINITION
 # -----------------------------------------------------------------------------
 
-BASELINE_SEMANTIC_PROMPT = """Role: Surgical Pathologist.
+PROMPT = """Role: Surgical Pathologist.
 Task: Extract precise clinical data from the report.
 Goal: High semantic fidelity to the text.
 
---- BASELINE SEMANTIC EXTRACTION ---
+--- PROMPT EXTRACTION RULES ---
 
 1. histologic_variant:
    - Options: "Classical" | "Follicular" | "Tall Cell"
@@ -104,69 +99,11 @@ Return a JSON object:
 }
 """
 
-PRAGMATIC_ALIGNMENT_PROMPT = """Role: Expert Cancer Registrar.
-Task: Extract structured variables from Pathology Reports.
-Goal: Balance high semantic fidelity with specific registry prioritization rules.
-
---- HYBRID EXTRACTION RULES ---
-
-1. histologic_variant:
-   - Priority Check: Check for "Discrepancy Form", "Addendum", or "Quality Control" sections. If found, findings there OVERRIDE the main text.
-   - Rule A (The 50% Threshold): Do NOT select "Tall Cell" or "Follicular" just because "features" or "architecture" are mentioned. Only select the Variant if it is the PRIMARY diagnosis (e.g., "Papillary Carcinoma, Tall Cell Variant").
-   - Rule B (Default): If the diagnosis is "Papillary Carcinoma" with "focal tall cell features", output "Classical".
-   - Rule C: "Follicular Variant" must be explicitly stated. "Follicular Pattern" alone maps to "Classical" unless it says "Exclusive Follicular Pattern".
-   - Options: "Classical" | "Follicular" | "Tall Cell"
-
-2. tumor_site (The "Bilateral" Check):
-   - Logic:
-     1. Does the report explicitly state "Bilateral" or mention carcinoma in BOTH the Right and Left lobes? -> Output "Bilateral".
-     2. If NO contralateral disease, identify the location of the Dominant (Index) Nodule.
-     3. Ignore "Isthmus" unless the dominant nodule is explicitly centered there.
-   - Options: "Right lobe" | "Left lobe" | "Isthmus" | "Bilateral"
-
-3. extrathyroidal_extension (Text over Stage):
-   - Logic: Trust the *descriptive text* over the TNM stage code (as staging criteria vary by year).
-   - Rules:
-     1. "Confined to thyroid", "Intrathyroidal", "Limited to thyroid" -> "No ETE" (Even if pT3 is listed).
-     2. "Microscopic extension", "Invades perithyroidal soft tissue", "Invades fat" -> "Microscopic".
-     3. "Gross extension", "Macroscopic", "Invades strap muscles/trachea" -> "Gross".
-   - Options: "No ETE" | "Microscopic" | "Gross"
-
-4. margins:
-   - Rules:
-     1. "Negative", "Uninvolved", "Clear" -> "R0".
-     2. "Extends to margin" BUT "Confined to thyroid" -> "R0" (Capsule is the margin, but not breached).
-     3. "Positive", "Involved", "Tumor at ink" (with ETE) -> "R1".
-   - Options: "R0" | "R1" | "R2"
-
-5. tumor_size (The Incidentaloma Rule):
-   - Logic:
-     1. Extract the size of the carcinoma.
-     2. EXCEPTION: If the carcinoma is "microscopic" (<0.1 cm) but contained within a larger "nodule" or "adenoma" (e.g., 3.5 cm), and the Final Diagnosis Header refers to the larger mass size, use the LARGER size.
-     3. If conflicting sizes exist between Synoptic and Gross, prioritize the size listed in the **Final Diagnosis Header**.
-   - Output: Float (cm).
-
---- OUTPUT FORMAT ---
-Return a JSON object:
-{
-  "histologic_variant": "Classical | Follicular | Tall Cell",
-  "tumor_site": "Right lobe | Left lobe | Isthmus | Bilateral",
-  "extrathyroidal_extension": "No ETE | Microscopic | Gross",
-  "margins": "R0 | R1 | R2",
-  "tumor_size": Float
-}
-"""
-
 USER_PROMPT_TEMPLATE = """Report:
 ---
 {report_text}
 ---
 """
-
-PROMPTS = {
-    "baseline_semantic": BASELINE_SEMANTIC_PROMPT,
-    "pragmatic_alignment": PRAGMATIC_ALIGNMENT_PROMPT
-}
 
 
 
@@ -175,9 +112,9 @@ PROMPTS = {
 # HELPER FUNCTIONS
 # -----------------------------------------------------------------------------
 
-def get_output_path(model_alias: str, split_name: str, mode: str) -> Path:
+def get_output_path(model_alias: str, split_name: str) -> Path:
     sanitized_name = model_alias.replace("/", "_").replace(":", "_")
-    return OUTPUT_DIR / f"study_{split_name}_{sanitized_name}_{mode}.csv"
+    return OUTPUT_DIR / f"study_{split_name}_{sanitized_name}.csv"
 
 def get_completed_runs(output_csv: Path) -> Set[str]:
     if not output_csv.exists():
@@ -229,18 +166,18 @@ def call_llm(provider: str, model_id: str, system_prompt: str, user_prompt: str)
     
     return "Unknown provider", "error"
 
-def run_inference(model_alias: str, model_config: Dict, split: str, mode: str, patients: List[Dict]):
-    output_csv = get_output_path(model_alias, split, mode)
+def run_inference(model_alias: str, model_config: Dict, split: str, patients: List[Dict]):
+    output_csv = get_output_path(model_alias, split)
     
     if not output_csv.exists():
         with open(output_csv, 'w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
-            writer.writerow(['patient_id', 'model_alias', 'mode', 'timestamp', 'status', 'raw_response', 'parsed_json'])
+            writer.writerow(['patient_id', 'model_alias', 'timestamp', 'status', 'raw_response', 'parsed_json'])
     
     completed = get_completed_runs(output_csv)
     to_process = [p for p in patients if p['patient_id'] not in completed]
     
-    print(f"\n>>> [{mode.upper()}] {model_alias}: Processing {len(to_process)} cases...")
+    print(f"\n>>> {model_alias}: Processing {len(to_process)} cases...")
     
     for i, row in enumerate(to_process):
         pid = row['patient_id']
@@ -253,7 +190,7 @@ def run_inference(model_alias: str, model_config: Dict, split: str, mode: str, p
             
         print(f"    [{i+1}/{len(to_process)}] {pid}...", end=" ", flush=True)
         
-        system_prompt = PROMPTS[mode]
+        system_prompt = PROMPT
         user_content = USER_PROMPT_TEMPLATE.format(report_text=report_text)
         
         raw_resp, status = call_llm(model_config["provider"], model_config["id"], system_prompt, user_content)
@@ -273,7 +210,7 @@ def run_inference(model_alias: str, model_config: Dict, split: str, mode: str, p
             
         with open(output_csv, 'a', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
-            writer.writerow([pid, model_alias, mode, time.strftime("%Y-%m-%d %H:%M:%S"), status, raw_resp, parsed_json])
+            writer.writerow([pid, model_alias, time.strftime("%Y-%m-%d %H:%M:%S"), status, raw_resp, parsed_json])
         
         time.sleep(0.3)
 
@@ -304,8 +241,7 @@ def main():
         patients = list(csv.DictReader(f))
 
     for alias, config in target_models.items():
-        for mode in ACTIVE_MODES:
-            run_inference(alias, config, args.split, mode, patients)
+        run_inference(alias, config, args.split, patients)
 
 if __name__ == "__main__":
     main()
