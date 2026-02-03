@@ -1,0 +1,52 @@
+patient_id,histologic_variant_gold,histologic_variant_llm,histologic_variant_match,extrathyroidal_extension_gold,extrathyroidal_extension_llm,extrathyroidal_extension_match,margins_gold,margins_llm,margins_match,tumor_site_gold,tumor_site_llm,tumor_site_match,tumor_size_gold,tumor_size_llm,tumor_size_match
+TCGA-DJ-A2PR,Classical,Classical,MATCH,Microscopic,Microscopic,MATCH,R0,R0,MATCH,Bilateral,Left lobe,MISMATCH,2.0,2.0,MATCH
+TCGA-E3-A3DZ,Follicular,Classical,MISMATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Right lobe,Right lobe,MATCH,5.0,5.0,MATCH
+TCGA-EM-A1YD,Follicular,Classical,MISMATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Right lobe,Right lobe,MATCH,3.7,3.7,MATCH
+TCGA-EM-A2CL,Follicular,Classical,MISMATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Left lobe,Left lobe,MATCH,2.5,2.5,MATCH
+TCGA-FY-A3ON,Classical,Classical,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Bilateral,Right lobe,MISMATCH,2.5,2.5,MATCH
+TCGA-J8-A3YG,Classical,Classical,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Bilateral,Right lobe,MISMATCH,2.5,2.5,MATCH
+TCGA-DJ-A2PO,Classical,Classical,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Bilateral,Left lobe,MISMATCH,0.6,0.6,MATCH
+TCGA-DJ-A2PP,Follicular,Follicular,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Bilateral,Right lobe,MISMATCH,3.6,3.6,MATCH
+TCGA-DJ-A2PU,Classical,Classical,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Bilateral,Right lobe,MISMATCH,2.8,2.8,MATCH
+TCGA-DJ-A2PV,Classical,Classical,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Bilateral,Left lobe,MISMATCH,3.4,3.4,MATCH
+TCGA-DJ-A2Q4,Classical,Classical,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Bilateral,Right lobe,MISMATCH,1.3,1.3,MATCH
+TCGA-DJ-A2QA,Follicular,Follicular,MATCH,Microscopic,Microscopic,MATCH,R0,R0,MATCH,Bilateral,Right lobe,MISMATCH,1.3,1.3,MATCH
+TCGA-DJ-A3UO,Classical,Classical,MATCH,Microscopic,Gross,MISMATCH,R0,R0,MATCH,Bilateral,Bilateral,MATCH,2.8,2.8,MATCH
+TCGA-DJ-A3V2,Classical,Classical,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Bilateral,Right lobe,MISMATCH,2.1,2.1,MATCH
+TCGA-DO-A1K0,Classical,Classical,MATCH,Microscopic,Microscopic,MATCH,R0,R0,MATCH,Bilateral,Left lobe,MISMATCH,4.2,4.2,MATCH
+TCGA-E8-A416,Classical,Classical,MATCH,No ETE,Microscopic,MISMATCH,R0,R0,MATCH,Left lobe,Left lobe,MATCH,1.5,1.5,MATCH
+TCGA-ET-A25L,Tall Cell,Classical,MISMATCH,Microscopic,Microscopic,MATCH,R1,R1,MATCH,Left lobe,Left lobe,MATCH,3.0,3.0,MATCH
+TCGA-ET-A4KN,Tall Cell,Classical,MISMATCH,Microscopic,Microscopic,MATCH,R0,R0,MATCH,Right lobe,Right lobe,MATCH,2.0,2.0,MATCH
+TCGA-FK-A3SH,Classical,Classical,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Bilateral,Left lobe,MISMATCH,3.0,3.0,MATCH
+TCGA-MK-A4N7,Classical,Classical,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Isthmus,Right lobe,MISMATCH,2.5,2.5,MATCH
+TCGA-DJ-A13V,Classical,Classical,MATCH,Microscopic,Gross,MISMATCH,R0,R0,MATCH,Left lobe,Left lobe,MATCH,2.9,2.9,MATCH
+TCGA-DJ-A2PS,Classical,Classical,MATCH,Microscopic,Microscopic,MATCH,R0,R0,MATCH,Bilateral,Right lobe,MISMATCH,1.1,1.1,MATCH
+TCGA-DJ-A3UR,Follicular,Follicular,MATCH,Microscopic,Microscopic,MATCH,R0,R0,MATCH,Bilateral,Right lobe,MISMATCH,1.0,1.0,MATCH
+TCGA-DO-A1JZ,Follicular,Follicular,MATCH,No ETE,Microscopic,MISMATCH,R1,R1,MATCH,Left lobe,Left lobe,MATCH,3.3,3.3,MATCH
+TCGA-EL-A3T1,Classical,Classical,MATCH,Microscopic,Microscopic,MATCH,R0,R1,MISMATCH,Isthmus,Isthmus,MATCH,3.8,3.8,MATCH
+TCGA-FE-A233,Classical,Classical,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Right lobe,Right lobe,MATCH,2.3,3.0,MISMATCH
+TCGA-FY-A3R8,Classical,Classical,MATCH,Microscopic,Gross,MISMATCH,R0,R0,MATCH,Left lobe,Left lobe,MATCH,1.7,1.7,MATCH
+TCGA-FY-A3R9,Classical,Classical,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Bilateral,Left lobe,MISMATCH,0.7,0.7,MATCH
+TCGA-L6-A4EU,Tall Cell,Tall Cell,MATCH,Microscopic,Gross,MISMATCH,R1,R1,MATCH,Right lobe,Right lobe,MATCH,5.0,5.0,MATCH
+TCGA-BJ-A0Z0,Classical,Follicular,MISMATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Right lobe,Right lobe,MATCH,3.5,3.5,MATCH
+TCGA-BJ-A18Y,Classical,Follicular,MISMATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Bilateral,Right lobe,MISMATCH,1.4,1.4,MATCH
+TCGA-BJ-A18Z,Classical,Tall Cell,MISMATCH,Microscopic,Microscopic,MATCH,R1,R1,MATCH,Bilateral,Left lobe,MISMATCH,3.6,3.6,MATCH
+TCGA-DE-A0Y2,Classical,Classical,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Left lobe,Left lobe,MATCH,2.4,2.3,MISMATCH
+TCGA-DE-A4M8,Classical,Classical,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Bilateral,Left lobe,MISMATCH,1.7,3.2,MISMATCH
+TCGA-DJ-A1QL,Follicular,Follicular,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Left lobe,Left lobe,MATCH,2.1,2.2,MISMATCH
+TCGA-DJ-A2PT,Tall Cell,Tall Cell,MATCH,Microscopic,Gross,MISMATCH,R0,R0,MATCH,Right lobe,Right lobe,MATCH,1.5,1.5,MATCH
+TCGA-DJ-A2PX,Follicular,,MISMATCH,No ETE,,MISMATCH,R0,,MISMATCH,Left lobe,,MISMATCH,1.2,,MISMATCH
+TCGA-DJ-A2Q1,Classical,Classical,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Bilateral,Right lobe,MISMATCH,1.6,1.6,MATCH
+TCGA-DJ-A3UV,Classical,Classical,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Left lobe,Left lobe,MATCH,0.8,1.0,MISMATCH
+TCGA-DJ-A3V5,Tall Cell,Tall Cell,MATCH,Microscopic,No ETE,MISMATCH,R1,R1,MATCH,Right lobe,Right lobe,MATCH,1.4,1.4,MATCH
+TCGA-DJ-A3VL,Follicular,Classical,MISMATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Right lobe,Right lobe,MATCH,0.6,0.6,MATCH
+TCGA-DJ-A4V4,Tall Cell,Classical,MISMATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Bilateral,Right lobe,MISMATCH,0.9,0.9,MATCH
+TCGA-E3-A3E2,Follicular,Follicular,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Right lobe,Right lobe,MATCH,1.7,1.0,MISMATCH
+TCGA-E8-A438,Classical,Classical,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Left lobe,Left lobe,MATCH,2.3,3.0,MISMATCH
+TCGA-EL-A3CN,Classical,Classical,MATCH,Microscopic,Microscopic,MATCH,R2,R1,MISMATCH,Left lobe,Left lobe,MATCH,1.5,1.5,MATCH
+TCGA-EL-A3D1,Classical,Classical,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Left lobe,Left lobe,MATCH,5.5,3.0,MISMATCH
+TCGA-EL-A3D6,Classical,Classical,MATCH,Microscopic,Microscopic,MATCH,R1,R1,MATCH,Left lobe,Left lobe,MATCH,6.0,5.5,MISMATCH
+TCGA-EL-A3GO,Classical,Follicular,MISMATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Right lobe,Right lobe,MATCH,3.2,3.2,MATCH
+TCGA-EL-A3GQ,Follicular,Follicular,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Right lobe,Right lobe,MATCH,4.0,1.3,MISMATCH
+TCGA-EL-A3H3,Classical,Classical,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Isthmus,Isthmus,MATCH,3.2,2.7,MISMATCH
+TCGA-EL-A3ZL,Classical,Classical,MATCH,No ETE,No ETE,MATCH,R0,R0,MATCH,Right lobe,Right lobe,MATCH,4.0,1.5,MISMATCH

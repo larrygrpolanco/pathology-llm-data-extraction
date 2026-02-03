@@ -1,0 +1,2203 @@
+patient_id,model_alias,timestamp,status,raw_response,parsed_json
+TCGA-DE-A69J,qwen3-32b,2026-02-02 12:46:30,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}"
+TCGA-DJ-A13L,qwen3-32b,2026-02-02 12:46:31,success,"{  ""histologic_variant"": ""Tall Cell"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.4
+}","{  ""histologic_variant"": ""Tall Cell"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.4
+}"
+TCGA-DJ-A13R,qwen3-32b,2026-02-02 12:46:33,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 5.0
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 5.0
+}"
+TCGA-DJ-A13S,qwen3-32b,2026-02-02 12:46:34,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.8
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.8
+}"
+TCGA-DJ-A13X,qwen3-32b,2026-02-02 12:46:35,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 6.5
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 6.5
+}"
+TCGA-DJ-A1QE,qwen3-32b,2026-02-02 12:46:37,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}"
+TCGA-DJ-A1QQ,qwen3-32b,2026-02-02 12:46:38,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}"
+TCGA-DJ-A2PN,qwen3-32b,2026-02-02 12:46:40,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.3
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.3
+}"
+TCGA-DJ-A2PR,qwen3-32b,2026-02-02 12:46:41,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}"
+TCGA-DJ-A2PZ,qwen3-32b,2026-02-02 12:46:43,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.7
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.7
+}"
+TCGA-DJ-A2Q0,qwen3-32b,2026-02-02 12:46:44,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.8
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.8
+}"
+TCGA-DJ-A2Q5,qwen3-32b,2026-02-02 12:46:46,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.0
+}"
+TCGA-DJ-A3UK,qwen3-32b,2026-02-02 12:46:47,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}"
+TCGA-DJ-A3UM,qwen3-32b,2026-02-02 12:46:49,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.3
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.3
+}"
+TCGA-DJ-A3UP,qwen3-32b,2026-02-02 12:46:50,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.1
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.1
+}"
+TCGA-DJ-A3US,qwen3-32b,2026-02-02 12:46:52,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}"
+TCGA-DJ-A3UX,qwen3-32b,2026-02-02 12:46:53,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 0.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 0.5
+}"
+TCGA-DJ-A3UY,qwen3-32b,2026-02-02 12:46:54,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.2
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.2
+}"
+TCGA-DJ-A3V3,qwen3-32b,2026-02-02 12:46:56,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.4
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.4
+}"
+TCGA-DJ-A3VG,qwen3-32b,2026-02-02 12:46:57,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.1
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.1
+}"
+TCGA-DJ-A3VM,qwen3-32b,2026-02-02 12:46:58,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}"
+TCGA-DJ-A4UP,qwen3-32b,2026-02-02 12:46:59,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.6
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.6
+}"
+TCGA-DJ-A4UR,qwen3-32b,2026-02-02 12:47:01,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}"
+TCGA-DJ-A4V0,qwen3-32b,2026-02-02 12:47:02,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.1
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.1
+}"
+TCGA-E3-A3DZ,qwen3-32b,2026-02-02 12:47:04,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 5.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 5.0
+}"
+TCGA-E3-A3E1,qwen3-32b,2026-02-02 12:47:05,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}"
+TCGA-E8-A413,qwen3-32b,2026-02-02 12:47:06,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}"
+TCGA-E8-A414,qwen3-32b,2026-02-02 12:47:07,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 5.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 5.0
+}"
+TCGA-E8-A433,qwen3-32b,2026-02-02 12:47:08,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}"
+TCGA-E8-A436,qwen3-32b,2026-02-02 12:47:10,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}"
+TCGA-E8-A44K,qwen3-32b,2026-02-02 12:47:11,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}"
+TCGA-E8-A44M,qwen3-32b,2026-02-02 12:47:12,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.0
+}"
+TCGA-EL-A3GV,qwen3-32b,2026-02-02 12:47:14,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.9
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.9
+}"
+TCGA-EL-A3GW,qwen3-32b,2026-02-02 12:47:15,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}"
+TCGA-EL-A3T6,qwen3-32b,2026-02-02 12:47:17,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.5
+}"
+TCGA-EL-A3ZK,qwen3-32b,2026-02-02 12:47:18,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}"
+TCGA-EL-A3ZQ,qwen3-32b,2026-02-02 12:47:20,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.6
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.6
+}"
+TCGA-EL-A3ZS,qwen3-32b,2026-02-02 12:47:21,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.6
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.6
+}"
+TCGA-EL-A4JW,qwen3-32b,2026-02-02 12:47:23,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.6
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.6
+}"
+TCGA-EL-A4JX,qwen3-32b,2026-02-02 12:47:24,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.0
+}"
+TCGA-EL-A4JZ,qwen3-32b,2026-02-02 12:47:25,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}"
+TCGA-EL-A4K2,qwen3-32b,2026-02-02 12:47:26,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.8
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.8
+}"
+TCGA-EM-A1YD,qwen3-32b,2026-02-02 12:47:28,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.7
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.7
+}"
+TCGA-EM-A2CJ,qwen3-32b,2026-02-02 12:47:30,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.2
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.2
+}"
+TCGA-EM-A2CL,qwen3-32b,2026-02-02 12:47:31,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}"
+TCGA-EM-A2OX,qwen3-32b,2026-02-02 12:47:33,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.8
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.8
+}"
+TCGA-EM-A2OY,qwen3-32b,2026-02-02 12:47:34,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.6
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.6
+}"
+TCGA-EM-A3AP,qwen3-32b,2026-02-02 12:47:35,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.6
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.6
+}"
+TCGA-EM-A3FL,qwen3-32b,2026-02-02 12:47:37,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}"
+TCGA-EM-A3FP,qwen3-32b,2026-02-02 12:47:38,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.2
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.2
+}"
+TCGA-EM-A3FQ,qwen3-32b,2026-02-02 12:47:40,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.8
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.8
+}"
+TCGA-EM-A3O9,qwen3-32b,2026-02-02 12:47:42,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.5
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.5
+}"
+TCGA-EM-A3OA,qwen3-32b,2026-02-02 12:47:43,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.2
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.2
+}"
+TCGA-EM-A3OB,qwen3-32b,2026-02-02 12:47:44,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.2
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.2
+}"
+TCGA-EM-A4FF,qwen3-32b,2026-02-02 12:47:46,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 1.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 1.5
+}"
+TCGA-EM-A4FH,qwen3-32b,2026-02-02 12:47:47,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.7
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.7
+}"
+TCGA-ET-A25I,qwen3-32b,2026-02-02 12:47:49,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.4
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.4
+}"
+TCGA-ET-A25J,qwen3-32b,2026-02-02 12:47:50,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}"
+TCGA-ET-A25M,qwen3-32b,2026-02-02 12:47:52,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}"
+TCGA-ET-A25N,qwen3-32b,2026-02-02 12:47:53,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.3
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.3
+}"
+TCGA-ET-A2N0,qwen3-32b,2026-02-02 12:47:55,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}"
+TCGA-ET-A39I,qwen3-32b,2026-02-02 12:47:56,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.9
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.9
+}"
+TCGA-ET-A39J,qwen3-32b,2026-02-02 12:47:57,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}"
+TCGA-ET-A39L,qwen3-32b,2026-02-02 12:48:00,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 5.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 5.5
+}"
+TCGA-ET-A39M,qwen3-32b,2026-02-02 12:48:01,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.0
+}"
+TCGA-ET-A39O,qwen3-32b,2026-02-02 12:48:03,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.6
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.6
+}"
+TCGA-ET-A39S,qwen3-32b,2026-02-02 12:48:05,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.0
+}"
+TCGA-ET-A3BN,qwen3-32b,2026-02-02 12:48:06,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}"
+TCGA-ET-A3BQ,qwen3-32b,2026-02-02 12:48:07,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}"
+TCGA-ET-A3BV,qwen3-32b,2026-02-02 12:48:09,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.0
+}"
+TCGA-ET-A3DP,qwen3-32b,2026-02-02 12:48:10,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}"
+TCGA-ET-A3DQ,qwen3-32b,2026-02-02 12:48:11,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.0
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.0
+}"
+TCGA-ET-A3DR,qwen3-32b,2026-02-02 12:48:12,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.2
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.2
+}"
+TCGA-ET-A3DS,qwen3-32b,2026-02-02 12:48:14,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 0.8
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 0.8
+}"
+TCGA-ET-A3DT,qwen3-32b,2026-02-02 12:48:16,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}"
+TCGA-ET-A3DU,qwen3-32b,2026-02-02 12:48:17,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 1.4
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 1.4
+}"
+TCGA-ET-A40P,qwen3-32b,2026-02-02 12:48:18,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.2
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.2
+}"
+TCGA-ET-A40Q,qwen3-32b,2026-02-02 12:48:20,success,"{  ""histologic_variant"": ""Tall Cell"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}","{  ""histologic_variant"": ""Tall Cell"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}"
+TCGA-ET-A4KQ,qwen3-32b,2026-02-02 12:48:21,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.0
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.0
+}"
+TCGA-FE-A230,qwen3-32b,2026-02-02 12:48:22,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.4
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.4
+}"
+TCGA-FE-A231,qwen3-32b,2026-02-02 12:48:24,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 9.4
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 9.4
+}"
+TCGA-FE-A234,qwen3-32b,2026-02-02 12:48:25,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.3
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.3
+}"
+TCGA-FE-A23A,qwen3-32b,2026-02-02 12:48:27,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.7
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.7
+}"
+TCGA-FK-A3S3,qwen3-32b,2026-02-02 12:48:28,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}"
+TCGA-FK-A3SE,qwen3-32b,2026-02-02 12:48:30,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.5
+}"
+TCGA-FK-A4UB,qwen3-32b,2026-02-02 12:48:31,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 2.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 2.0
+}"
+TCGA-FY-A3NP,qwen3-32b,2026-02-02 12:48:33,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}"
+TCGA-FY-A3ON,qwen3-32b,2026-02-02 12:48:35,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}"
+TCGA-FY-A3RA,qwen3-32b,2026-02-02 12:48:36,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.0
+}"
+TCGA-FY-A3TY,qwen3-32b,2026-02-02 12:48:37,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.2
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.2
+}"
+TCGA-FY-A3W9,qwen3-32b,2026-02-02 12:48:39,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 2.3
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 2.3
+}"
+TCGA-FY-A3WA,qwen3-32b,2026-02-02 12:48:44,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.1
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.1
+}"
+TCGA-FY-A3YR,qwen3-32b,2026-02-02 12:48:45,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.7
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.7
+}"
+TCGA-FY-A40K,qwen3-32b,2026-02-02 12:48:47,success,"{
+  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.0
+}","{
+  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.0
+}"
+TCGA-IM-A3ED,qwen3-32b,2026-02-02 12:48:48,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.7
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.7
+}"
+TCGA-J8-A3O1,qwen3-32b,2026-02-02 12:48:50,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 6.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 6.5
+}"
+TCGA-J8-A3YG,qwen3-32b,2026-02-02 12:48:53,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}"
+TCGA-J8-A4HW,qwen3-32b,2026-02-02 12:48:54,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}"
+TCGA-J8-A4HY,qwen3-32b,2026-02-02 12:48:57,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Gross"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 6.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Gross"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 6.5
+}"
+TCGA-KS-A41I,qwen3-32b,2026-02-02 12:48:58,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}"
+TCGA-KS-A41L,qwen3-32b,2026-02-02 12:49:00,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.2
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.2
+}"
+TCGA-KS-A4I7,qwen3-32b,2026-02-02 12:49:01,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}"
+TCGA-KS-A4I9,qwen3-32b,2026-02-02 12:49:03,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.7
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.7
+}"
+TCGA-KS-A4IB,qwen3-32b,2026-02-02 12:49:04,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.2
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.2
+}"
+TCGA-L6-A4EP,qwen3-32b,2026-02-02 12:49:05,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}"
+TCGA-CE-A484,qwen3-32b,2026-02-02 12:49:07,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 5.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 5.0
+}"
+TCGA-DE-A4MC,qwen3-32b,2026-02-02 12:49:08,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.8
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.8
+}"
+TCGA-DJ-A2PO,qwen3-32b,2026-02-02 12:49:11,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 0.6
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 0.6
+}"
+TCGA-DJ-A2PP,qwen3-32b,2026-02-02 12:49:12,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.6
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.6
+}"
+TCGA-DJ-A2PQ,qwen3-32b,2026-02-02 12:49:14,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.5
+}"
+TCGA-DJ-A2PU,qwen3-32b,2026-02-02 12:49:15,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.8
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.8
+}"
+TCGA-DJ-A2PV,qwen3-32b,2026-02-02 12:49:16,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.4
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.4
+}"
+TCGA-DJ-A2Q4,qwen3-32b,2026-02-02 12:49:18,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.3
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.3
+}"
+TCGA-DJ-A2Q9,qwen3-32b,2026-02-02 12:49:20,success,"{  ""histologic_variant"": ""Tall Cell"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}","{  ""histologic_variant"": ""Tall Cell"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}"
+TCGA-DJ-A2QA,qwen3-32b,2026-02-02 12:49:21,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.3
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.3
+}"
+TCGA-DJ-A3UO,qwen3-32b,2026-02-02 12:49:22,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.8
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.8
+}"
+TCGA-DJ-A3V2,qwen3-32b,2026-02-02 12:49:24,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.1
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.1
+}"
+TCGA-DJ-A3VA,qwen3-32b,2026-02-02 12:49:25,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}"
+TCGA-DO-A1K0,qwen3-32b,2026-02-02 12:49:27,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.2
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.2
+}"
+TCGA-E8-A416,qwen3-32b,2026-02-02 12:49:28,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}"
+TCGA-EL-A3CL,qwen3-32b,2026-02-02 12:49:30,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}"
+TCGA-EL-A3T3,qwen3-32b,2026-02-02 12:49:31,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.5
+}"
+TCGA-EL-A3ZM,qwen3-32b,2026-02-02 12:49:33,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Gross"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 5.7
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Gross"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 5.7
+}"
+TCGA-EL-A3ZT,qwen3-32b,2026-02-02 12:49:35,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}"
+TCGA-EM-A22L,qwen3-32b,2026-02-02 12:49:36,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.2
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.2
+}"
+TCGA-EM-A2P1,qwen3-32b,2026-02-02 12:49:39,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.1
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.1
+}"
+TCGA-EM-A3FK,qwen3-32b,2026-02-02 12:49:41,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.2
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.2
+}"
+TCGA-EM-A3O3,qwen3-32b,2026-02-02 12:49:45,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.1
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.1
+}"
+TCGA-ET-A25K,qwen3-32b,2026-02-02 12:49:46,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}"
+TCGA-ET-A25L,qwen3-32b,2026-02-02 12:49:48,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 3.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 3.0
+}"
+TCGA-ET-A2MY,qwen3-32b,2026-02-02 12:49:49,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.3
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.3
+}"
+TCGA-ET-A39N,qwen3-32b,2026-02-02 12:49:51,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 5.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 5.0
+}"
+TCGA-ET-A4KN,qwen3-32b,2026-02-02 12:49:53,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}"
+TCGA-FE-A232,qwen3-32b,2026-02-02 12:49:55,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.5
+}"
+TCGA-FE-A3PD,qwen3-32b,2026-02-02 12:49:57,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.3
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.3
+}"
+TCGA-FK-A3SH,qwen3-32b,2026-02-02 12:49:59,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}"
+TCGA-FY-A4B4,qwen3-32b,2026-02-02 12:50:00,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 1.8
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 1.8
+}"
+TCGA-IM-A3EB,qwen3-32b,2026-02-02 12:50:02,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}"
+TCGA-J8-A3YE,qwen3-32b,2026-02-02 12:50:05,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.5
+}"
+TCGA-J8-A3YF,qwen3-32b,2026-02-02 12:50:08,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 0.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 0.5
+}"
+TCGA-MK-A4N7,qwen3-32b,2026-02-02 12:50:09,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}"
+TCGA-CE-A481,qwen3-32b,2026-02-02 12:50:11,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}"
+TCGA-DE-A0XZ,qwen3-32b,2026-02-02 12:50:12,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}"
+TCGA-DJ-A13M,qwen3-32b,2026-02-02 12:50:29,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}"
+TCGA-DJ-A13O,qwen3-32b,2026-02-02 12:50:30,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.1
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.1
+}"
+TCGA-DJ-A13T,qwen3-32b,2026-02-02 12:50:31,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.2
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.2
+}"
+TCGA-DJ-A13U,qwen3-32b,2026-02-02 12:50:33,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.1
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.1
+}"
+TCGA-DJ-A13V,qwen3-32b,2026-02-02 12:50:34,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.9
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.9
+}"
+TCGA-DJ-A13W,qwen3-32b,2026-02-02 12:50:36,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}"
+TCGA-DJ-A1QI,qwen3-32b,2026-02-02 12:50:37,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}"
+TCGA-DJ-A2PS,qwen3-32b,2026-02-02 12:50:39,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.1
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.1
+}"
+TCGA-DJ-A2QC,qwen3-32b,2026-02-02 12:50:41,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.3
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.3
+}"
+TCGA-DJ-A3UR,qwen3-32b,2026-02-02 12:50:42,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.0
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.0
+}"
+TCGA-DJ-A3UU,qwen3-32b,2026-02-02 12:50:44,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 1.1
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 1.1
+}"
+TCGA-DJ-A3VF,qwen3-32b,2026-02-02 12:50:45,success,"{  ""histologic_variant"": ""Tall Cell"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.0
+}","{  ""histologic_variant"": ""Tall Cell"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.0
+}"
+TCGA-DJ-A3VI,qwen3-32b,2026-02-02 12:50:46,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.2
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.2
+}"
+TCGA-DO-A1JZ,qwen3-32b,2026-02-02 12:50:48,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 3.3
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 3.3
+}"
+TCGA-E8-A242,qwen3-32b,2026-02-02 12:50:51,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 1.8
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 1.8
+}"
+TCGA-EL-A3T1,qwen3-32b,2026-02-02 12:50:53,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.8
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.8
+}"
+TCGA-EL-A3T7,qwen3-32b,2026-02-02 12:50:54,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.0
+}"
+TCGA-EM-A1CS,qwen3-32b,2026-02-02 12:50:55,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.3
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.3
+}"
+TCGA-EM-A2P3,qwen3-32b,2026-02-02 12:51:00,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.4
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.4
+}"
+TCGA-EM-A3FO,qwen3-32b,2026-02-02 12:51:03,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.4
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 4.4
+}"
+TCGA-EM-A3SX,qwen3-32b,2026-02-02 12:51:04,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 4.4
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 4.4
+}"
+TCGA-ET-A39K,qwen3-32b,2026-02-02 12:51:05,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 4.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Bilateral"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 4.0
+}"
+TCGA-ET-A3BT,qwen3-32b,2026-02-02 12:51:07,success,"{  ""histologic_variant"": ""Tall Cell"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}","{  ""histologic_variant"": ""Tall Cell"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.5
+}"
+TCGA-FE-A233,qwen3-32b,2026-02-02 12:51:08,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}"
+TCGA-FY-A3R6,qwen3-32b,2026-02-02 12:51:16,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.2
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.2
+}"
+TCGA-FY-A3R8,qwen3-32b,2026-02-02 12:51:18,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.7
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.7
+}"
+TCGA-DE-A69K,qwen3-32b,2026-02-02 12:52:06,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 3.1
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 3.1
+}"
+TCGA-KS-A41F,qwen3-32b,2026-02-02 12:52:20,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.2
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.2
+}"
+TCGA-KS-A41J,qwen3-32b,2026-02-02 12:52:21,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.3
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.3
+}"
+TCGA-L6-A4EU,qwen3-32b,2026-02-02 12:52:25,success,"{  ""histologic_variant"": ""Tall Cell"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 5.0
+}","{  ""histologic_variant"": ""Tall Cell"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 5.0
+}"
+TCGA-BJ-A0Z0,qwen3-32b,2026-02-02 12:52:27,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.5
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.5
+}"
+TCGA-BJ-A18Y,qwen3-32b,2026-02-02 12:52:29,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.4
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.4
+}"
+TCGA-BJ-A18Z,qwen3-32b,2026-02-02 12:52:32,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 3.6
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 3.6
+}"
+TCGA-DE-A0Y2,qwen3-32b,2026-02-02 12:52:34,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.3
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.3
+}"
+TCGA-FY-A3R9,qwen3-32b,2026-02-02 12:53:36,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 0.7
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 0.7
+}"
+TCGA-DE-A4M8,qwen3-32b,2026-02-02 12:53:40,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.2
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.2
+}"
+TCGA-DJ-A1QL,qwen3-32b,2026-02-02 12:53:41,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.2
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.2
+}"
+TCGA-DJ-A2PT,qwen3-32b,2026-02-02 12:53:42,success,"{  ""histologic_variant"": ""Tall Cell"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}","{  ""histologic_variant"": ""Tall Cell"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}"
+TCGA-DJ-A2PX,qwen3-32b,2026-02-02 12:53:44,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.2
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.2
+}"
+TCGA-DJ-A2Q1,qwen3-32b,2026-02-02 12:53:45,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 1.6
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 1.6
+}"
+TCGA-DJ-A3UV,qwen3-32b,2026-02-02 12:53:47,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.0
+}"
+TCGA-DJ-A3V5,qwen3-32b,2026-02-02 12:53:49,success,"{  ""histologic_variant"": ""Tall Cell"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 1.4
+}","{  ""histologic_variant"": ""Tall Cell"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 1.4
+}"
+TCGA-DJ-A3V6,qwen3-32b,2026-02-02 12:53:50,success,"{  ""histologic_variant"": ""Tall Cell"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.8
+}","{  ""histologic_variant"": ""Tall Cell"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.8
+}"
+TCGA-DJ-A3V7,qwen3-32b,2026-02-02 12:53:53,success,"{  ""histologic_variant"": ""Tall Cell"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.2
+}","{  ""histologic_variant"": ""Tall Cell"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.2
+}"
+TCGA-DJ-A3VK,qwen3-32b,2026-02-02 12:53:54,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.0
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.0
+}"
+TCGA-DJ-A3VL,qwen3-32b,2026-02-02 12:53:55,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 0.6
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 0.6
+}"
+TCGA-DJ-A4V4,qwen3-32b,2026-02-02 12:53:57,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 0.9
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 0.9
+}"
+TCGA-E3-A3E2,qwen3-32b,2026-02-02 12:53:59,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.0
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.0
+}"
+TCGA-E8-A438,qwen3-32b,2026-02-02 12:54:00,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}"
+TCGA-EL-A3CN,qwen3-32b,2026-02-02 12:54:02,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 1.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 1.5
+}"
+TCGA-EL-A3CY,qwen3-32b,2026-02-02 12:54:03,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 5.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 5.0
+}"
+TCGA-EL-A3D1,qwen3-32b,2026-02-02 12:54:04,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.0
+}"
+TCGA-EL-A3D6,qwen3-32b,2026-02-02 12:54:06,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 5.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Left lobe"",
+  ""extrathyroidal_extension"": ""Microscopic"",
+  ""margins"": ""R1"",
+  ""tumor_size"": 5.5
+}"
+TCGA-EL-A3GO,qwen3-32b,2026-02-02 12:54:07,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.2
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 3.2
+}"
+TCGA-EL-A3GQ,qwen3-32b,2026-02-02 12:54:08,success,"{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.3
+}","{  ""histologic_variant"": ""Follicular"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.3
+}"
+TCGA-EL-A3H3,qwen3-32b,2026-02-02 12:54:11,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.7
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Isthmus"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 2.7
+}"
+TCGA-EL-A3ZL,qwen3-32b,2026-02-02 12:54:12,success,"{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}","{  ""histologic_variant"": ""Classical"",
+  ""tumor_site"": ""Right lobe"",
+  ""extrathyroidal_extension"": ""No ETE"",
+  ""margins"": ""R0"",
+  ""tumor_size"": 1.5
+}"

@@ -13,15 +13,17 @@ from groq import Groq
 # USER SETTINGS 
 # -----------------------------------------------------------------------------
 
-DEFAULT_SPLIT = "dev"
+DEFAULT_SPLIT = "final"
 
 # Define the models
 MODELS = {
     "gpt-oss-120b": {"id": "openai/gpt-oss-120b", "provider": "groq"},
-    # "llama-3.1-8b": {"id": "meta-llama/llama-3.1-8b-instant", "provider": "groq"},
-    # "llama-3.3-70b": {"id": "meta-llama/llama-3.3-70b-versatile", "provider": "groq"},
-    # "qwen3-32b": {"id": "qwen/qwen3-32b", "provider": "groq"},
-    # "kimi-k2": {"id": "moonshotai/kimi-k2-instruct-0905", "provider": "groq"}
+    "gpt-oss-20b": {"id": "openai/gpt-oss-20b", "provider": "groq"},
+    "llama-3.1-8b": {"id": "llama-3.1-8b-instant", "provider": "groq"},
+    "llama-3.3-70b": {"id": "llama-3.3-70b-versatile", "provider": "groq"},
+    "qwen3-32b": {"id": "qwen/qwen3-32b", "provider": "groq"},
+    "kimi-k2": {"id": "moonshotai/kimi-k2-instruct-0905", "provider": "groq"},
+    "mistral-large-2512": {"id": "mistralai/mistral-large-2512", "provider": "openrouter"}
 }
 
 # -----------------------------------------------------------------------------
@@ -47,46 +49,50 @@ groq_client = Groq(api_key=GROQ_API_KEY) if GROQ_API_KEY else None
 # PROMPT DEFINITION
 # -----------------------------------------------------------------------------
 
-PROMPT = """Role: Surgical Pathologist.
-Task: Extract precise clinical data from the report.
-Goal: High semantic fidelity to the text.
 
---- PROMPT EXTRACTION RULES ---
+PROMPT = """Role: Clinical data abstractor for cancer registry coding.
+Task: Extract structured variables from pathology reports following rules below.
+
+--- EXTRACTION RULES ---
 
 1. histologic_variant:
    - Options: "Classical" | "Follicular" | "Tall Cell"
-   - CRITICAL RULES:
-     A. Specific Diagnosis: Only select "Follicular" if the diagnosis explicitly says "Follicular Variant" (FVPTC). 
-     B. Architecture vs Variant: Ignore descriptions like "follicular architecture" or "follicular pattern" if the diagnosis is just PTC.
-     C. DEFAULT RULE: If the diagnosis is "Papillary Thyroid Carcinoma" and NO specific variant is mentioned, output "Classical".
+   - RULES:
+     A. Extract variant ONLY from the final diagnosis line, NOT from microscopic descriptions.
+     B. "Follicular/Tall Cell features" or "architecture" → ignore (these describe cellular patterns, not the variant).
+     C. If multiple variants mentioned, use the one in the PRIMARY/DOMINANT tumor only.
+     D. DEFAULT: If diagnosis says "Papillary Thyroid Carcinoma" without specifying variant → "Classical".
 
 2. tumor_site (The Bilateral Rule):
    - Options: "Right lobe" | "Left lobe" | "Isthmus" | "Bilateral"
-   - Logic:
-     1. Identify the location of the DOMINANT nodule (e.g., Right Lobe).
-     2. Check for ANY carcinoma in the contralateral lobe (e.g., "Left lobe contains a 0.2cm focus").
-     3. If carcinoma is present in BOTH lobes -> Output "Bilateral".
-     4. Otherwise, output the site of the dominant nodule.
-     5. Only use "Isthmus" if the dominant center is the isthmus.
+   - Rules:
+     A. Identify the location of the DOMINANT nodule (e.g., Right Lobe).
+     B. Check for clinically significant carcinoma (>1cm) in the contralateral lobe
+     C. If carcinoma is present in BOTH lobes -> Output "Bilateral".
+     D. Otherwise, output the site of the dominant nodule.
+     E. Only use "Isthmus" if the dominant center is the isthmus.
 
 3. extrathyroidal_extension:
    - Options: "No ETE" | "Microscopic" | "Gross"
-   - Rule: Check Synoptic table first and trust the *descriptive text* over the TNM stage code (as staging criteria vary by year).
-     - "Not identified", "Absent", "Intrathyroidal", "Confined/limited to thyroid" -> "No ETE"
-     - "Present", "Identified", "Microscopic extension", "Invades fat/soft tissue" -> "Microscopic"
-     - "Gross extension", "Macroscopic", "Invades strap muscles/trachea" -> "Gross"
+   - Rules: 
+     A. Check Synoptic table first and trust the *descriptive text* over the TNM stage code (as staging criteria vary by year).
+     B. "Not identified", "Absent", "Intrathyroidal", "Confined/limited to thyroid" -> "No ETE"
+     C. "Present", "Identified", "Microscopic extension", "Invades fat/soft tissue" -> "Microscopic"
+     D. "Gross extension", "Macroscopic", "Invades strap muscles/trachea" -> "Gross"
 
 4. margins:
    - Options: "R0" | "R1" | "R2"
-   - Rule: "Uninvolved", "Negative", "Clear", or if no involvement is mentioned -> "R0" (even if close). 
-   - Rule: "Involved", "Positive", or "Focal involvement" -> "R1".
+   - Rules: 
+     A. "Uninvolved", "Negative", "Clear", or if no involvement is mentioned -> "R0" (even if close). 
+     B. "Involved", "Positive", or "Focal involvement" -> "R1".
 
 5. tumor_size (Header Priority):
    - Type: Float (cm).
-   - Hierarchy: 
-     1. Synoptic Data / Final Diagnosis for the DOMINANT (largest) tumor.
-     2. EXCEPTION: If Diagnosis says "Microcarcinoma" (<1cm) but Gross Description explicitly measures the distinct tumor nodule as larger (e.g., 1.2 cm), use the Gross size.
-     3. Convert mm to cm.
+   - Rules: 
+     A. Synoptic Data / Final Diagnosis for the DOMINANT (largest) tumor.
+     B. EXCEPTION: If Diagnosis uses the term "Microcarcinoma" AND Gross Description measures 
+the same nodule as ≥1.0 cm, use the Gross measurement.
+     C. Convert mm to cm.
 
 --- OUTPUT FORMAT ---
 Return a JSON object:

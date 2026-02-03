@@ -212,7 +212,7 @@ Preserved by:   Date:   Time:
 
 | Organ         | Size          | Extension of Tumor | Distance to NAT |
 | ------------- | ------------- | ------------------ | --------------- |
-| Thyroid Tumor | 15 x 1 x 1 cm | Lymph Nodes        | 2 cm            |
+| Thyroid Tumor | 1.5 x 1 x 1 cm | Lymph Nodes        | 2 cm            |
 
 # Distant Metastasis
 
