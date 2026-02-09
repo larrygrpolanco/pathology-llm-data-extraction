@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:46:11",
+  "value": "Follicular",
+  "confidence": "High",
+  "reasoning": "The final diagnosis line explicitly states 'follicular variant', which directly matches one of the allowed options."
+}

@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:49:48",
+  "value": 1.9,
+  "confidence": "High",
+  "reasoning": "The diagnosis and synoptic data both state the dominant tumor is 1.9\u202fcm, with no ambiguity or conflicting measurements."
+}

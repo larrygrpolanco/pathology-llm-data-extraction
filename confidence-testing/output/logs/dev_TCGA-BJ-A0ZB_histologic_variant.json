@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:59:22",
+  "value": "Tall Cell",
+  "confidence": "High",
+  "reasoning": "The FINAL DIAGNOSIS explicitly states the tumor is a papillary thyroid carcinoma, tall cell variant, in both the thyroid and metastatic nodes."
+}

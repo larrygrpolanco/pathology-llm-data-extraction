@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:53:03",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The dominant 4.2\u202fcm carcinoma is described as being located in the right lobe, and no clinically significant carcinoma is reported in the left lobe, so the site is Right lobe."
+}

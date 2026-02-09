@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:46:43",
+  "value": "R1",
+  "confidence": "High",
+  "reasoning": "The report states the tumor is focally at the inked anterior margin, indicating focal involvement, which maps to R1 with no ambiguity."
+}

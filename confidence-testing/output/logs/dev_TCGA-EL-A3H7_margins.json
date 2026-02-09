@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:03:25",
+  "value": "R1",
+  "confidence": "High",
+  "reasoning": "The report states the tumor is at a cauterized edge, indicating a positive (involved) margin, which maps to R1."
+}

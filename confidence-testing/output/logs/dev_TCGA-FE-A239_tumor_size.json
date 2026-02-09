@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:44:31",
+  "value": 4.5,
+  "confidence": "High",
+  "reasoning": "The synoptic report lists the tumor size as 4.5\u202f\u00d7\u202f2.5\u202f\u00d7\u202f2.7\u202fcm, making the largest dimension 4.5\u202fcm; no conflicting measurements or microcarcinoma terminology are present."
+}

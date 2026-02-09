@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:43:12",
+  "value": 1.2,
+  "confidence": "High",
+  "reasoning": "Diagnosis labels the tumor as a microcarcinoma, but the gross description provides a nodule size of 1.2\u202fcm (\u22651.0\u202fcm), so per the exception rule the gross measurement is used."
+}

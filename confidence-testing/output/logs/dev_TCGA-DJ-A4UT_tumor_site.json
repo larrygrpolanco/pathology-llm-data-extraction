@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:02:31",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The dominant tumor is located in the right lobe (1.0\u202fcm) and the only contralateral focus is a 0.5\u202fmm microcarcinoma, which is below the >1\u202fcm significance threshold, so the site is Right lobe."
+}

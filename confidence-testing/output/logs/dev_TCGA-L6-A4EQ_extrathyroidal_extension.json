@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:01:17",
+  "value": "No ETE",
+  "confidence": "High",
+  "reasoning": "The report explicitly states the external capsule is grossly uninvolved, indicating no extrathyroidal extension; no microscopic or gross invasion is described."
+}

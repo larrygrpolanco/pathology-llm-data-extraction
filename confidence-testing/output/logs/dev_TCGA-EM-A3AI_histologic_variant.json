@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:50:30",
+  "value": "Classical",
+  "confidence": "High",
+  "reasoning": "The final Diagnosis line mentions papillary carcinoma but does not specify a variant; per the default rule, this is interpreted as the Classical variant."
+}

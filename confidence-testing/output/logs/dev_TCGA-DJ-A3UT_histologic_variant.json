@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:01:27",
+  "value": "Classical",
+  "confidence": "High",
+  "reasoning": "The final diagnosis lists papillary microcarcinoma without specifying a variant; per rule, default to Classical. No ambiguity present."
+}

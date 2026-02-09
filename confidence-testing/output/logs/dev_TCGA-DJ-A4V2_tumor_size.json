@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:46:10",
+  "value": 3.0,
+  "confidence": "High",
+  "reasoning": "The diagnosis section explicitly states the tumor size as a greatest diameter of 3.0\u202fcm, which matches the gross measurement; the information is clear and unambiguous."
+}

@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:56:07",
+  "value": "No ETE",
+  "confidence": "High",
+  "reasoning": "The synoptic data explicitly lists 'Extrathyroidal Extension: Not identified', which maps to 'No ETE' per the extraction rules; the statement is clear and unambiguous."
+}

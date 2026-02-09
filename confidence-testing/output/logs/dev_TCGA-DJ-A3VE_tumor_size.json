@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:54:55",
+  "value": 1.7,
+  "confidence": "High",
+  "reasoning": "The gross description lists a 1.7\u202f\u00d7\u202f1.6\u202f\u00d7\u202f1.3\u202fcm nodule, which is the largest tumor mentioned; no conflicting data or microcarcinoma terminology is present."
+}

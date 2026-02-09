@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:48:16",
+  "value": "No ETE",
+  "confidence": "High",
+  "reasoning": "The report states the primary tumor is \"limited to thyroid,\" which maps to the \"No ETE\" category with no ambiguity."
+}

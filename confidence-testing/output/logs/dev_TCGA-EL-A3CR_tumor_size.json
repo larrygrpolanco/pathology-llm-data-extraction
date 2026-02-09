@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:00:43",
+  "value": 3.5,
+  "confidence": "High",
+  "reasoning": "The diagnosis explicitly states the tumor is 3.5\u202fcm in maximum dimension, which is unambiguous and matches the dominant lesion."
+}

@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:45:31",
+  "value": "Classical",
+  "confidence": "High",
+  "reasoning": "The final diagnosis line mentions only \"papillary thyroid carcinoma\" without specifying a variant, so per the default rule the variant is Classical. The information is clear and unambiguous."
+}

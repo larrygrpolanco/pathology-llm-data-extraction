@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:48:32",
+  "value": 1.0,
+  "confidence": "High",
+  "reasoning": "The Diagnosis section explicitly lists the tumor size as 1.0\u202fcm, which overrides other measurements per the extraction rules."
+}

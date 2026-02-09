@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:02:58",
+  "value": "Classical",
+  "confidence": "Low",
+  "reasoning": "The report does not contain a clear final diagnosis line specifying a papillary thyroid carcinoma variant; no variant is mentioned, so we default to Classical but with low confidence due to missing explicit information."
+}

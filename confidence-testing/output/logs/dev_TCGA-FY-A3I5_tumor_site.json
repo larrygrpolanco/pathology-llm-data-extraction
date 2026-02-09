@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:52:33",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The dominant tumor is a 4.5\u202fcm focus in the right lobe, while the left lobe carcinoma is only 0.9\u202fcm (<1\u202fcm), so only the right lobe meets the criteria for the dominant site."
+}

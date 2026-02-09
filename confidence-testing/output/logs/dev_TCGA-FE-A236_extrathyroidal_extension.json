@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:45:24",
+  "value": "No ETE",
+  "confidence": "High",
+  "reasoning": "The synoptic report explicitly states 'Tumor extent: Confined to the thyroid; Yes' and 'Infiltration of adjacent structures: No', indicating no extrathyroidal extension."
+}

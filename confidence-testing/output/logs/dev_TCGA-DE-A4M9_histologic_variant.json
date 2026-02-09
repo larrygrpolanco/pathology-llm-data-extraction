@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:43:36",
+  "value": "Classical",
+  "confidence": "High",
+  "reasoning": "The final diagnosis lists only papillary thyroid carcinoma with follicular and solid growth patterns, not a specific variant; per rules, default to Classical."
+}

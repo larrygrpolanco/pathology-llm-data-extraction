@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:53:21",
+  "value": 2.0,
+  "confidence": "High",
+  "reasoning": "The final diagnosis section lists 'TUMOR SIZE (LARGEST NODULE): Greatest dimension: 2.0 cm', directly providing the size in centimeters with no ambiguity."
+}

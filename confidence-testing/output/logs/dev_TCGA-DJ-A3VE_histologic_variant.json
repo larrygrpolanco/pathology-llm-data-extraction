@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:54:48",
+  "value": "Classical",
+  "confidence": "High",
+  "reasoning": "The final diagnosis section does not specify a variant; per rule 5, unspecified papillary carcinoma defaults to Classical, making the extraction unambiguous."
+}

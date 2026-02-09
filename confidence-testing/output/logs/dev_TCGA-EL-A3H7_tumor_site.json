@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:03:20",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The dominant tumor is a 3.0\u202fcm nodule in the right thyroid lobe; the left lobe nodule is <1\u202fcm, so no clinically significant carcinoma in the contralateral lobe, leading to a Right lobe classification."
+}

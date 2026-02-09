@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:00:29",
+  "value": 3.0,
+  "confidence": "High",
+  "reasoning": "Both the Diagnosis and Synoptic Data list the tumor's greatest dimension as 3.0\u202fcm, with no conflicting measurements."
+}

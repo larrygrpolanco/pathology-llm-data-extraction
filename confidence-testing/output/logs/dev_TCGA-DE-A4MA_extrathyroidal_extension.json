@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:58:48",
+  "value": "Microscopic",
+  "confidence": "Medium",
+  "reasoning": "The report notes a focus suspicious for extra\u2011thyroidal involvement of adipose tissue, indicating presence of microscopic extension, but the description is not definitive, leading to moderate confidence."
+}

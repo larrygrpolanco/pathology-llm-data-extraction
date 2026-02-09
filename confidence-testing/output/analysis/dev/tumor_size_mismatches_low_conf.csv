@@ -1,0 +1,2 @@
+patient_id,gold_value,llm_value,llm_normalized,gold_normalized,match,confidence,reasoning
+TCGA-EL-A3T8,3.8,0.1,0.1,3.8,MISMATCH,Low,"The diagnosis only provides a size for one carcinoma as ""less than 0.1 cm"" and gives no measurement for the other tumor, making the dominant tumor size ambiguous."

@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:45:44",
+  "value": "Microscopic",
+  "confidence": "High",
+  "reasoning": "The synoptic table explicitly lists 'Extrathyroidal Extension | identified', which maps to Microscopic according to the extraction rules; no conflicting information is present."
+}

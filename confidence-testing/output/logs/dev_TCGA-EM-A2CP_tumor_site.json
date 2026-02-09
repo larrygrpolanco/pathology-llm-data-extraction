@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:58:04",
+  "value": "Left lobe",
+  "confidence": "High",
+  "reasoning": "The report states the dominant tumor is a 3.2\u202fcm papillary carcinoma in the left lobe, and the only contralateral carcinoma is 0.8\u202fcm (below the >1\u202fcm significance threshold)."
+}

@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:52:18",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The synoptic report identifies the dominant tumor in the right lobe and the left lobe shows no malignant tumor, so no contralateral carcinoma >1\u202fcm is present."
+}

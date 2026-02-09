@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:43:24",
+  "value": 3.5,
+  "confidence": "High",
+  "reasoning": "The synoptic data explicitly states the tumor size as 3.5\u202fcm, which is the largest primary thyroid lesion and is clearly documented."
+}

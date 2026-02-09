@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:52:42",
+  "value": 4.5,
+  "confidence": "High",
+  "reasoning": "The Final Diagnosis for the right thyroid lobe states the largest focus measures 4.5\u202f\u00d7\u202f3.0\u202f\u00d7\u202f3.0\u202fcm, which is the dominant tumor size; the information is explicit and unambiguous."
+}

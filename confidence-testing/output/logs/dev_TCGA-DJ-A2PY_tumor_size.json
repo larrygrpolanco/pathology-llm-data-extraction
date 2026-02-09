@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:50:05",
+  "value": 2.5,
+  "confidence": "High",
+  "reasoning": "The final diagnosis lists the dominant tumor size as a greatest diameter of 2.5\u202fcm, which is unambiguous and matches the gross measurement."
+}

@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:54:05",
+  "value": 5.0,
+  "confidence": "High",
+  "reasoning": "The diagnosis section explicitly lists a 5.0\u202fcm papillary thyroid carcinoma as the primary tumor, and no other larger or conflicting measurements are provided."
+}

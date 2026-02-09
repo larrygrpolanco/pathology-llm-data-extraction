@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:43:30",
+  "value": "Left lobe",
+  "confidence": "High",
+  "reasoning": "The report states Laterality: Left and the tumor size is 0.7\u202fcm, which is below the >1\u202fcm threshold for a clinically significant contralateral lesion; no contralateral disease is mentioned, so the dominant nodule is in the left lobe."
+}

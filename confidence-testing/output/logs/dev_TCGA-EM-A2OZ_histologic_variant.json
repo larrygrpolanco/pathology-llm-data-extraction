@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:58:55",
+  "value": "Classical",
+  "confidence": "High",
+  "reasoning": "The diagnosis explicitly states the dominant tumor is a 'classical variant' and the histologic type is listed as 'Papillary carcinoma, classical', leaving no ambiguity."
+}

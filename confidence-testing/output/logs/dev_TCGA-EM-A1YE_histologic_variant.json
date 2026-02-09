@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:00:13",
+  "value": "Classical",
+  "confidence": "High",
+  "reasoning": "The Diagnosis section lists only 'Papillary carcinoma' without a variant; per rule 5, default to Classical. No ambiguity present."
+}

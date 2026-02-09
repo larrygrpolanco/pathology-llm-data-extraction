@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:55:32",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The report states the papillary carcinoma is located in the right lobe (4.9\u202fcm) and the only other nodule in the left lobe is 0.8\u202fcm, below the 1\u202fcm threshold for clinically significant carcinoma, so the dominant site is right lobe."
+}

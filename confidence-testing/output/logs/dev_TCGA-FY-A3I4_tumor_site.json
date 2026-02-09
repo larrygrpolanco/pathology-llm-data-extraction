@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:51:12",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The report lists the dominant tumor location as the right lobe (4.0\u202fcm) and indicates no carcinoma in the left lobe, only a benign colloid nodule, so the tumor is confined to the right lobe."
+}

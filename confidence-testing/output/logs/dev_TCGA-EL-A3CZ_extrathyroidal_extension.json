@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:48:24",
+  "value": "No ETE",
+  "confidence": "Medium",
+  "reasoning": "The gross description explicitly states the nodule is \"confined to the thyroid,\" indicating no extrathyroidal extension, but the diagnosis line lists \"Extrathyroidal extension\" without a clear qualifier, creating some ambiguity."
+}

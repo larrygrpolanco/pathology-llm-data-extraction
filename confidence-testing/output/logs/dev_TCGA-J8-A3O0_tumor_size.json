@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:44:47",
+  "value": 2.8,
+  "confidence": "High",
+  "reasoning": "The FINAL DIAGNOSIS section lists the tumor size as 'Greatest Dimension: 2.8 cm', which matches the gross description; no ambiguity or conflicting measurements are present."
+}

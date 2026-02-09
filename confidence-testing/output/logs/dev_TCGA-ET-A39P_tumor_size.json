@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:48:09",
+  "value": 5.3,
+  "confidence": "High",
+  "reasoning": "The final diagnosis section explicitly states \"TUMOR SIZE: Greatest dimension 5.3 cm\", providing a clear, unambiguous measurement."
+}

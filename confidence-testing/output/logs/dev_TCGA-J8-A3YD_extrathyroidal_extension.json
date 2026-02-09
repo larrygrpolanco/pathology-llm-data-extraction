@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:44:12",
+  "value": "No ETE",
+  "confidence": "High",
+  "reasoning": "The report explicitly states the capsular surface appears intact with no invasion beyond the capsule, indicating no extrathyroidal extension."
+}

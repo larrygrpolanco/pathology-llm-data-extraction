@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:56:45",
+  "value": "R0",
+  "confidence": "High",
+  "reasoning": "The report explicitly states that surgical resection margins are negative/uninvolved by carcinoma, indicating no residual tumor at the margins."
+}

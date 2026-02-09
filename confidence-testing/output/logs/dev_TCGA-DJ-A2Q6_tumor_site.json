@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:48:38",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The report states the two largest tumor foci (\u22651\u202fcm) are in the right lobe, while the left lobe nodule is only 0.3\u202fcm, below the clinically significant threshold, so the dominant site is the right lobe."
+}

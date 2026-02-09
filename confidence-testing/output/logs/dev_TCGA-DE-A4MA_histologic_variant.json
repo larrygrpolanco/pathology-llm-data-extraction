@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:58:38",
+  "value": "Classical",
+  "confidence": "High",
+  "reasoning": "The final diagnosis line states 'Papillary thyroid carcinoma, usual type', which corresponds to the Classical variant per the extraction rules."
+}

@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:49:00",
+  "value": 2.7,
+  "confidence": "High",
+  "reasoning": "Both the Final Diagnosis and the Gross Description state the tumor size as 2.7\u202fcm, with no ambiguity."
+}

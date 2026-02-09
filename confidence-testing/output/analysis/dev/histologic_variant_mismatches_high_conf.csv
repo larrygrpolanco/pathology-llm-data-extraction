@@ -1,0 +1,11 @@
+patient_id,gold_value,llm_value,llm_normalized,gold_normalized,match,confidence,reasoning
+TCGA-J8-A3O0,Classical,Follicular,Follicular,Classical,MISMATCH,High,"The FINAL DIAGNOSIS section explicitly lists 'HISTOLOGIC TYPE: Papillary carcinoma, Follicular variant', directly indicating the variant."
+TCGA-EM-A1CW,Follicular,Classical,Classical,Follicular,MISMATCH,High,"The final diagnosis line mentions only ""papillary thyroid carcinoma"" without specifying a variant, so per the default rule the variant is Classical. The information is clear and unambiguous."
+TCGA-DJ-A2Q8,Tall Cell,Classical,Classical,Tall Cell,MISMATCH,High,"The final diagnosis lists only 'Papillary thyroid microcarcinoma' with no variant specified, so per default rule the variant is Classical. The information is explicit and unambiguous."
+TCGA-DJ-A2PY,Tall Cell,Classical,Classical,Tall Cell,MISMATCH,High,"The final diagnosis states ""Papillary carcinoma, classical type with tall cell features""; per rules, tall cell features are ignored, leaving the explicit classical variant."
+TCGA-EM-A3AI,Follicular,Classical,Classical,Follicular,MISMATCH,High,"The final Diagnosis line mentions papillary carcinoma but does not specify a variant; per the default rule, this is interpreted as the Classical variant."
+TCGA-DJ-A1QG,Follicular,Classical,Classical,Follicular,MISMATCH,High,"The final diagnosis lists one classical type and one follicular variant, and explicitly notes that the largest tumor focus is the classical type, making it the dominant variant."
+TCGA-BJ-A0ZB,Classical,Tall Cell,Tall Cell,Classical,MISMATCH,High,"The FINAL DIAGNOSIS explicitly states the tumor is a papillary thyroid carcinoma, tall cell variant, in both the thyroid and metastatic nodes."
+TCGA-EM-A1YE,Follicular,Classical,Classical,Follicular,MISMATCH,High,"The Diagnosis section lists only 'Papillary carcinoma' without a variant; per rule 5, default to Classical. No ambiguity present."
+TCGA-EL-A3CR,Classical,Follicular,Follicular,Classical,MISMATCH,High,"The final diagnosis line explicitly states ""PAPILLARY CARCINOMA ... FOLLICULAR VARIENT"", indicating the follicular variant."
+TCGA-DJ-A3UT,Follicular,Classical,Classical,Follicular,MISMATCH,High,"The final diagnosis lists papillary microcarcinoma without specifying a variant; per rule, default to Classical. No ambiguity present."

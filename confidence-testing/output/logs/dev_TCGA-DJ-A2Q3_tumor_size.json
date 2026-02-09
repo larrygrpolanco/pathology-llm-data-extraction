@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:44:55",
+  "value": 0.8,
+  "confidence": "High",
+  "reasoning": "The Diagnosis section states the tumor's greatest diameter is 0.8\u202fcm, which matches the largest dimension reported in the Gross Description; no ambiguity or conflicting measurements are present."
+}

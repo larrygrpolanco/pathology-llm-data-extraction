@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:53:45",
+  "value": "Microscopic",
+  "confidence": "High",
+  "reasoning": "The report lists 'Extrathyroid Extension: Fibroadipose tissue' with 'Invades: perithyroidal', indicating microscopic invasion of perithyroidal soft tissue, matching the rule for Microscopic ETE."
+}

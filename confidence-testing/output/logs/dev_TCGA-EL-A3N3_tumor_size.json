@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:55:10",
+  "value": 1.5,
+  "confidence": "High",
+  "reasoning": "The diagnosis explicitly states the papillary carcinoma measures 1.5\u202fcm, and the gross description confirms the same size; no ambiguity exists."
+}

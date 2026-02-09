@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:59:42",
+  "value": 2.4,
+  "confidence": "High",
+  "reasoning": "Both the final diagnosis and synoptic data explicitly state the tumor size as 2.4\u202fcm, leaving no ambiguity."
+}

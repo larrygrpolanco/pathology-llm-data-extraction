@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:57:52",
+  "value": "R0",
+  "confidence": "High",
+  "reasoning": "The report explicitly states 'Margins grossly free of tumor,' indicating no margin involvement, which maps to R0 with no ambiguity."
+}

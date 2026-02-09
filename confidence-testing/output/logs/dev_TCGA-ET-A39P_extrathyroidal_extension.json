@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:48:03",
+  "value": "Microscopic",
+  "confidence": "High",
+  "reasoning": "The report states 'multiple foci of extrathyroidal extension' without describing gross invasion, indicating microscopic extension."
+}

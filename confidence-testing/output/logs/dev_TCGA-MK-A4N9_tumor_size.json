@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:46:02",
+  "value": 2.6,
+  "confidence": "High",
+  "reasoning": "The Pathologic Diagnosis lists the multifocal papillary carcinoma sizes, with the largest being the isthmus lesion at 2.6\u202fcm, which is unambiguous."
+}

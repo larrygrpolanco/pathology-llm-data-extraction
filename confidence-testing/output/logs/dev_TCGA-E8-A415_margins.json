@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:00:58",
+  "value": "R1",
+  "confidence": "Medium",
+  "reasoning": "The report states 'Invasion of capsule: Yes', indicating involvement, which maps to R1, but the term refers to capsule invasion rather than explicit surgical margin status, creating some ambiguity."
+}

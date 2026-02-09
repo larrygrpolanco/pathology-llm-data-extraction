@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:45:56",
+  "value": "Isthmus",
+  "confidence": "High",
+  "reasoning": "The largest tumor (2.6\u202fcm) is in the isthmus, making it the dominant nodule. Only the right lobe has a clinically significant (>1\u202fcm) carcinoma, so the disease is not bilateral."
+}

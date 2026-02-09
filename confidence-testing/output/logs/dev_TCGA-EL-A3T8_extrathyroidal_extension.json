@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:57:48",
+  "value": "No ETE",
+  "confidence": "High",
+  "reasoning": "The report states the tumor capsule is intact and margins are grossly free, indicating no extrathyroidal extension."
+}

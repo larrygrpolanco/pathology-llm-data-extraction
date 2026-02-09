@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:43:38",
+  "value": "No ETE",
+  "confidence": "High",
+  "reasoning": "The report explicitly states 'Extra-thyroidal extension invasion: Not identified' and also notes the tumor is 'Confined', both indicating no extrathyroidal extension."
+}

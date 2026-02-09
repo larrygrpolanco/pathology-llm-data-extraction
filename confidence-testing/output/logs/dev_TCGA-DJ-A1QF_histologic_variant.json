@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:02:42",
+  "value": "Classical",
+  "confidence": "High",
+  "reasoning": "The final diagnosis line explicitly states \"Papillary carcinoma, classical type\", directly indicating the Classical variant."
+}

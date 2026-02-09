@@ -1,0 +1,7 @@
+patient_id,gold_value,llm_value,llm_normalized,gold_normalized,match,confidence,reasoning
+TCGA-DJ-A2Q7,R0,R1,R1,R0,MISMATCH,High,"The report states the tumor is focally at the inked anterior margin, indicating focal involvement, which maps to R1 with no ambiguity."
+TCGA-EL-A3CZ,R1,R0,R0,R1,MISMATCH,High,"The report explicitly states 'Resection margins - negative' and 'margins free of tumor', indicating no involvement."
+TCGA-ET-A3DW,R0,R1,R1,R0,MISMATCH,High,"The report explicitly states 'THE TUMOR EXTENDS TO THE MARGIN', indicating a positive/involved margin, which maps to R1."
+TCGA-FE-A3PA,R2,R0,R0,R2,MISMATCH,High,"The report contains no explicit mention of margin involvement, positivity, or gross residual disease; per the extraction rules, absence of such information defaults to R0."
+TCGA-L6-A4ET,R0,R1,R1,R0,MISMATCH,High,"The report explicitly states that tumor is present focally at the black inked anterior margin, indicating positive/involved margin."
+TCGA-EL-A3H7,R0,R1,R1,R0,MISMATCH,High,"The report states the tumor is at a cauterized edge, indicating a positive (involved) margin, which maps to R1."

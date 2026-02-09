@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:49:29",
+  "value": "Follicular",
+  "confidence": "High",
+  "reasoning": "The final diagnosis line explicitly states \"dominant follicular variant\" of papillary carcinoma, directly indicating the follicular variant."
+}

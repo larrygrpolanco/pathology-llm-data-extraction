@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:49:09",
+  "value": "R0",
+  "confidence": "High",
+  "reasoning": "The report explicitly states 'Margins uninvolved by carcinoma' and that surgical margins are free of tumor, indicating no involvement."
+}

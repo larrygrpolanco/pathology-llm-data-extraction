@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:54:29",
+  "value": "Classical",
+  "confidence": "High",
+  "reasoning": "The final diagnosis states the dominant variant is the classical variant, with only focal tall cell change (<5%) which is not the primary variant."
+}

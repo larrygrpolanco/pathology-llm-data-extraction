@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:50:52",
+  "value": "Gross",
+  "confidence": "Medium",
+  "reasoning": "The report states \"Extrathyroidal extension: Yes\" and describes tumor attached to left anterior skeletal muscle and ligament of Berry, indicating invasion of strap muscle, which aligns with gross extension, though the exact extent is not explicitly labeled."
+}

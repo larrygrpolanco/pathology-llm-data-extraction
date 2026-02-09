@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:59:01",
+  "value": "Isthmus",
+  "confidence": "High",
+  "reasoning": "The dominant tumor is a 1.7\u202fcm papillary carcinoma located in the isthmus, and no carcinoma >1\u202fcm is present in the opposite lobe, so the site is the isthmus."
+}

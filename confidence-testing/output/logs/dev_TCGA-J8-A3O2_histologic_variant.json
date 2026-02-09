@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:43:14",
+  "value": "Classical",
+  "confidence": "High",
+  "reasoning": "The final diagnosis section lists the tumor as \"Classical (usual)\", directly specifying the histologic variant."
+}

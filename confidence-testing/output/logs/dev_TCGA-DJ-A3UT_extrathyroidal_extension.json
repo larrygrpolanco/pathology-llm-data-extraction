@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:01:35",
+  "value": "No ETE",
+  "confidence": "High",
+  "reasoning": "The diagnosis section explicitly states 'Extrathyroid Extension: Not Identified', which maps to 'No ETE' per the extraction rules."
+}

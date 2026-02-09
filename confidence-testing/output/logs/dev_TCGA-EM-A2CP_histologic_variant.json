@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:58:02",
+  "value": "Follicular",
+  "confidence": "High",
+  "reasoning": "The final diagnosis line explicitly states \"multifocal papillary carcinoma, dominant 3.2\u202fcm, follicular variant\" indicating the follicular variant as the tumor type."
+}

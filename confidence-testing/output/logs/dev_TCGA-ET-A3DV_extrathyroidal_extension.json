@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:53:07",
+  "value": "No ETE",
+  "confidence": "High",
+  "reasoning": "The report states the carcinoma is circumscribed, thinly encapsulated with only focal extension into the tumor capsule, indicating it remains confined to the thyroid without extrathyroidal spread."
+}

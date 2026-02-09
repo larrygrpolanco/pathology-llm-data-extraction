@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:52:22",
+  "value": "R0",
+  "confidence": "Medium",
+  "reasoning": "The report does not explicitly state margin involvement; it mentions capsular invasion but no clear margin status, so per the extraction rules we default to R0, though the capsular invasion creates some ambiguity."
+}

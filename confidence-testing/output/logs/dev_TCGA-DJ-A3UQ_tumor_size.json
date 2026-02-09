@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:53:48",
+  "value": 0.8,
+  "confidence": "High",
+  "reasoning": "The final diagnosis section lists the tumor size as a greatest diameter of 0.8\u202fcm, which is the largest reported lesion; the information is explicit and unambiguous."
+}

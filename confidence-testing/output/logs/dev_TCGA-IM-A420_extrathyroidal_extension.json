@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:59:58",
+  "value": "No ETE",
+  "confidence": "Medium",
+  "reasoning": "The synoptic section lists 'Extrathyroidal Extension: Not identified', which per the extraction rules indicates No ETE, despite a narrative note of 'Perithyroidal extension is present'; the rule to prioritize the synoptic table leads to this interpretation, but the conflict lowers confidence."
+}

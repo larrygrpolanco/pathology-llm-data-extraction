@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:48:48",
+  "value": 1.1,
+  "confidence": "High",
+  "reasoning": "The diagnosis section states tumor foci range up to 1.1\u202fcm, which is the largest reported size and is unambiguous."
+}

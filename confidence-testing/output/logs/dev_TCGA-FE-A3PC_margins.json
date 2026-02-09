@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:49:24",
+  "value": "R0",
+  "confidence": "High",
+  "reasoning": "The report explicitly states margins are uninvolved/clear and does not mention any positive or gross residual involvement, indicating a negative margin status."
+}

@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:57:02",
+  "value": "No ETE",
+  "confidence": "Low",
+  "reasoning": "The report states 'Extrathyroidal Extension: Cannot be assessed', which does not clearly map to the defined categories; it is ambiguous, so I defaulted to 'No ETE' with low confidence."
+}

@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:45:28",
+  "value": "R0",
+  "confidence": "High",
+  "reasoning": "The report states the tumor is confined to the thyroid with no capsular invasion or infiltration of adjacent structures, indicating negative/clear margins."
+}

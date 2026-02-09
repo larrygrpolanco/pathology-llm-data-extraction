@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:01:49",
+  "value": "Follicular",
+  "confidence": "High",
+  "reasoning": "The diagnosis and dominant tumor sections explicitly state the tumor is a follicular variant of papillary carcinoma, leaving no ambiguity."
+}

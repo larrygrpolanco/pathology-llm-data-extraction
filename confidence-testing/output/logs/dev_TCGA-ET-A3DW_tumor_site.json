@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:48:53",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The report specifies a 2.7\u202fcm tumor in the right lobe with no clinically significant carcinoma reported in the left lobe, so the dominant site is the right lobe."
+}

@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:54:18",
+  "value": "Left lobe",
+  "confidence": "High",
+  "reasoning": "The dominant tumor is a 2.8\u202fcm carcinoma in the left lobe; the only contralateral lesion is a 0.1\u202fcm microcarcinoma (<1\u202fcm), so it does not meet the >1\u202fcm criterion for bilateral disease."
+}

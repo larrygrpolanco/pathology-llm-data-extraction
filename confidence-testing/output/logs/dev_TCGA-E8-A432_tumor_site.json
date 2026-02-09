@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:56:22",
+  "value": "Left lobe",
+  "confidence": "High",
+  "reasoning": "The report specifies Laterality: left with a unifocal tumor and no mention of carcinoma in the opposite lobe, so the dominant nodule is in the left lobe."
+}

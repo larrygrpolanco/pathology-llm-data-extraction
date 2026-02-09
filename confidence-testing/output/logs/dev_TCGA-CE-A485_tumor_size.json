@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:03:14",
+  "value": 2.0,
+  "confidence": "High",
+  "reasoning": "The report explicitly lists the tumor size as 2\u202fcm in several tables, with no conflicting measurements."
+}

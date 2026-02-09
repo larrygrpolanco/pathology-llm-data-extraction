@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:52:14",
+  "value": 1.8,
+  "confidence": "High",
+  "reasoning": "The Diagnosis section lists tumor sizes with the largest diameter explicitly as 1.8\u202fcm, and per rules the synoptic diagnosis measurement is used for the dominant tumor."
+}

@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:59:19",
+  "value": 6.0,
+  "confidence": "High",
+  "reasoning": "The report explicitly states 'Tumor Size: Greatest dimension 6 cm', providing an unambiguous measurement in centimeters."
+}

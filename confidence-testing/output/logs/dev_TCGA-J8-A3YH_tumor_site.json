@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:43:48",
+  "value": "Bilateral",
+  "confidence": "High",
+  "reasoning": "The report explicitly states multifocal papillary carcinoma involving both right and left thyroid lobes (right > left) and lists tumor focality as bilateral, indicating clinically significant carcinoma in both lobes."
+}

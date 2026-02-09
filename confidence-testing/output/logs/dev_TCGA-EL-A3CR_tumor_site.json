@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:00:35",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The report identifies a dominant papillary carcinoma in the right thyroid lobe and notes no tumor in the left lobe, so the site is Right lobe with high certainty."
+}

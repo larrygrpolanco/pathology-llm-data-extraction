@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:57:44",
+  "value": "Left lobe",
+  "confidence": "Medium",
+  "reasoning": "The report mentions a tiny (<0.1\u202fcm) carcinoma in the right lobe and a carcinoma in the left lobe (size not specified, likely dominant). The contralateral right lobe lesion is not clinically significant (>1\u202fcm), so the dominant site is the left lobe."
+}

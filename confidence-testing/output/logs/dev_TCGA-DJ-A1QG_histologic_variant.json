@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:51:58",
+  "value": "Classical",
+  "confidence": "High",
+  "reasoning": "The final diagnosis lists one classical type and one follicular variant, and explicitly notes that the largest tumor focus is the classical type, making it the dominant variant."
+}

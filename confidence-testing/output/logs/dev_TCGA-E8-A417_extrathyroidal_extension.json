@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:46:25",
+  "value": "Gross",
+  "confidence": "High",
+  "reasoning": "The descriptive text explicitly mentions invasion of skeletal muscle, which indicates gross extrathyroidal extension, overriding the unspecified synoptic entry."
+}

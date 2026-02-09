@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:49:06",
+  "value": "Microscopic",
+  "confidence": "High",
+  "reasoning": "The report explicitly notes extrathyroidal extension as \"Present\" and \"Minimal\", indicating microscopic extension rather than gross invasion."
+}

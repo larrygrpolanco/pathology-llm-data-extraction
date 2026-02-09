@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:01:32",
+  "value": "Right lobe",
+  "confidence": "Medium",
+  "reasoning": "The report lists multiple microcarcinoma foci in both lobes, but the only measurable nodule (>0.1\u202fcm) is a 0.9\u202fcm lesion in the right lobe, making it the dominant focus; no lesion >1\u202fcm is present in the contralateral lobe, so the site is right lobe. Ambiguities in the 'Tumor Location' vs. 'Tumor Size' fields lower confidence."
+}

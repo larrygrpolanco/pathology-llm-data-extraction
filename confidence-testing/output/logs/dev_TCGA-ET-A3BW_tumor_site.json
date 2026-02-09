@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:51:44",
+  "value": "Left lobe",
+  "confidence": "High",
+  "reasoning": "The report explicitly states the tumor site as Left lobe, with no mention of carcinoma in the right lobe, so the dominant nodule is left lobe only."
+}

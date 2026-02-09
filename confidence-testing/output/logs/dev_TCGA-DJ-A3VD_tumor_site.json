@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:43:07",
+  "value": "Isthmus",
+  "confidence": "High",
+  "reasoning": "The report explicitly states the tumor location as the isthmus and no >1\u202fcm carcinoma is described in either thyroid lobe, so the dominant site is the isthmus."
+}

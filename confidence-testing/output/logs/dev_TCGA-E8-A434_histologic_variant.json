@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:43:28",
+  "value": "Classical",
+  "confidence": "High",
+  "reasoning": "The report mentions only 'Papillary carcinoma' with no specific variant, so per default rule we assign 'Classical' with high confidence."
+}

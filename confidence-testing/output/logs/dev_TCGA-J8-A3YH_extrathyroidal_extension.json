@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:43:53",
+  "value": "No ETE",
+  "confidence": "High",
+  "reasoning": "Both the final diagnosis and the EXTENSION section explicitly state that extrathyroidal extension is not identified, matching the rule for 'No ETE'."
+}

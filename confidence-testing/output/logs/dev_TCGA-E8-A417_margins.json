@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:46:30",
+  "value": "R0",
+  "confidence": "High",
+  "reasoning": "The report does not mention any margin involvement; per the extraction rules, absence of involvement defaults to R0."
+}

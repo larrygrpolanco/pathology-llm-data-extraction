@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:50:34",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The report states the dominant tumor is in the right lobe (2.3\u202fcm) and no carcinoma >1\u202fcm is mentioned in the contralateral (left) lobe; the small isthmus focus is <1\u202fcm, so the site is Right lobe."
+}

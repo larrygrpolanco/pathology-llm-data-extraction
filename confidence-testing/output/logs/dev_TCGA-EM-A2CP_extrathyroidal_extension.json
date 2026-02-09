@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:58:11",
+  "value": "Microscopic",
+  "confidence": "High",
+  "reasoning": "The report explicitly states 'Extrathyroidal Extension: identified' for the second tumor, indicating presence of extension, and the mapping rules assign this to 'Microscopic'. No contradictory information is present."
+}

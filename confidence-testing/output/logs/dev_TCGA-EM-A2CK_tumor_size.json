@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:44:06",
+  "value": 2.3,
+  "confidence": "High",
+  "reasoning": "The report explicitly lists the dominant tumor size as 2.3\u202fcm in both the Diagnosis and Synoptic Data sections, leaving no ambiguity."
+}

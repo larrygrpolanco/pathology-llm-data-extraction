@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:56:50",
+  "value": 1.5,
+  "confidence": "High",
+  "reasoning": "The synoptic summary lists the dominant tumor with greatest dimension of 1.5\u202fcm, which is the largest measurement and unambiguous."
+}

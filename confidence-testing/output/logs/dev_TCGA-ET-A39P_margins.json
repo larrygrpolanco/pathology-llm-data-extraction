@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:48:05",
+  "value": "R1",
+  "confidence": "High",
+  "reasoning": "The report explicitly states 'MARGINS: Involved by invasive carcinoma', which maps directly to R1 with no ambiguity."
+}

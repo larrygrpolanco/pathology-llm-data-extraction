@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:45:04",
+  "value": "No ETE",
+  "confidence": "Low",
+  "reasoning": "The report does not mention extrathyroidal extension; it only states 'Tumor extent: not specified', so the absence of explicit ETE information leads to a low\u2011confidence inference of no extension."
+}

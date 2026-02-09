@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:52:03",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The largest tumor focus (1.8\u202fcm) is in the right lobe, and the only left\u2011lobe focus is 0.1\u202fcm (<1\u202fcm), so no clinically significant carcinoma is present in the contralateral lobe. Hence the site is Right lobe."
+}

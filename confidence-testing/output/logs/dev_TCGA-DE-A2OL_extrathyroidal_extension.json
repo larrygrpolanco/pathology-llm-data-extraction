@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:47:34",
+  "value": "No ETE",
+  "confidence": "High",
+  "reasoning": "The report explicitly lists 'Extra thyroidal extension | negative', which maps to 'No ETE' per the extraction rules."
+}

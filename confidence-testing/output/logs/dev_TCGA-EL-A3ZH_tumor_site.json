@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:52:51",
+  "value": "Left lobe",
+  "confidence": "High",
+  "reasoning": "The diagnosis specifies a 2.5\u202fcm papillary carcinoma confined to the left lobe, and no carcinoma is reported in the right lobe despite the presence of nodules, so the dominant site is the left lobe."
+}

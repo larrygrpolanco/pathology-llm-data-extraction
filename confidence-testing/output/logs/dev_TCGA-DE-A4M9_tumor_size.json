@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:43:43",
+  "value": 3.0,
+  "confidence": "High",
+  "reasoning": "The Diagnosis section lists tumor sizes as 3.0\u202fcm and 0.3\u202fcm; per rules we use the synoptic (diagnosis) data for the dominant tumor, giving 3.0\u202fcm."
+}

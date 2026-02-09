@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:43:17",
+  "value": "Left lobe",
+  "confidence": "High",
+  "reasoning": "The dominant 3.5\u202fcm papillary carcinoma is explicitly described as located in the left thyroid lobe, and no >1\u202fcm carcinoma is reported in the right lobe, so the site is left lobe."
+}

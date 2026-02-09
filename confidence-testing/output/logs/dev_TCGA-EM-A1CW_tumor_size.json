@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:45:40",
+  "value": 4.5,
+  "confidence": "High",
+  "reasoning": "The dominant tumor is explicitly reported as 4.5\u202fcm in both the Diagnosis and Histology sections, and the gross description confirms a 4.5\u202fcm nodule, leaving no ambiguity."
+}

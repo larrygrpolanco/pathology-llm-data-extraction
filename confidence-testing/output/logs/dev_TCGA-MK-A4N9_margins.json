@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:46:00",
+  "value": "R0",
+  "confidence": "High",
+  "reasoning": "The report explicitly states that surgical margins are negative, which maps directly to R0. The statement is clear and unambiguous."
+}

@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:55:06",
+  "value": "Microscopic",
+  "confidence": "Medium",
+  "reasoning": "The report states \"extra-glandular extension,\" indicating extrathyroidal involvement, but does not specify whether it is gross or microscopic, so it is interpreted as Microscopic with moderate confidence."
+}

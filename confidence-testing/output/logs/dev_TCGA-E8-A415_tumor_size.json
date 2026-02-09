@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:01:01",
+  "value": 1.0,
+  "confidence": "High",
+  "reasoning": "The synoptic section lists the tumor size as 1\u202f\u00d7\u202f0.7\u202f\u00d7\u202f0.7\u202fcm, making the largest dimension 1\u202fcm; the measurement is explicit and unambiguous."
+}

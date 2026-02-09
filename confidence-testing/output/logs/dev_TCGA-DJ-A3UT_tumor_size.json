@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:01:44",
+  "value": 0.9,
+  "confidence": "High",
+  "reasoning": "The diagnosis lists tumor size ranging up to 0.9\u202fcm and the gross description confirms a nodule measuring 0.9\u202fcm; both sources agree on the largest dimension."
+}

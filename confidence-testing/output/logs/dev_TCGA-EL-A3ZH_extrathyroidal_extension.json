@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:52:54",
+  "value": "Microscopic",
+  "confidence": "Medium",
+  "reasoning": "The report states the tumor is \"confined to gland\" but also mentions a \"focus of papillary thyroid carcinoma present in soft tissue,\" indicating extrathyroidal extension that is not described as gross, thus interpreted as microscopic; the conflicting statements create some ambiguity."
+}

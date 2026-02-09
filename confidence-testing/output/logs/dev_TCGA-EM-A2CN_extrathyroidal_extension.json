@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:46:15",
+  "value": "Microscopic",
+  "confidence": "High",
+  "reasoning": "The report explicitly states 'Extrathyroidal Extension: Identified', which maps to the Microscopic category per the extraction rules; no contradictory information is present."
+}

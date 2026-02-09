@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:53:38",
+  "value": "Tall Cell",
+  "confidence": "High",
+  "reasoning": "The final diagnosis for the total thyroidectomy states \"Papillary microcarcinoma with focal tall cell and columnar cell features,\" directly indicating the Tall Cell variant."
+}

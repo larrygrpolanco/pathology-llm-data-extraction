@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:02:15",
+  "value": "No ETE",
+  "confidence": "High",
+  "reasoning": "The synoptic table explicitly lists 'Extrathyroidal extension: No' and the narrative states the tumor is confined to the thyroid, matching the 'No ETE' category."
+}

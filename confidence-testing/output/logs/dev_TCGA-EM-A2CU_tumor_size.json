@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:43:04",
+  "value": 4.0,
+  "confidence": "High",
+  "reasoning": "The dominant tumor is explicitly described with a dimension of 4.0\u202fcm in both the DOMINANT TUMOR section and the gross description, leaving no ambiguity."
+}

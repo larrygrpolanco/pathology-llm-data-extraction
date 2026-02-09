@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:43:23",
+  "value": "R1",
+  "confidence": "High",
+  "reasoning": "The report explicitly states the tumor focally extends to the inked surgical margins, indicating involved (positive) margins, which maps to R1."
+}

@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:59:08",
+  "value": "R0",
+  "confidence": "High",
+  "reasoning": "Both the dominant tumor and the second tumor sections explicitly state \"Margins uninvolved by carcinoma,\" which maps to the R0 category with no ambiguity."
+}

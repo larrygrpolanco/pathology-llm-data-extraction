@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:59:06",
+  "value": "No ETE",
+  "confidence": "High",
+  "reasoning": "Both the primary and secondary tumor sections list Extrathyroidal Extension as 'Not identified', which maps to 'No ETE' per the extraction rules."
+}

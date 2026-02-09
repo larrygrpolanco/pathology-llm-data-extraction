@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:48:51",
+  "value": "Tall Cell",
+  "confidence": "High",
+  "reasoning": "The final diagnosis explicitly states 'PAPILLARY THYROID CARCINOMA, TALL CELL VARIANT', directly indicating the Tall Cell variant."
+}

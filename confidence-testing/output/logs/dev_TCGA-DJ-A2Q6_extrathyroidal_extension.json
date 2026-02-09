@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:48:42",
+  "value": "Microscopic",
+  "confidence": "High",
+  "reasoning": "The report explicitly states 'Extrathyroid Extension: Invades fibroadipose tissue', which matches the rule for Microscopic extension."
+}

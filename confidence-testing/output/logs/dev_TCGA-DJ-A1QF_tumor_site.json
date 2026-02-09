@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:02:44",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The dominant carcinoma is a 2.9\u202fcm nodule in the right lobe; the only carcinoma in the left lobe is a 0.2\u202fcm microcarcinoma (<1\u202fcm), which is not clinically significant, so the site is Right lobe."
+}

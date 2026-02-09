@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:52:59",
+  "value": 2.5,
+  "confidence": "High",
+  "reasoning": "The diagnosis explicitly states a 2.5\u202fcm papillary thyroid carcinoma, which matches the largest nodule measurement in the gross description; thus the dominant tumor size is clear and unambiguous."
+}

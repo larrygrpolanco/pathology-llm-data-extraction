@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:55:47",
+  "value": "Classical",
+  "confidence": "Medium",
+  "reasoning": "The final diagnosis line does not specify a variant, so per default rule we assign 'Classical'; however the report mentions follicular variant elsewhere, creating some ambiguity."
+}

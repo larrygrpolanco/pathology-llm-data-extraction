@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:52:30",
+  "value": "Follicular",
+  "confidence": "High",
+  "reasoning": "The final diagnosis for the dominant right thyroid tumor explicitly states \"MULTIFOCAL PAPILLARY CARCINOMA, FOLLICULAR VARIANT\" and it is larger than the left lobe lesion, making this the primary variant."
+}

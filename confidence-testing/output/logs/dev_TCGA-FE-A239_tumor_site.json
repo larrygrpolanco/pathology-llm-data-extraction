@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:44:18",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The synoptic report explicitly states the tumor location as the right lobe and notes no tumor in the left lobe (multifocal: No, left lobe unremarkable), so there is no contralateral carcinoma to trigger a bilateral classification."
+}

@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:59:35",
+  "value": "Gross",
+  "confidence": "Medium",
+  "reasoning": "The report states \"EXTRATHYROIDAL EXTENSION IS SEEN\" and assigns a pT3 stage, which typically reflects gross (macroscopic) extension; however, the wording does not explicitly label it as gross, so interpretation is required."
+}

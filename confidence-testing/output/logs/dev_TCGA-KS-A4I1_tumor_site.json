@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:46:55",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The dominant tumor is a 2.2\u202fcm lesion in the right lobe; a smaller 0.4\u202fcm focus in the left lobe is below the >1\u202fcm significance threshold, so the site is Right lobe."
+}

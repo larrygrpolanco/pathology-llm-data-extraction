@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:54:37",
+  "value": "No ETE",
+  "confidence": "High",
+  "reasoning": "Both the histologic description and the TNM descriptor explicitly state that extrathyroidal extension is not identified/limited to the thyroid, leaving no ambiguity."
+}

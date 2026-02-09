@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:55:52",
+  "value": "No ETE",
+  "confidence": "Medium",
+  "reasoning": "The report does not mention any extrathyroidal extension; absence of such description suggests no ETE, but the lack of explicit statement makes the inference less certain."
+}

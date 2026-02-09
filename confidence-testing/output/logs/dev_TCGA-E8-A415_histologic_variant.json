@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:00:45",
+  "value": "Classical",
+  "confidence": "High",
+  "reasoning": "The final diagnosis states only 'Papillary carcinoma' with no variant specified, so per rule 5 the default variant is Classical."
+}

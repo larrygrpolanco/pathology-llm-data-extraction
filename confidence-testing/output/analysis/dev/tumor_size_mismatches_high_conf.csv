@@ -1,0 +1,11 @@
+patient_id,gold_value,llm_value,llm_normalized,gold_normalized,match,confidence,reasoning
+TCGA-MK-A4N9,3.5,2.6,2.6,3.5,MISMATCH,High,"The Pathologic Diagnosis lists the multifocal papillary carcinoma sizes, with the largest being the isthmus lesion at 2.6 cm, which is unambiguous."
+TCGA-EL-A3CZ,4.5,1.0,1.0,4.5,MISMATCH,High,"The Diagnosis section explicitly lists the tumor size as 1.0 cm, which overrides other measurements per the extraction rules."
+TCGA-EL-A3TA,7.5,4.0,4.0,7.5,MISMATCH,High,"The gross description specifies a circumscribed nodule measuring 4.0 × 2.5 × 2.0 cm, making 4.0 cm the largest dimension of the dominant tumor; no conflicting size information is present."
+TCGA-DJ-A3UQ,0.7,0.8,0.8,0.7,MISMATCH,High,"The final diagnosis section lists the tumor size as a greatest diameter of 0.8 cm, which is the largest reported lesion; the information is explicit and unambiguous."
+TCGA-EL-A3H4,8.0,5.0,5.0,8.0,MISMATCH,High,"The diagnosis section explicitly lists a 5.0 cm papillary thyroid carcinoma as the primary tumor, and no other larger or conflicting measurements are provided."
+TCGA-EL-A3N3,6.0,1.5,1.5,6.0,MISMATCH,High,"The diagnosis explicitly states the papillary carcinoma measures 1.5 cm, and the gross description confirms the same size; no ambiguity exists."
+TCGA-IM-A41Z,4.5,1.5,1.5,4.5,MISMATCH,High,"The synoptic summary lists the dominant tumor with greatest dimension of 1.5 cm, which is the largest measurement and unambiguous."
+TCGA-DJ-A3UN,1.0,1.2,1.2,1.0,MISMATCH,High,"The Diagnosis section states the tumor's greatest diameter is 1.2 cm, which is the largest lesion and overrides the gross measurement; the information is clear and unambiguous."
+TCGA-IM-A420,5.0,4.0,4.0,5.0,MISMATCH,High,"The synoptic data lists the dominant tumor size as 4 cm, and the gross description confirms a 4.0 cm lesion; no ambiguity exists."
+TCGA-CE-A485,4.5,2.0,2.0,4.5,MISMATCH,High,"The report explicitly lists the tumor size as 2 cm in several tables, with no conflicting measurements."

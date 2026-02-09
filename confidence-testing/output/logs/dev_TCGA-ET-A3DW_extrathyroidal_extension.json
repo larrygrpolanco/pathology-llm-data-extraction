@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:48:55",
+  "value": "No ETE",
+  "confidence": "High",
+  "reasoning": "The report explicitly states the tumor involves the thyroid capsule but does not extend beyond the thyroid, indicating no extrathyroidal extension."
+}

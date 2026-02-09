@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:47:07",
+  "value": 2.2,
+  "confidence": "High",
+  "reasoning": "The report explicitly states the size of the largest primary tumor as 2.2\u202fcm, with no conflicting measurements or microcarcinoma qualifiers."
+}

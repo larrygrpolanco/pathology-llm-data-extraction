@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:49:41",
+  "value": "R0",
+  "confidence": "Medium",
+  "reasoning": "The report states 'None uninvolved by carcinoma' for one tumor and 'Not applicable' for the other, which together imply no positive margins, but the wording is not entirely explicit for the first tumor."
+}

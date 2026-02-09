@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:43:42",
+  "value": "R1",
+  "confidence": "High",
+  "reasoning": "The report explicitly states a focally positive anterior surgical margin, indicating margin involvement (R1)."
+}

@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:48:22",
+  "value": "Left lobe",
+  "confidence": "High",
+  "reasoning": "The report states the papillary thyroid carcinoma is located in the left lobe with no carcinoma >1\u202fcm identified in the right lobe, so the dominant site is the left lobe."
+}

@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:54:41",
+  "value": 1.1,
+  "confidence": "High",
+  "reasoning": "The diagnosis and synoptic data both state the dominant tumor size as 1.1\u202fcm, and the gross description confirms a nodule measuring 1.1\u202fcm; no larger measurement is present."
+}

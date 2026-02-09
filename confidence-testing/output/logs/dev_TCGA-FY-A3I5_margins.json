@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:52:38",
+  "value": "R0",
+  "confidence": "High",
+  "reasoning": "The report explicitly states 'SURGICAL MARGIN STATUS: NEGATIVE FOR CARCINOMA' for both thyroid lobes, which maps to the R0 category."
+}

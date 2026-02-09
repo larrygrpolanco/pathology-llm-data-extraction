@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:58:50",
+  "value": "R0",
+  "confidence": "High",
+  "reasoning": "The report explicitly states 'Surgical margins: Negative but close to black inked posterior (< 1 mm)', which matches the rule for R0 (negative/clear)."
+}

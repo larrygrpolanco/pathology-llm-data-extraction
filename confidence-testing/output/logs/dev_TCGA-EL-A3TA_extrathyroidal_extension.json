@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:50:25",
+  "value": "No ETE",
+  "confidence": "High",
+  "reasoning": "The report explicitly states the tumor is \"confined to the thyroid\" and provides no indication of microscopic or gross extrathyroidal extension."
+}

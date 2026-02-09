@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:02:20",
+  "value": 1.7,
+  "confidence": "High",
+  "reasoning": "The synoptic data explicitly lists the size of the largest primary tumor as 1.7\u202fcm, matching the gross description; the measurement is clear and unambiguous."
+}

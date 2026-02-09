@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:44:58",
+  "value": "Left lobe",
+  "confidence": "High",
+  "reasoning": "The report explicitly states 'Tumor laterality: Left' and provides no evidence of a >1\u202fcm carcinoma in the right lobe, so the dominant nodule is in the left lobe."
+}

@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:48:27",
+  "value": "R0",
+  "confidence": "High",
+  "reasoning": "The report explicitly states 'Resection margins - negative' and 'margins free of tumor', indicating no involvement."
+}

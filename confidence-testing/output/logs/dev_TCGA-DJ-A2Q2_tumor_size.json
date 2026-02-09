@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:55:44",
+  "value": 4.9,
+  "confidence": "High",
+  "reasoning": "The diagnosis section explicitly states the tumor's greatest diameter as 4.9\u202fcm, which is the dominant lesion; no ambiguity or conflicting information is present."
+}

@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:02:46",
+  "value": "No ETE",
+  "confidence": "High",
+  "reasoning": "Both the structured field 'Extrathyroid Extension: Not identified' and the gross description state no extension beyond the capsule, matching the rule for 'No ETE' with no ambiguity."
+}

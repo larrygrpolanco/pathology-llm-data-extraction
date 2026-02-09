@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:51:53",
+  "value": 3.2,
+  "confidence": "High",
+  "reasoning": "The Final Diagnosis section explicitly lists the greatest tumor dimension as 3.2\u202fcm, which is the largest lesion; thus the dominant tumor size is clear and unambiguous."
+}

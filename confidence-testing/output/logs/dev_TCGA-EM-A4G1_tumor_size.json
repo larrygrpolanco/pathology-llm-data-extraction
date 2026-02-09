@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:57:19",
+  "value": 1.7,
+  "confidence": "High",
+  "reasoning": "Both the Diagnosis and the Synoptic Data list the dominant tumor's greatest dimension as 1.7\u202fcm, with no conflicting information or microcarcinoma terminology."
+}

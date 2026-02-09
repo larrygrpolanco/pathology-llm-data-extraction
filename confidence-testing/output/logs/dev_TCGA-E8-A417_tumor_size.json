@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:46:33",
+  "value": 2.5,
+  "confidence": "High",
+  "reasoning": "The report explicitly lists the tumor size as 2.5\u202f\u00d7\u202f2\u202f\u00d7\u202f1.8\u202fcm, making the largest dimension 2.5\u202fcm; the information is clear and unambiguous."
+}

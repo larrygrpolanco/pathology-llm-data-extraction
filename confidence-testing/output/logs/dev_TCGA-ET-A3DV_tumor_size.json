@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:53:12",
+  "value": 4.2,
+  "confidence": "High",
+  "reasoning": "The final diagnosis explicitly states the dominant tumor size as 4.2\u202fcm, matching the gross measurement; no ambiguity exists."
+}

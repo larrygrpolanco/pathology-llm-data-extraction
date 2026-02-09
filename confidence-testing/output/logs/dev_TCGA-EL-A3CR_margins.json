@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:00:40",
+  "value": "R1",
+  "confidence": "High",
+  "reasoning": "The diagnosis explicitly states the tumor is \"involving the anterior and posterior margins,\" which maps to an involved margin (R1) with no ambiguity."
+}

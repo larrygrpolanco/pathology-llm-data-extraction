@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:03:00",
+  "value": "Left lobe",
+  "confidence": "Medium",
+  "reasoning": "The surgical treatment note mentions resection of the left lobe, indicating the dominant tumor is in the left lobe; no evidence of a >1\u202fcm carcinoma in the right lobe is provided, but the text is garbled, creating some uncertainty."
+}

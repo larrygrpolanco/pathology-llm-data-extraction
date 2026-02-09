@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:44:11",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The report documents papillary carcinoma confined to the right thyroid lobe (and isthmus) with no carcinoma in the left lobe, so the dominant lesion is in the right lobe and the case is not bilateral."
+}

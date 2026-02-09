@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:56:02",
+  "value": "Follicular",
+  "confidence": "High",
+  "reasoning": "The final diagnosis line specifies a dominant oncocytic follicular variant, which corresponds to the Follicular option."
+}

@@ -1,0 +1,4 @@
+Metric,Value,Cases to Review,Errors Caught,Efficiency
+Baseline Error Rate,12.9%,,,
+Review Only LOW Conf,,1.2%,1.8%,"Save 98.8% of review time, catch 1.8% of errors"
+Review LOW + MEDIUM Conf,,7.1%,13.4%,"Save 92.9% of review time, catch 13.4% of errors"

@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:47:30",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The report specifies a 2.9\u202fcm papillary carcinoma located in the right thyroid lobe with no mention of a clinically significant lesion in the left lobe, so the dominant site is right lobe."
+}

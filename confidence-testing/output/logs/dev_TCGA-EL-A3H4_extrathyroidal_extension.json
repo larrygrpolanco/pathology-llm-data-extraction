@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:53:59",
+  "value": "Gross",
+  "confidence": "High",
+  "reasoning": "The diagnosis explicitly states the tumor invades surrounding soft tissue, skeletal and smooth muscle, and the gross description notes gross invasion, indicating macroscopic (gross) extrathyroidal extension."
+}

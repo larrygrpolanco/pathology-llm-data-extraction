@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:57:09",
+  "value": 6.0,
+  "confidence": "High",
+  "reasoning": "The diagnosis explicitly states the dominant tumor has a greatest dimension of at least 6\u202fcm, providing a clear measurement."
+}

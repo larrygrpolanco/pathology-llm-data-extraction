@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:57:04",
+  "value": "R1",
+  "confidence": "High",
+  "reasoning": "The report explicitly states that tumor is present focally at the black inked anterior margin, indicating positive/involved margin."
+}

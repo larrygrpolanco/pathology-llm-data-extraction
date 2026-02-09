@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:50:46",
+  "value": 2.3,
+  "confidence": "High",
+  "reasoning": "The diagnosis and tumor characteristics both state the dominant tumor\u2019s greatest dimension as 2.3\u202fcm, with no conflicting measurements or microcarcinoma terminology."
+}

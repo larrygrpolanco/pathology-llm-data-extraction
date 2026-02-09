@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:50:28",
+  "value": 4.0,
+  "confidence": "High",
+  "reasoning": "The gross description specifies a circumscribed nodule measuring 4.0\u202f\u00d7\u202f2.5\u202f\u00d7\u202f2.0\u202fcm, making 4.0\u202fcm the largest dimension of the dominant tumor; no conflicting size information is present."
+}

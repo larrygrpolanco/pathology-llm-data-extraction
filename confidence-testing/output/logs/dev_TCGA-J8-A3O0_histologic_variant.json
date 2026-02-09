@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:44:34",
+  "value": "Follicular",
+  "confidence": "High",
+  "reasoning": "The FINAL DIAGNOSIS section explicitly lists 'HISTOLOGIC TYPE: Papillary carcinoma, Follicular variant', directly indicating the variant."
+}

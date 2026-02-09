@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:45:42",
+  "value": "Follicular",
+  "confidence": "Medium",
+  "reasoning": "The dominant tumor is described as an oncocytic mixed follicular and macrofollicular variant; among the allowed options, the closest match is Follicular, though the description is not an exact term, leading to moderate confidence."
+}

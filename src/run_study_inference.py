@@ -13,17 +13,17 @@ from groq import Groq
 # USER SETTINGS 
 # -----------------------------------------------------------------------------
 
-DEFAULT_SPLIT = "final"
+DEFAULT_SPLIT = "dev" 
 
 # Define the models
 MODELS = {
     "gpt-oss-120b": {"id": "openai/gpt-oss-120b", "provider": "groq"},
-    "gpt-oss-20b": {"id": "openai/gpt-oss-20b", "provider": "groq"},
-    "llama-3.1-8b": {"id": "llama-3.1-8b-instant", "provider": "groq"},
-    "llama-3.3-70b": {"id": "llama-3.3-70b-versatile", "provider": "groq"},
-    "qwen3-32b": {"id": "qwen/qwen3-32b", "provider": "groq"},
-    "kimi-k2": {"id": "moonshotai/kimi-k2-instruct-0905", "provider": "groq"},
-    "mistral-large-2512": {"id": "mistralai/mistral-large-2512", "provider": "openrouter"}
+    # "gpt-oss-20b": {"id": "openai/gpt-oss-20b", "provider": "groq"},
+    # "llama-3.1-8b": {"id": "llama-3.1-8b-instant", "provider": "groq"},
+    # "llama-3.3-70b": {"id": "llama-3.3-70b-versatile", "provider": "groq"},
+    # "qwen3-32b": {"id": "qwen/qwen3-32b", "provider": "groq"},
+    # "kimi-k2": {"id": "moonshotai/kimi-k2-instruct-0905", "provider": "groq"},
+    # "mistral-large-2512": {"id": "mistralai/mistral-large-2512", "provider": "openrouter"}
 }
 
 # -----------------------------------------------------------------------------

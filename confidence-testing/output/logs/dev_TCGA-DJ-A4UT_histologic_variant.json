@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:02:26",
+  "value": "Classical",
+  "confidence": "High",
+  "reasoning": "The final diagnosis states 'Papillary carcinoma, classical type with focal oncocytic/tall cell features', indicating the dominant variant is classical."
+}

@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:46:47",
+  "value": 2.5,
+  "confidence": "High",
+  "reasoning": "The diagnosis section for the left thyroid lobe states the tumor size as 'Greatest diameter is 2.5 cm', which is the largest tumor reported and not a microcarcinoma, so this measurement is used directly."
+}

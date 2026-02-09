@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:55:54",
+  "value": "R0",
+  "confidence": "High",
+  "reasoning": "The report contains no explicit mention of margin involvement, positivity, or gross residual disease; per the extraction rules, absence of such information defaults to R0."
+}

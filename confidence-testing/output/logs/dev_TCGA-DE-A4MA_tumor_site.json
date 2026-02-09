@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:58:41",
+  "value": "Left lobe",
+  "confidence": "High",
+  "reasoning": "The dominant tumor is explicitly described as located in the left lobe, and the report states the right lobe and isthmus are negative for carcinoma, so no contralateral disease >1\u202fcm is present."
+}

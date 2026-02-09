@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:53:33",
+  "value": 3.3,
+  "confidence": "High",
+  "reasoning": "The diagnosis explicitly states a papillary thyroid carcinoma measuring 3.3\u202fcm, matching the gross measurement; the size is unambiguous."
+}

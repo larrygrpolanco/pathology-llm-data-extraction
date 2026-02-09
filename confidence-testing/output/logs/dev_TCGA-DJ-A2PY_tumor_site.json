@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:49:55",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The dominant tumor is a 2.5\u202fcm papillary carcinoma in the right lobe; the only lesion in the left lobe is a 0.6\u202fcm microcarcinoma (<1\u202fcm), which does not meet the >1\u202fcm threshold for bilateral disease."
+}

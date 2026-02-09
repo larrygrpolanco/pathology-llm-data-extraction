@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:55:49",
+  "value": "Left lobe",
+  "confidence": "High",
+  "reasoning": "The report states a large (4\u202f\u00d7\u202f3\u202f\u00d7\u202f3\u202fcm) tumor in the left lobe and only normal-appearing tissue in the right lobe, with no mention of carcinoma in the contralateral side, so the dominant site is the left lobe."
+}

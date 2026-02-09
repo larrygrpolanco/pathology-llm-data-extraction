@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:57:10",
+  "value": "Follicular",
+  "confidence": "High",
+  "reasoning": "The final diagnosis line explicitly states \"Papillary carcinoma, encapsulated follicular variant\" indicating the follicular variant."
+}

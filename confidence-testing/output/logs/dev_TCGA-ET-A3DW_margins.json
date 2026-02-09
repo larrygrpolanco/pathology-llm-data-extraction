@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:48:58",
+  "value": "R1",
+  "confidence": "High",
+  "reasoning": "The report explicitly states 'THE TUMOR EXTENDS TO THE MARGIN', indicating a positive/involved margin, which maps to R1."
+}

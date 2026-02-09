@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:51:28",
+  "value": "No ETE",
+  "confidence": "High",
+  "reasoning": "The diagnosis explicitly states the carcinoma is \"confined to the gland\" and the capsule is described as intact, indicating no extrathyroidal extension."
+}

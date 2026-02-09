@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:59:46",
+  "value": "Classical",
+  "confidence": "Medium",
+  "reasoning": "The dominant (left lobe) tumor is described as \"conventional and follicular variant\"; conventional corresponds to Classical, but the presence of both variants makes the assignment somewhat ambiguous, so a medium confidence is appropriate."
+}

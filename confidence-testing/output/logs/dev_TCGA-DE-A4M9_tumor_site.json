@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:43:37",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The report states the dominant carcinoma focus is in the right lobe, and no clinically significant carcinoma (>1\u202fcm) is described in the left lobe; thus the Bilateral Rule yields 'Right lobe'."
+}

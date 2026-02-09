@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:53:11",
+  "value": "R0",
+  "confidence": "High",
+  "reasoning": "The report explicitly states that the surgical margins are negative for tumor, which maps to R0 with no ambiguity."
+}

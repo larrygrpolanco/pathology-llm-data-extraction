@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:51:10",
+  "value": "Classical",
+  "confidence": "High",
+  "reasoning": "The final diagnosis lists only 'Papillary thyroid carcinoma' with no variant, and the histologic type is noted as 'usual type', which corresponds to the classical variant."
+}

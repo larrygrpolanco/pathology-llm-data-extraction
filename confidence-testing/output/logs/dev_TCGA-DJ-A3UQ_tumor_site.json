@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:53:43",
+  "value": "Left lobe",
+  "confidence": "High",
+  "reasoning": "The report states the dominant tumor is in the left lobe (0.8\u202fcm) and the contralateral right\u2011lobe focus is only 0.6\u202fcm (<1\u202fcm), so it does not meet the >1\u202fcm threshold for bilateral classification."
+}

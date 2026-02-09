@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:45:59",
+  "value": "Microscopic",
+  "confidence": "Medium",
+  "reasoning": "The diagnosis states \"WITH EXTRATHYROIDAL EXTENSION\" without specifying gross invasion; per extraction rules, a generic presence maps to \"Microscopic\". However, the lack of explicit qualifier introduces some ambiguity."
+}

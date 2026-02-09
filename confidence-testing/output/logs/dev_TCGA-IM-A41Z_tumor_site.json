@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:56:36",
+  "value": "Bilateral",
+  "confidence": "High",
+  "reasoning": "The report states papillary carcinoma in both lobes with dominant nodules >1\u202fcm in each (1.5\u202fcm right, 1.3\u202fcm left), meeting the criteria for bilateral disease."
+}

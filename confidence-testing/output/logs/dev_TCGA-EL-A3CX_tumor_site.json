@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:53:24",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The report identifies a 3.3\u202fcm papillary carcinoma in the right lobe and states the left lobe is grossly unremarkable with no tumor reported, so the dominant nodule is right lobe and no contralateral carcinoma is present."
+}

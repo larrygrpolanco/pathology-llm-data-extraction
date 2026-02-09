@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:02:03",
+  "value": 4.2,
+  "confidence": "High",
+  "reasoning": "The dominant tumor is explicitly listed with a greatest dimension of 4.2\u202fcm in the Diagnosis section, which is unambiguous and requires no conversion."
+}

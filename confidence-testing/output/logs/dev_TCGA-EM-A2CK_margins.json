@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:44:05",
+  "value": "R0",
+  "confidence": "High",
+  "reasoning": "The report explicitly states 'Margins uninvolved by carcinoma' for both tumors, indicating no involvement, which maps to R0."
+}

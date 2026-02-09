@@ -1,0 +1,6 @@
+Field,Accuracy,F1,High Conf Acc,Med Conf Acc,Low Conf Acc,High Count,Med Count,Low Count
+Histologic Variant,0.866,0.863,87.0%,66.7%,100.0%,77,3,2
+Tumor Site,0.829,0.793,84.8%,33.3%,N/A,79,3,0
+Extrathyroidal Extension,0.878,0.890,88.1%,84.6%,100.0%,67,13,2
+Margins,0.915,0.914,92.3%,75.0%,N/A,78,4,0
+Tumor Size,0.866,0.864,87.5%,100.0%,0.0%,80,1,1

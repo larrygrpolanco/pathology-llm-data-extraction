@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:00:37",
+  "value": "Gross",
+  "confidence": "High",
+  "reasoning": "The diagnosis explicitly states the tumor is infiltrating the anterior soft tissue and extending into adjacent soft tissue, indicating macroscopic/gross extrathyroidal extension."
+}

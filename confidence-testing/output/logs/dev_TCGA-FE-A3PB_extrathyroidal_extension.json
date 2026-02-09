@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:52:21",
+  "value": "Microscopic",
+  "confidence": "Medium",
+  "reasoning": "The synoptic report states the tumor infiltrates focally the capsule into perithyroidal fat, indicating microscopic extrathyroidal extension, but a contradictory 'Confined to the thyroid: Yes' entry creates some ambiguity, leading to medium confidence."
+}

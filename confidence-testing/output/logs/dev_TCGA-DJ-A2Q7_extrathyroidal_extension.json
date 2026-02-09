@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:46:41",
+  "value": "Microscopic",
+  "confidence": "High",
+  "reasoning": "The left thyroid lobe explicitly states \"Extrathyroid Extension: Invades extrathyroidal fibrous tissue, focal,\" which maps to Microscopic; the right lobe shows no extension, but the presence of any ETE dictates a Microscopic classification."
+}

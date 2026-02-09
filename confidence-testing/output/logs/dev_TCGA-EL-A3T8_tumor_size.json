@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:57:56",
+  "value": 0.1,
+  "confidence": "Low",
+  "reasoning": "The diagnosis only provides a size for one carcinoma as \"less than 0.1\u202fcm\" and gives no measurement for the other tumor, making the dominant tumor size ambiguous."
+}

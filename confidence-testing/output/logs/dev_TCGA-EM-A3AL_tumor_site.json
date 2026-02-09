@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:49:35",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The report identifies a dominant 1.9\u202fcm papillary carcinoma in the right lobe and no carcinoma >1\u202fcm in the left lobe; the small isthmus lesion is <1\u202fcm, so the site is right lobe."
+}

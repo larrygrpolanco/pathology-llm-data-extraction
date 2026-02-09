@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:49:04",
+  "value": "Left lobe",
+  "confidence": "High",
+  "reasoning": "The report describes a 3.5\u202fcm papillary carcinoma in the left thyroid lobe and isthmus, with no carcinoma in the right lobe; thus the dominant nodule is in the left lobe and the case is not bilateral."
+}

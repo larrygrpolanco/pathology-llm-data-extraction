@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:48:19",
+  "value": 2.5,
+  "confidence": "High",
+  "reasoning": "The final diagnosis lists a multifocal tumor with the largest measurement explicitly given as 2.5\u202fcm, which is unambiguous."
+}

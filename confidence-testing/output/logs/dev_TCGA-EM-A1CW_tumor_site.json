@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:45:34",
+  "value": "Bilateral",
+  "confidence": "High",
+  "reasoning": "The report states a dominant right\u2011lobe carcinoma (4.5\u202fcm) and also mentions a separate 1.3\u202fcm carcinoma in the left lobe, indicating clinically significant disease in both lobes; therefore the Bilateral rule applies."
+}

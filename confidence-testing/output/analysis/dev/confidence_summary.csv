@@ -1,0 +1,4 @@
+Confidence,Count,Correct,Wrong,Accuracy,% of Total
+High,381,335,46,87.9%,92.9%
+Medium,24,18,6,75.0%,5.9%
+Low,5,4,1,80.0%,1.2%

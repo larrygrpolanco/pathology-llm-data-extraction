@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:47:40",
+  "value": 2.9,
+  "confidence": "High",
+  "reasoning": "The report explicitly lists the tumor size as 2.9\u202fcm in the synoptic section and the gross description confirms a nodule of ~2.9\u202fcm, leaving no ambiguity."
+}

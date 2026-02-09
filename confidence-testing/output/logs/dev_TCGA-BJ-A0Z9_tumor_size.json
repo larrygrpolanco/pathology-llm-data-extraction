@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:54:28",
+  "value": 2.8,
+  "confidence": "High",
+  "reasoning": "The synoptic data and final diagnosis both state the largest tumor nodule measures 2.8\u202fcm, with no ambiguity."
+}

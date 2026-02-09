@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:43:57",
+  "value": "Follicular",
+  "confidence": "High",
+  "reasoning": "The Diagnosis section lists a dominant 2.3\u202fcm right thyroid tumor described as a follicular variant, and rule 4 directs us to use the variant of the dominant tumor."
+}

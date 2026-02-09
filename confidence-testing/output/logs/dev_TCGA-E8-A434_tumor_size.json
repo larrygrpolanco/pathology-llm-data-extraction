@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:43:33",
+  "value": 0.7,
+  "confidence": "Medium",
+  "reasoning": "The report lists the tumor dimensions as 0.7\u202f\u00d7\u202f0.7\u202f\u00d7\u202f0.7, presumably in centimeters, but the unit is not explicitly stated, introducing slight uncertainty."
+}

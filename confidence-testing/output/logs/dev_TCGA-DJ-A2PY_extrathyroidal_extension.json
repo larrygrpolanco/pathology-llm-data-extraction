@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:49:59",
+  "value": "Microscopic",
+  "confidence": "High",
+  "reasoning": "The report explicitly states 'Extrathyroid Extension: Invades: perithyroidal soft tissue', which matches the rule for microscopic extension (invades soft tissue)."
+}

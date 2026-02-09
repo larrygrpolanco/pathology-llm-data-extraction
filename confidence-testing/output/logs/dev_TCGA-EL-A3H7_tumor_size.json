@@ -1,0 +1,9 @@
+{
+  "field": "tumor_size",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:03:28",
+  "value": 3.0,
+  "confidence": "High",
+  "reasoning": "The gross description identifies the dominant tumor as a 3.0\u202f\u00d7\u202f2.6\u202f\u00d7\u202f1.7\u202fcm nodule, providing an unambiguous size of 3.0\u202fcm."
+}

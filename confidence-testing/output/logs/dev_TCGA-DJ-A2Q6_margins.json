@@ -1,0 +1,9 @@
+{
+  "field": "margins",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:48:43",
+  "value": "R0",
+  "confidence": "High",
+  "reasoning": "The report states 'Surgical Margins: Free of tumor' with no involvement, which maps to R0 per the extraction rules, despite noting the tumor is close to the inked margin."
+}

@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:49:14",
+  "value": "Classical",
+  "confidence": "Low",
+  "reasoning": "The final diagnosis lists an 'oncocytic type' papillary carcinoma, which is not one of the permitted options (Classical, Follicular, Tall Cell); defaulting to Classical is uncertain, so a low confidence is assigned."
+}

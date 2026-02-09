@@ -1,0 +1,9 @@
+{
+  "field": "tumor_site",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:53:55",
+  "value": "Right lobe",
+  "confidence": "High",
+  "reasoning": "The report states the primary tumor replaces the right thyroid lobe (radical thyroidectomy right) and no carcinoma >1\u202fcm is described in the left lobe, so the dominant site is the right lobe."
+}

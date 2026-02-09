@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:03:24",
+  "value": "Microscopic",
+  "confidence": "High",
+  "reasoning": "The diagnosis states extrathyroidal invasion into soft tissue, while the gross description notes no gross capsular breach, indicating microscopic extension."
+}

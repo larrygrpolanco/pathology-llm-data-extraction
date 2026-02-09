@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:53:00",
+  "value": "Follicular",
+  "confidence": "High",
+  "reasoning": "The FINAL DIAGNOSIS line explicitly states 'PAPILLARY THYROID CARCINOMA, FOLLICULAR VARIANT', directly matching one of the allowed options."
+}

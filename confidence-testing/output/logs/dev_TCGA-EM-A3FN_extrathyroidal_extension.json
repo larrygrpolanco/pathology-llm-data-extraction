@@ -1,0 +1,9 @@
+{
+  "field": "extrathyroidal_extension",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 14:01:57",
+  "value": "No ETE",
+  "confidence": "High",
+  "reasoning": "The synoptic section explicitly states 'Extrathyroidal Extension: Not identified' for both tumors, which maps directly to 'No ETE' per the extraction rules. The statement is clear and unambiguous."
+}

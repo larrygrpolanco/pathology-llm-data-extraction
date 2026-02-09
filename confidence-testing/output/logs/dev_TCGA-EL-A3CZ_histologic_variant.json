@@ -1,0 +1,9 @@
+{
+  "field": "histologic_variant",
+  "status": "success",
+  "retries": 0,
+  "timestamp": "2026-02-09 13:48:20",
+  "value": "Classical",
+  "confidence": "High",
+  "reasoning": "The final diagnosis states \"PAPILLARY THYROID CARCINOMA, CONVENTIONAL TYPE,\" which corresponds to the Classical variant."
+}
