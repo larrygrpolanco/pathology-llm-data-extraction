@@ -98,5 +98,4 @@ The pipeline targets 9 high-impact prognostic factors:
 
 The project uses **Groq** and **OpenRouter** to test a wide range of models, including:
 
-- **Large**: GPT-4o, Llama-3.3-70B
-- **Open Source**: Llama-3.1-8B, Qwen-32B
+
