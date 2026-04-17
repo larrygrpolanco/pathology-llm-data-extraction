@@ -10,15 +10,15 @@ from dotenv import load_dotenv
 from groq import Groq
 
 # -----------------------------------------------------------------------------
-# USER SETTINGS 
+# USER SETTINGS
 # -----------------------------------------------------------------------------
 
-DEFAULT_SPLIT = "dev" 
+DEFAULT_SPLIT = "final" 
 
 # Define the models
 MODELS = {
-    "gpt-oss-120b": {"id": "openai/gpt-oss-120b", "provider": "groq"},
-    # "gpt-oss-20b": {"id": "openai/gpt-oss-20b", "provider": "groq"},
+    # "gpt-oss-120b": {"id": "openai/gpt-oss-120b", "provider": "groq"},
+    "gpt-oss-20b": {"id": "openai/gpt-oss-20b", "provider": "groq"},
     # "llama-3.1-8b": {"id": "llama-3.1-8b-instant", "provider": "groq"},
     # "llama-3.3-70b": {"id": "llama-3.3-70b-versatile", "provider": "groq"},
     # "qwen3-32b": {"id": "qwen/qwen3-32b", "provider": "groq"},
@@ -66,11 +66,15 @@ Task: Extract structured variables from pathology reports following rules below.
 2. tumor_site (The Bilateral Rule):
    - Options: "Right lobe" | "Left lobe" | "Isthmus" | "Bilateral"
    - Rules:
-     A. Identify the location of the DOMINANT nodule (e.g., Right Lobe).
-     B. Check for clinically significant carcinoma (>1cm) in the contralateral lobe
-     C. If carcinoma is present in BOTH lobes -> Output "Bilateral".
-     D. Otherwise, output the site of the dominant nodule.
-     E. Only use "Isthmus" if the dominant center is the isthmus.
+     A. Identify the location of the DOMINANT (largest) nodule.
+     B. LOGIC GATE - SECONDARY TUMORS:
+        - Look for other tumors in the CONTRALATERAL lobe (Left vs Right).
+        - IGNORE any secondary tumor that is ≤ 1.0 cm. It does not exist for this task.
+        - IGNORE any tumor in the Isthmus when calculating Bilaterality.
+     C. If a tumor > 1.0 cm exists in the Right Lobe AND a tumor > 1.0 cm exists in the Left Lobe -> Output "Bilateral".
+     D. "Right Lobe" + "Isthmus" = "Right Lobe".
+     E. "Left Lobe" + "Isthmus" = "Left Lobe".
+     F. Otherwise, output the site of the dominant nodule.
 
 3. extrathyroidal_extension:
    - Options: "No ETE" | "Microscopic" | "Gross"
@@ -89,10 +93,11 @@ Task: Extract structured variables from pathology reports following rules below.
 5. tumor_size (Header Priority):
    - Type: Float (cm).
    - Rules: 
-     A. Synoptic Data / Final Diagnosis for the DOMINANT (largest) tumor.
-     B. EXCEPTION: If Diagnosis uses the term "Microcarcinoma" AND Gross Description measures 
-the same nodule as ≥1.0 cm, use the Gross measurement.
-     C. Convert mm to cm.
+     A. Extract the size of the largest MALIGNANT tumor focus.
+     B. IGNORE sizes of benign nodules, cysts, adenomas, or "nodular hyperplasia," even if they are larger than the carcinoma.
+     C. Synoptic Data / Final Diagnosis takes priority.
+     D. EXCEPTION: ONLY use the Gross Description if the Synoptic/Diagnosis is missing the tumor size. If both exist, the Synoptic/Final Diagnosis is the final truth (microscopic measurement overrides gross visual estimate)
+     E. Convert mm to cm.
 
 --- OUTPUT FORMAT ---
 Return a JSON object:
@@ -110,8 +115,6 @@ USER_PROMPT_TEMPLATE = """Report:
 {report_text}
 ---
 """
-
-
 
 
 # -----------------------------------------------------------------------------
